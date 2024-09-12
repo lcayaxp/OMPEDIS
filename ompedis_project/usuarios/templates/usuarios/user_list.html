@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Lista de Usuarios</h2>
+    <a href="{% url 'signup' %}" class="btn btn-success mb-3">Registrar Nuevo Usuario</a>
+    <ul class="list-group">
+        {% for user in users %}
+            <li class="list-group-item">
+                <a href="{% url 'user_detail' user.pk %}">{{ user.username }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+

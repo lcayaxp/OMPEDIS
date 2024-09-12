@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-info text-white">
+            <h3 class="text-center">Detalles de {{ paciente.nombre }} {{ paciente.apellido }}</h3>
+        </div>
+        <div class="card-body">
+            <h4 class="mb-3">Información del Paciente</h4>
+            <p><strong>Fecha de Nacimiento:</strong> {{ paciente.fecha_nacimiento }}</p>
+            <p><strong>Edad:</strong> {{ paciente.calcular_edad }}</p>
+            <p><strong>Género:</strong> {{ paciente.genero }}</p>
+            <p><strong>ID Partida de Nacimiento:</strong> {{ paciente.id_partida_nacimiento }}</p>
+            <p><strong>Domicilio:</strong> {{ paciente.domicilio }}</p>
+            <p><strong>Departamento:</strong> {{ paciente.departamento }}</p>
+            <p><strong>Municipio:</strong> {{ paciente.municipio }}</p>
+            <p><strong>Estado:</strong> {{ paciente.estado_activo|yesno:"Activo,Inactivo" }}</p>
+
+            <h4 class="mt-4">Diagnóstico Médico</h4>
+            <p>{{ paciente.diagnostico_medico }}</p>
+
+            <h4 class="mt-4">Servicios</h4>
+            <ul>
+                {% for servicio in paciente.servicios.all %}
+                    <li>{{ servicio.nombre_servicio }}</li>
+                {% empty %}
+                    <li>No hay servicios registrados.</li>
+                {% endfor %}
+            </ul>
+
+            <h4 class="mt-4">Medicamentos</h4>
+            <p>{{ paciente.medicamentos|default:"No se han registrado medicamentos." }}</p>
+
+            <h4 class="mt-4">Información del Responsable</h4>
+            {% if paciente.responsables.exists %}
+                {% for responsable in paciente.responsables.all %}
+                    <p><strong>Nombre:</strong> {{ responsable.nombre }} {{ responsable.apellido }}</p>
+                    <p><strong>Parentesco:</strong> {{ responsable.parentesco }}</p>
+                    <p><strong>Teléfono:</strong> {{ responsable.telefono }}</p>
+                {% endfor %}
+            {% else %}
+                <p>No hay información de responsables registrados.</p>
+            {% endif %}
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a href="{% url 'pacientes:editar_paciente' paciente.pk %}" class="btn btn-warning">Editar</a>
+            <a href="{% url 'pacientes:lista_pacientes' %}" class="btn btn-secondary">Regresar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

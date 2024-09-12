@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Estadísticas con Gráficas{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Estadísticas de Sesiones de Terapia</h2>
+    
+    <!-- Collage de Gráficas: Dos por Fila -->
+    <div class="row">
+        <!-- Gráfico de Total de Pacientes por Género -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Pacientes Femeninos y Masculinos</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="genderChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Rango de Edades -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Rango de Edades de Pacientes</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="ageRangeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fila de Gráfico: Terapias por Semana -->
+    <div class="row">
+        <!-- Gráfico de Terapias por Semana -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Total de Terapias por Semana</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="weeklyTherapiesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts para Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Opciones comunes para reducir el tamaño de las gráficas
+    const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    boxWidth: 10
+                }
+            }
+        }
+    };
+
+    // Datos para el gráfico de género
+    var genderCtx = document.getElementById('genderChart').getContext('2d');
+    var genderChart = new Chart(genderCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Femeninos', 'Masculinos'],
+            datasets: [{
+                data: [{{ total_femeninos }}, {{ total_masculinos }}],
+                backgroundColor: ['#FF6384', '#36A2EB'],
+                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+            }]
+        },
+        options: chartOptions
+    });
+
+    // Datos para el gráfico de rango de edades
+    var ageRangeCtx = document.getElementById('ageRangeChart').getContext('2d');
+    var ageRangeChart = new Chart(ageRangeCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['0-18', '19-35', '36-60', '60+'],
+            datasets: [{
+                data: [{{ rangos_edad.0_18 }}, {{ rangos_edad.19_35 }}, {{ rangos_edad.36_60 }}, {{ rangos_edad.60_plus }}],
+                backgroundColor: ['#FFCE56', '#4BC0C0', '#FF6384', '#36A2EB'],
+                hoverBackgroundColor: ['#FFCE56', '#4BC0C0', '#FF6384', '#36A2EB']
+            }]
+        },
+        options: chartOptions
+    });
+
+    // Datos para el gráfico de terapias por semana
+    var weeklyTherapiesCtx = document.getElementById('weeklyTherapiesChart').getContext('2d');
+    var weeklyTherapiesChart = new Chart(weeklyTherapiesCtx, {
+        type: 'bar',
+        data: {
+            labels: [{% for semana in terapias_por_semana %} 'Semana {{ semana.week }}', {% endfor %}],
+            datasets: [{
+                label: 'Sesiones por Semana',
+                data: [{% for semana in terapias_por_semana %} {{ semana.total }}, {% endfor %}],
+                backgroundColor: '#FFCE56',
+                hoverBackgroundColor: '#FFCE56'
+            }]
+        },
+        options: {
+            ...chartOptions,
+            scales: {
+                x: {
+                    beginAtZero: true
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

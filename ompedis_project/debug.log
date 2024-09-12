@@ -1,0 +1,1501 @@
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\locale with glob **/*.mo.
+File C:\Program Files\Python312\Lib\re\_constants.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\re\_casefix.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\bootstrap.py first seen with mtime 1723725765.716955
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\response.py first seen with mtime 1723615844.9876716
+File C:\Program Files\Python312\Lib\contextlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\urls\__init__.py first seen with mtime 1723615841.489669
+File C:\Program Files\Python312\Lib\random.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\text.py first seen with mtime 1723615844.8726697
+File C:\Program Files\Python312\Lib\opcode.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\views.py first seen with mtime 1724906719.5022912
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\__init__.py first seen with mtime 1723725765.7217162
+File C:\Program Files\Python312\Lib\_weakrefset.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\manage.py first seen with mtime 1723616062.883193
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py first seen with mtime 1723725765.7247167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\__init__.py first seen with mtime 1723615845.0726695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\temp.py first seen with mtime 1723615844.7196686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\fields.py first seen with mtime 1723615844.8416698
+File C:\Program Files\Python312\Lib\pkgutil.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\graphlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\timesince.py first seen with mtime 1723615845.06467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\where.py first seen with mtime 1723615844.8976693
+File C:\Program Files\Python312\Lib\glob.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\__init__.py first seen with mtime 1723615845.0136719
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\utils.py first seen with mtime 1723615845.007686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\proxy.py first seen with mtime 1723615844.8646698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\views.py first seen with mtime 1725069990.084296
+File C:\Program Files\Python312\Lib\asyncio\staggered.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\registry.py first seen with mtime 1723615841.1386704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related_lookups.py first seen with mtime 1723615844.8676693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\base.py first seen with mtime 1723615844.8146727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\django.py first seen with mtime 1723615845.0106697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\utils.py first seen with mtime 1723615844.7826703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dateparse.py first seen with mtime 1723615845.0446708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\__init__.py first seen with mtime 1723615844.66967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loader.py first seen with mtime 1723615845.0046704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\__init__.py first seen with mtime 1723615844.7766688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\utils.py first seen with mtime 1723615844.6686692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\library.py first seen with mtime 1723615845.0046704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\__init__.py first seen with mtime 1723615844.6766694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\files.py first seen with mtime 1723615844.6796682
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\__init__.py first seen with mtime 1723615844.7396686
+File C:\Program Files\Python312\DLLs\_socket.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\checks.py first seen with mtime 1723615842.3336716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\i18n.py first seen with mtime 1723615845.07567
+File C:\Program Files\Python312\Lib\base64.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\platform.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\manager.py first seen with mtime 1723615844.8536694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\constraints.py first seen with mtime 1723615844.84867
+File C:\Program Files\Python312\Lib\ast.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\base_subprocess.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\hashable.py first seen with mtime 1723615845.0526693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\__init__.py first seen with mtime 1723615845.0866723
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\connection.py first seen with mtime 1723615845.0416696
+File C:\Program Files\Python312\Lib\encodings\aliases.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\base.py first seen with mtime 1723615844.7836704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\models.py first seen with mtime 1723615841.499668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\cache.py first seen with mtime 1723615845.0196698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\base.py first seen with mtime 1723615844.6706698
+File C:\Program Files\Python312\Lib\bz2.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\common.py first seen with mtime 1723615844.990671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\admin.py first seen with mtime 1723615842.5816703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\admin.py first seen with mtime 1724887727.0868363
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\__init__.py first seen with mtime 1723615843.7806764
+File C:\Program Files\Python312\Lib\nturl2path.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\extensions.py first seen with mtime 1724214950.0356412
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1723615844.83367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\lookups.py first seen with mtime 1723615844.8536694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\json.py first seen with mtime 1723615844.8626692
+File C:\Program Files\Python312\Lib\http\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\views.py first seen with mtime 1723615842.3446698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\special.py first seen with mtime 1723615844.8446696
+File C:\Program Files\Python312\Lib\email\mime\multipart.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\forms.py first seen with mtime 1724905380.858044
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\forms.py first seen with mtime 1725223557.2234583
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\__init__.py first seen with mtime 1723615844.7826703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\inspect.py first seen with mtime 1723615845.055673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\validators.py first seen with mtime 1723615842.3436701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\__init__.py first seen with mtime 1723615840.8876686
+File C:\Program Files\Python312\Lib\collections\abc.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\features.py first seen with mtime 1723615844.8166735
+File C:\Program Files\Python312\Lib\urllib\request.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\locmem.py first seen with mtime 1723615844.6736696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\__init__.py first seen with mtime 1723615844.6686692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\__init__.py first seen with mtime 1723615845.0086691
+File C:\Program Files\Python312\Lib\email\iterators.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\extras.py first seen with mtime 1724214950.0376413
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\hashers.py first seen with mtime 1723615842.3376706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\translation.py first seen with mtime 1723615844.6836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\utils.py first seen with mtime 1723725765.7217162
+File C:\Program Files\Python312\Lib\asyncio\mixins.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\constants.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\filter_stack.py first seen with mtime 1723615840.446668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\middleware.py first seen with mtime 1723615844.2426715
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\__init__.py first seen with mtime 1723615844.722669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\aligned_indent.py first seen with mtime 1723615840.4496691
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\apps.py first seen with mtime 1723615842.3316696
+File C:\Program Files\Python312\Lib\concurrent\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py first seen with mtime 1723615842.0396712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\i18n.py first seen with mtime 1723615845.020669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\__init__.py first seen with mtime 1723615844.7796707
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1723615844.832669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py first seen with mtime 1723725765.7247167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\math.py first seen with mtime 1723615844.8706694
+File C:\Program Files\Python312\Lib\asyncio\exceptions.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\transports.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\sql.py first seen with mtime 1723615840.4446683
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\constants.py first seen with mtime 1723615843.782677
+File C:\Program Files\Python312\Lib\html\parser.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\uploadhandler.py first seen with mtime 1723615844.7216697
+File C:\Program Files\Python312\Lib\ipaddress.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\widgets.py first seen with mtime 1723615844.9086697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\validators.py first seen with mtime 1723615844.6666684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\signals.py first seen with mtime 1723615842.341669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\__init__.py first seen with mtime 1723615842.3296688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\operations.py first seen with mtime 1723615844.7886727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\filters.py first seen with mtime 1723615841.4966688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\management\__init__.py first seen with mtime 1723615842.5406694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1723615844.8316703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\__init__.py first seen with mtime 1723615844.2386694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_utils.py first seen with mtime 1723725765.7257178
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\apps.py first seen with mtime 1723616097.8173928
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\deletion.py first seen with mtime 1723615844.849672
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related.py first seen with mtime 1723615844.8656697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\signing.py first seen with mtime 1723615844.6656766
+File C:\Program Files\Python312\Lib\threading.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\base_events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\utils.py first seen with mtime 1723615840.4456692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\base.py first seen with mtime 1723615845.0316727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\edit.py first seen with mtime 1723615845.0926716
+File C:\Program Files\Python312\Lib\wsgiref\headers.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\apps.py first seen with mtime 1723616086.2074687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\apps.py first seen with mtime 1723615842.5826707
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\smartif.py first seen with mtime 1723615845.0066743
+File C:\Program Files\Python312\Lib\socketserver.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\password_validation.py first seen with mtime 1723615842.340671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\__init__.py first seen with mtime 1723616086.2214313
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\api.py first seen with mtime 1723615843.7816753
+File C:\Program Files\Python312\Lib\asyncio\threads.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\__init__.py first seen with mtime 1723615843.787677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\safestring.py first seen with mtime 1723615845.0616684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\query.py first seen with mtime 1723615844.8566701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\tokens.py first seen with mtime 1723615840.4536695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\__init__.py first seen with mtime 1723615844.874669
+File C:\Program Files\Python312\Lib\email\contentmanager.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_ipaddress.py first seen with mtime 1724214950.0136402
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\comparison.py first seen with mtime 1723615844.86967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\autoreload.py first seen with mtime 1723615845.0396752
+File C:\Program Files\Python312\Lib\queue.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\sysconfig.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\detail.py first seen with mtime 1723615845.0906708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\__init__.py first seen with mtime 1723615844.8446696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\shortcuts.py first seen with mtime 1723615844.4526694
+File C:\Program Files\Python312\Lib\encodings\cp1252.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\ctypes\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\apps.py first seen with mtime 1723615844.647669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\move.py first seen with mtime 1723615844.7186706
+File C:\Program Files\Python312\Lib\subprocess.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\traceback.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\importlib\_abc.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\__init__.py first seen with mtime 1723615845.0306692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\views.py first seen with mtime 1723615842.587669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\base.py first seen with mtime 1723615844.846673
+File C:\Program Files\Python312\Lib\collections\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\checks.py first seen with mtime 1723615844.647669
+File C:\Program Files\Python312\Lib\email\utils.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\futures.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\_policybase.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\gzip.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\python.py first seen with mtime 1723615844.772671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\base_user.py first seen with mtime 1723615842.3326695
+File C:\Program Files\Python312\Lib\getpass.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\base_session.py first seen with mtime 1723615844.24067
+File C:\Program Files\Python312\Lib\re\_parser.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\ipv6.py first seen with mtime 1723615845.055673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\main.py first seen with mtime 1723615842.0496707
+File C:\Program Files\Python312\Lib\wsgiref\util.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\exceptions.py first seen with mtime 1723615841.495669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\base.py first seen with mtime 1723615844.7156744
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\boundfield.py first seen with mtime 1723615844.9016695
+File C:\Program Files\Python312\Lib\string.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\mime\message.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\decimal.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\migration.py first seen with mtime 1723615844.8346727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\base.py first seen with mtime 1723615844.7116685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py first seen with mtime 1723615844.658672
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\variables.py first seen with mtime 1725224612.8851507
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\forms.py first seen with mtime 1723615844.9036694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\decorators.py first seen with mtime 1724884851.8394916
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\transaction.py first seen with mtime 1723615844.7776697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_range.py first seen with mtime 1724214950.0336418
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\exception.py first seen with mtime 1723615844.729669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\actions.py first seen with mtime 1723615841.4926705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\l10n.py first seen with mtime 1723615845.0216725
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\__init__.py first seen with mtime 1723615845.0366712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\decorators.py first seen with mtime 1723615842.336669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\renderers.py first seen with mtime 1723615844.9066706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\formatter.py first seen with mtime 1723615840.4416685
+File C:\Program Files\Python312\Lib\typing.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\handler.py first seen with mtime 1723615844.7246685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\__init__.py first seen with mtime 1723615844.995673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\csrf.py first seen with mtime 1723615845.0736687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\ddl_references.py first seen with mtime 1723615844.7806704
+File C:\Program Files\Python312\DLLs\_zoneinfo.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\base.py first seen with mtime 1723615844.2456694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\utils.py first seen with mtime 1723615844.8586707
+File C:\Program Files\Python312\Lib\urllib\__init__.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\wsgiref\__init__.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py first seen with mtime 1723725765.7227156
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\functional.py first seen with mtime 1723615845.051672
+File C:\Program Files\Python312\Lib\_markupbase.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\cache.py first seen with mtime 1723615844.9886687
+File C:\Program Files\Python312\Lib\weakref.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\base_futures.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_ctypes.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\urls.py first seen with mtime 1724914416.6254811
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\__init__.py first seen with mtime 1725224612.881152
+File C:\Program Files\Python312\Lib\asyncio\events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\admin.py first seen with mtime 1723615842.3306704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\__init__.py first seen with mtime 1723615844.7306678
+File C:\Program Files\Python312\Lib\email\charset.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\expressions.py first seen with mtime 1723615844.851671
+File C:\Program Files\Python312\Lib\concurrent\futures\_base.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\mimetypes.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\logging\config.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\admin.py first seen with mtime 1723616116.4210374
+File C:\Program Files\Python312\Lib\copyreg.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\keyword.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\middleware.py first seen with mtime 1723615843.7846751
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\sync.py first seen with mtime 1723615840.8926694
+File C:\Program Files\Python312\Lib\uuid.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\version.py first seen with mtime 1723615845.066669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\cached.py first seen with mtime 1723615845.0166693
+File C:\Program Files\Python312\Lib\asyncio\log.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_wmi.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\bisect.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\wsgi.py first seen with mtime 1723615844.7306678
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\models.py first seen with mtime 1724485587.7972074
+File C:\Program Files\Python312\Lib\concurrent\futures\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\message.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\dispatch\__init__.py first seen with mtime 1723615844.898669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loader_tags.py first seen with mtime 1723615845.0056696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\csrf.py first seen with mtime 1723615844.9916697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\__init__.py first seen with mtime 1723615841.1366718
+File C:\Program Files\Python312\Lib\email\parser.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\formsets.py first seen with mtime 1723615844.9046807
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\aggregates.py first seen with mtime 1723615844.8456724
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\forms.py first seen with mtime 1723615842.5846686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\finders.py first seen with mtime 1723615844.6486695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\__init__.py first seen with mtime 1723615842.5806694
+File C:\Program Files\Python312\Lib\re\_compiler.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\right_margin.py first seen with mtime 1723615840.4526694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\__init__.py first seen with mtime 1723615844.768671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\dates.py first seen with mtime 1723615845.0886743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\reverse_related.py first seen with mtime 1723615844.8676693
+File C:\Program Files\Python312\Lib\_compression.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\views.py first seen with mtime 1723615844.6546698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\helper.py first seen with mtime 1723725765.7197196
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\servers\basehttp.py first seen with mtime 1723615844.7756712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\shortcuts.py first seen with mtime 1723615841.135671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\__init__.py first seen with mtime 1723615845.018669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\signals.py first seen with mtime 1723615844.8576703
+File C:\Program Files\Python312\Lib\hmac.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\locale.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\schema.py first seen with mtime 1723615844.7896705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\__init__.py first seen with mtime 1724214950.012679
+File C:\Program Files\Python312\Lib\pathlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\exceptions.py first seen with mtime 1723615844.662673
+File C:\Program Files\Python312\Lib\asyncio\subprocess.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\argparse.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\__init__.py first seen with mtime 1723615844.8596685
+File C:\Program Files\Python312\Lib\struct.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\commands\__init__.py first seen with mtime 1723615844.6556695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\sessions.py first seen with mtime 1723615844.7136686
+File C:\Program Files\Python312\Lib\email\_encoded_words.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\__init__.py first seen with mtime 1723615844.6466691
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\__init__.py first seen with mtime 1723615841.4916697
+File C:\Program Files\Python312\Lib\concurrent\futures\thread.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\requests.py first seen with mtime 1723615844.451671
+File C:\Program Files\Python312\DLLs\_decimal.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\email\_header_value_parser.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\filebased.py first seen with mtime 1723615844.6726706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\apps.py first seen with mtime 1723615843.7816753
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\__init__.py first seen with mtime 1723615844.9836693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\errors.py first seen with mtime 1724214950.0346408
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\fields.py first seen with mtime 1723615844.9026694
+File C:\Program Files\Python312\Lib\email\policy.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\urls.py first seen with mtime 1725068218.6709704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\exceptions.py first seen with mtime 1723615845.00367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\options.py first seen with mtime 1723615841.500669
+File C:\Program Files\Python312\Lib\hashlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\__init__.py first seen with mtime 1723615844.6556695
+File C:\Program Files\Python312\Lib\ctypes\wintypes.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\http\client.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_hashlib.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\asyncio\format_helpers.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\locks.py first seen with mtime 1723615844.71767
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\utils.py first seen with mtime 1723615844.7786715
+File C:\Program Files\Python312\Lib\textwrap.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\calendar.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\mime\base.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\tokenize.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\email\_parseaddr.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\feedparser.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\forms.py first seen with mtime 1723615842.336669
+File C:\Program Files\Python312\Lib\selectors.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\common.py first seen with mtime 1723615845.0806713
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\fields.py first seen with mtime 1723615842.5836692
+File C:\Program Files\Python312\Lib\gettext.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dateformat.py first seen with mtime 1723615845.0446708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\forms.py first seen with mtime 1725218563.0639467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\state.py first seen with mtime 1723615844.8386683
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templatetags\__init__.py first seen with mtime 1724218508.2730172
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\__init__.py first seen with mtime 1723615840.4396703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\autocomplete.py first seen with mtime 1723615842.0476708
+File C:\Program Files\Python312\Lib\token.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\urls.py first seen with mtime 1724906775.087431
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\mixins.py first seen with mtime 1723615842.339671
+File C:\Program Files\Python312\Lib\dataclasses.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\base.py first seen with mtime 1723615844.8416698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\json.py first seen with mtime 1723615844.7706716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_modify.py first seen with mtime 1723615842.0416698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\current_thread_executor.py first seen with mtime 1723615840.88967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\termcolors.py first seen with mtime 1723615845.0626807
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\checks.py first seen with mtime 1723615842.5836692
+File C:\Program Files\Python312\Lib\asyncio\timeouts.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\filesystem.py first seen with mtime 1723615845.017669
+File C:\Program Files\Python312\Lib\importlib\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\cli.py first seen with mtime 1723615840.440668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\resolvers.py first seen with mtime 1723615845.0346708
+File C:\Program Files\Python312\Lib\asyncio\windows_events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\models.py first seen with mtime 1723615842.5856698
+File C:\Program Files\Python312\Lib\http\server.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\log.py first seen with mtime 1723615845.0586698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\main.py first seen with mtime 1725224612.8831515
+File C:\Program Files\Python312\Lib\email\quoprimime.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\exceptions.py first seen with mtime 1723615844.2416685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\asgi.py first seen with mtime 1723615844.7276688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\defaultfilters.py first seen with mtime 1723615845.00067
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\mixins.py first seen with mtime 1723615844.8636694
+File C:\Program Files\Python312\Lib\ctypes\_endian.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\socket.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\_os.py first seen with mtime 1723615845.037671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\layout.py first seen with mtime 1723725765.7197196
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_urls.py first seen with mtime 1723615842.0436714
+File C:\Program Files\Python312\Lib\asyncio\trsock.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\zoneinfo\__init__.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\constants.py first seen with mtime 1723615844.8756697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\apps.py first seen with mtime 1723615844.2396703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\indexes.py first seen with mtime 1723615844.8526683
+File C:\Program Files\Python312\Lib\pickle.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\features.py first seen with mtime 1723615844.7866697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\files.py first seen with mtime 1723615844.860669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\database.py first seen with mtime 1723615844.678676
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\grouping.py first seen with mtime 1723615840.4476695
+File C:\Program Files\Python312\Lib\types.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\http\cookies.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\base.py first seen with mtime 1723615842.0446699
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\datetime.py first seen with mtime 1723615844.8706694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\duration.py first seen with mtime 1723615845.0486765
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\response.py first seen with mtime 1723615845.0066743
+File C:\Program Files\Python312\Lib\pprint.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\conf.py first seen with mtime 1723615845.032676
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\cookie.py first seen with mtime 1723615844.9846702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\messages.py first seen with mtime 1723615844.6806686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\parser.py first seen with mtime 1725224612.884152
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\utils.py first seen with mtime 1723615844.9076686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\exceptions.py first seen with mtime 1723725765.7187085
+File C:\Program Files\Python312\Lib\encodings\utf_8.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\__init__.py first seen with mtime 1723615844.2446697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\__init__.py first seen with mtime 1723725765.7149515
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\__init__.py first seen with mtime 1723615841.1416712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\__init__.py first seen with mtime 1723615841.4926705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\templates.py first seen with mtime 1723615844.68268
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\query.py first seen with mtime 1723615844.8956685
+File C:\Program Files\Python312\Lib\email\base64mime.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\__init__.py first seen with mtime 1723615844.8296733
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\__init__.py first seen with mtime 1723616116.4250393
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\__init__.py first seen with mtime 1723615844.4456706
+File C:\Program Files\Python312\DLLs\_bz2.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\context.py first seen with mtime 1723615844.9986763
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\sites.py first seen with mtime 1723615841.500669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\mixins.py first seen with mtime 1723615844.72667
+File C:\Program Files\Python312\Lib\reprlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\models.py first seen with mtime 1723615844.24367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\servers\__init__.py first seen with mtime 1723615844.7746696
+File C:\Program Files\Python312\Lib\urllib\parse.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\DLLs\_queue.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\__init__.py first seen with mtime 1723615844.7276688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\layout_slice.py first seen with mtime 1723725765.7207148
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\compatibility\__init__.py first seen with mtime 1723615844.6846704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\base.py first seen with mtime 1723615844.72367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\signals.py first seen with mtime 1723615844.7816699
+File C:\Program Files\Python312\Lib\urllib\error.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\lorem_ipsum.py first seen with mtime 1723615845.0596757
+File C:\Program Files\Python312\Lib\logging\handlers.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\json\scanner.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\coroutines.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\locks.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\client.py first seen with mtime 1723615844.78467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\statement_splitter.py first seen with mtime 1723615840.4476695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\models.py first seen with mtime 1725215624.8807528
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\base.py first seen with mtime 1723725765.7159553
+File C:\Program Files\Python312\Lib\urllib\response.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\defaulttags.py first seen with mtime 1723615845.0016732
+File C:\Program Files\Python312\DLLs\_ssl.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\reloader.py first seen with mtime 1723615845.0696688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\crypto.py first seen with mtime 1723615845.0426714
+File C:\Program Files\Python312\Lib\asyncio\base_tasks.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\__init__.py first seen with mtime 1723615844.9006686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\exceptions.py first seen with mtime 1723615845.0346708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\defaults.py first seen with mtime 1723615845.07567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\csrf.py first seen with mtime 1723615845.0816693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related_descriptors.py first seen with mtime 1723615844.8666744
+File C:\Program Files\Python312\Lib\email\mime\text.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\tokens.py first seen with mtime 1723615840.4446683
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\apps.py first seen with mtime 1723615841.4936688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\global_settings.py first seen with mtime 1723615841.1426704
+File C:\Program Files\Python312\Lib\functools.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\creation.py first seen with mtime 1723615844.7856698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\regex_helper.py first seen with mtime 1723615845.0616684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\encoding.py first seen with mtime 1723615845.0496793
+File C:\Program Files\Python312\Lib\html\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\__init__.py first seen with mtime 1723615844.8686705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\exceptions.py first seen with mtime 1723615844.8306708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\generated.py first seen with mtime 1723615844.8616683
+File C:\Program Files\Python312\Lib\lzma.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\helpers.py first seen with mtime 1723615841.49867
+File C:\Program Files\Python312\Lib\asyncio\tasks.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\base.py first seen with mtime 1723615845.0096755
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\query_utils.py first seen with mtime 1723615844.8566701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templatetags\form_tags.py first seen with mtime 1724218339.3450503
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\models.py first seen with mtime 1723615842.340671
+File C:\Program Files\Python312\Lib\asyncio\queues.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\__init__.py first seen with mtime 1723615844.8406692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\app_directories.py first seen with mtime 1723615845.0146706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\caches.py first seen with mtime 1723615844.6776702
+File C:\Program Files\Python312\Lib\html\entities.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\others.py first seen with mtime 1723615840.4506693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\signals.py first seen with mtime 1723615844.6646707
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1723615844.9896686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\commands\__init__.py first seen with mtime 1723615844.74467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\utils.py first seen with mtime 1723615844.653673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\models.py first seen with mtime 1723615844.8436708
+File C:\Program Files\Python312\Lib\contextvars.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\secrets.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\__init__.py first seen with mtime 1723615840.4456692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\lexer.py first seen with mtime 1723615840.4436715
+File C:\Program Files\Python312\Lib\json\decoder.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\utils.py first seen with mtime 1723615844.7216697
+File C:\Program Files\Python312\Lib\_compat_pickle.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\__init__.py first seen with mtime 1723615842.0376697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\subqueries.py first seen with mtime 1723615844.8966706
+File C:\Program Files\Python312\Lib\email\mime\nonmultipart.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\asyncio.py first seen with mtime 1723615845.0386758
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\__init__.py first seen with mtime 1723615845.06867
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\validation.py first seen with mtime 1723615844.7906704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\html.py first seen with mtime 1723615845.0536761
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\__init__.py first seen with mtime 1724455939.7553954
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\log.py first seen with mtime 1723615842.045671
+File C:\Program Files\Python312\Lib\shutil.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\module_loading.py first seen with mtime 1723615845.0596757
+File C:\Program Files\Python312\Lib\email\headerregistry.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\output.py first seen with mtime 1723615840.451671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_psycopg.cp312-win_amd64.pyd first seen with mtime 1724214950.0316415
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\memory.py first seen with mtime 1723615844.725677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\utils.py first seen with mtime 1723615844.7326698
+File C:\Program Files\Python312\Lib\heapq.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\handlers.py first seen with mtime 1723615844.6496701
+File C:\Program Files\Python312\Lib\asyncio\runners.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\base.py first seen with mtime 1723615844.7696698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\utils.py first seen with mtime 1723615845.0356688
+File C:\Program Files\Python312\DLLs\_overlapped.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\local.py first seen with mtime 1723615840.88967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\__init__.py first seen with mtime 1723615841.1336758
+File C:\Program Files\Python312\Lib\signal.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\http.py first seen with mtime 1723615845.054669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\formats.py first seen with mtime 1723615845.0506775
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\admin.py first seen with mtime 1723616097.8154206
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\registry.py first seen with mtime 1723615844.681674
+File C:\Program Files\Python312\Lib\linecache.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\json\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\inspect.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\taskgroups.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\base.py first seen with mtime 1723615844.7406704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\compatibility\django_4_0.py first seen with mtime 1723615844.710668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\cache.py first seen with mtime 1723615845.0786698
+File C:\Program Files\Python312\Lib\json\encoder.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\engine.py first seen with mtime 1723615845.0026743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\reindent.py first seen with mtime 1723615840.451671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\schema.py first seen with mtime 1723615844.8206701
+File C:\Program Files\Python312\Lib\quopri.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\trans_real.py first seen with mtime 1723615845.0716703
+File C:\Program Files\Python312\Lib\wsgiref\handlers.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\streams.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\config.py first seen with mtime 1723615841.1376712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\wsgi.py first seen with mtime 1723615844.6676688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\widgets.py first seen with mtime 1723615841.5036676
+File C:\Program Files\Python312\Lib\email\mime\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\paginator.py first seen with mtime 1723615844.6636763
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\datastructures.py first seen with mtime 1723615845.043671
+File C:\Program Files\Python312\Lib\numbers.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\sql.py first seen with mtime 1724214950.0396423
+File C:\Program Files\Python312\Lib\asyncio\proactor_events.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\select.pyd first seen with mtime 1702009264.0
+File C:\Program Files\Python312\DLLs\_asyncio.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\DLLs\_lzma.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\utils.py first seen with mtime 1723615841.5026689
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\filesystem.py first seen with mtime 1723615844.7246685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1723615843.787677
+File C:\Program Files\Python312\Lib\fnmatch.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\unicodedata.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\autoreload.py first seen with mtime 1723615844.9966784
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\datastructures.py first seen with mtime 1723615844.8766692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deprecation.py first seen with mtime 1723615845.0476696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\backends.py first seen with mtime 1723615842.3326695
+File C:\Program Files\Python312\Lib\asyncio\windows_utils.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\tokens.py first seen with mtime 1723615842.3426714
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\debug.py first seen with mtime 1723615845.0746694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\utils.py first seen with mtime 1723615844.8396685
+File C:\Program Files\Python312\Lib\tempfile.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\numberformat.py first seen with mtime 1723615845.0606692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\decorators.py first seen with mtime 1723615841.495669
+File C:\Program Files\Python312\Lib\dis.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\introspection.py first seen with mtime 1723615844.818677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\__init__.py first seen with mtime 1723616062.9141948
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\base.py first seen with mtime 1723615845.0876706
+File C:\Program Files\Python312\Lib\logging\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\client.py first seen with mtime 1723615844.8156695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\text.py first seen with mtime 1723615845.0636747
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\converters.py first seen with mtime 1723615845.0336695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\request.py first seen with mtime 1723615844.9866695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\tree.py first seen with mtime 1723615845.0656703
+File C:\Program Files\Python312\Lib\re\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\__init__.py first seen with mtime 1723615844.8126726
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\mixins.py first seen with mtime 1723615844.87167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\static.py first seen with mtime 1723615845.0766702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_json.py first seen with mtime 1724214950.0146418
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\models.py first seen with mtime 1723615844.90567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\window.py first seen with mtime 1723615844.8736696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\exceptions.py first seen with mtime 1723615840.4416685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\decorators.py first seen with mtime 1723615845.0476696
+File C:\Program Files\Python312\Lib\zoneinfo\_common.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\protocols.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\base.py first seen with mtime 1723615844.7286716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\choices.py first seen with mtime 1723615845.0416696
+File C:\Program Files\Python312\Lib\ssl.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\generator.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\operator.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\security.py first seen with mtime 1723615844.995673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\__init__.py first seen with mtime 1723615845.0776706
+File C:\Program Files\Python312\DLLs\_uuid.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\__init__.py first seen with mtime 1723615844.6616702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\model_checks.py first seen with mtime 1723615844.6806686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\__init__.py first seen with mtime 1723615840.4486701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\commands\runserver.py first seen with mtime 1723615844.7576692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\debug.py first seen with mtime 1723615845.0826705
+File C:\Program Files\Python312\Lib\email\encoders.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py first seen with mtime 1725224470.3901522
+File C:\Program Files\Python312\Lib\difflib.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\encodings\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\async_checks.py first seen with mtime 1723615844.6766694
+File C:\Program Files\Python312\Lib\zoneinfo\_tzpath.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\management\__init__.py first seen with mtime 1723615843.045671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\csrf.py first seen with mtime 1723615844.712668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\base.py first seen with mtime 1723615845.01567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\checks.py first seen with mtime 1723615841.49467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\timezone.py first seen with mtime 1723615845.0656703
+File C:\Program Files\Python312\Lib\email\errors.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\list.py first seen with mtime 1723615845.0936706
+File C:\Program Files\Python312\Lib\enum.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dates.py first seen with mtime 1723615845.0456693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\utils.py first seen with mtime 1723615843.7856784
+File C:\Program Files\Python312\Lib\copy.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\header.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\wsgiref\simple_server.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\uploadedfile.py first seen with mtime 1723615844.7206688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\views.py first seen with mtime 1725218527.7133496
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\color.py first seen with mtime 1723615844.7416704
+File C:\Program Files\Python312\Lib\asyncio\selector_events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deconstruct.py first seen with mtime 1723615845.0466805
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\message.py first seen with mtime 1723615844.7316694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\__init__.py first seen with mtime 1723616097.8203936
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\base.py first seen with mtime 1723615844.9976704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\dispatch\dispatcher.py first seen with mtime 1723615844.89967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\tz.py first seen with mtime 1723615845.0226688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\introspection.py first seen with mtime 1723615844.78767
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\creation.py first seen with mtime 1723615844.8166735
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\constants.py first seen with mtime 1723615844.8476698
+File C:\Program Files\Python312\Lib\warnings.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\urls.py first seen with mtime 1723615844.6836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\cache.py first seen with mtime 1723615845.0406702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\apps.py first seen with mtime 1723616116.4230378
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\multipartparser.py first seen with mtime 1723615844.985669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\operations.py first seen with mtime 1723615844.818677
+File C:\Program Files\Python312\Lib\asyncio\sslproto.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\keywords.py first seen with mtime 1723615840.4426732
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\middleware.py first seen with mtime 1723615842.338669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\__init__.py first seen with mtime 1723615844.7146697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\psycopg_any.py first seen with mtime 1723615844.819679
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\models.py first seen with mtime 1725067669.9854548
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\__init__.py first seen with mtime 1723615844.9876716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\options.py first seen with mtime 1723615844.8546708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\images.py first seen with mtime 1723615844.71667
+File C:\Program Files\Python312\Lib\datetime.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\locale\__init__.py first seen with mtime 1723615841.1496694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\__init__.py first seen with mtime 1723615842.045671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\urls.py first seen with mtime 1724483770.535436
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\static.py first seen with mtime 1723615845.0216725
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\__init__.py first seen with mtime 1723615844.7116685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\enums.py first seen with mtime 1723615844.8506696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes first seen with mtime 1724914204.5014217
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\crear_paciente.html first seen with mtime 1725218592.1266198
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\detalle_paciente.html first seen with mtime 1725214451.1935334
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\editar_paciente.html first seen with mtime 1725218623.9656434
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\lista_pacientes.html first seen with mtime 1724915538.6793954
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\templates\base.html first seen with mtime 1724867183.4364297
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes first seen with mtime 1724222118.5953138
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\menu_reportes.html first seen with mtime 1724481116.109396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\registrar_sesion.html first seen with mtime 1725224174.7230918
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\ver_estadisticas.html first seen with mtime 1724481140.27616
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios first seen with mtime 1724906817.2582743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\dashboard.html first seen with mtime 1725068537.839754
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\login.html first seen with mtime 1724892377.2211792
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\perfil.html first seen with mtime 1724903902.7907133
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\signup.html first seen with mtime 1724904189.7163606
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_confirm_delete.html first seen with mtime 1724887330.4162598
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_detail.html first seen with mtime 1724906819.0751057
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_list.html first seen with mtime 1724907073.9348688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_update.html first seen with mtime 1724904650.457551
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4 first seen with mtime 1724455939.765396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\accordion-group.html first seen with mtime 1724455939.7563965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\accordion.html first seen with mtime 1724455939.7573965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\betterform.html first seen with mtime 1724455939.7573965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\display_form.html first seen with mtime 1724455939.7583995
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\errors.html first seen with mtime 1724455939.7593968
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\errors_formset.html first seen with mtime 1724455939.7603972
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\field.html first seen with mtime 1724455939.7603972
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\inputs.html first seen with mtime 1724455939.761397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout first seen with mtime 1724455939.7843983
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\table_inline_formset.html first seen with mtime 1724455939.7623963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\uni_form.html first seen with mtime 1724455939.7633967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\uni_formset.html first seen with mtime 1724455939.7633967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\whole_uni_form.html first seen with mtime 1724455939.7643974
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\whole_uni_formset.html first seen with mtime 1724455939.765396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\alert.html first seen with mtime 1724455939.7663963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\attrs.html first seen with mtime 1724455939.7663963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\baseinput.html first seen with mtime 1724455939.767398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\button.html first seen with mtime 1724455939.7683957
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\buttonholder.html first seen with mtime 1724455939.7683957
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\checkboxselectmultiple.html first seen with mtime 1724455939.7693985
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\checkboxselectmultiple_inline.html first seen with mtime 1724455939.7693985
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\column.html first seen with mtime 1724455939.7703989
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\div.html first seen with mtime 1724455939.771397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\fieldset.html first seen with mtime 1724455939.7733967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_errors.html first seen with mtime 1724455939.771397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_errors_block.html first seen with mtime 1724455939.7723956
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_file.html first seen with mtime 1724455939.7723956
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_with_buttons.html first seen with mtime 1724455939.7733967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\formactions.html first seen with mtime 1724455939.7743986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\help_text.html first seen with mtime 1724455939.7753975
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\help_text_and_errors.html first seen with mtime 1724455939.776396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\inline_field.html first seen with mtime 1724455939.7773986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\modal.html first seen with mtime 1724455939.7773986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\multifield.html first seen with mtime 1724455939.778398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\prepended_appended_text.html first seen with mtime 1724455939.779398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\radioselect.html first seen with mtime 1724455939.780398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\radioselect_inline.html first seen with mtime 1724455939.7813966
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\row.html first seen with mtime 1724455939.7813966
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\tab-link.html first seen with mtime 1724455939.7823977
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\tab.html first seen with mtime 1724455939.7833965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\uneditable_input.html first seen with mtime 1724455939.785398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1723615844.8756697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1723615843.052675
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1723615842.5426693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\migrations\__init__.py first seen with mtime 1725068330.6390293
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1723615841.88467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1723615841.8866687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\wsgi.py first seen with mtime 1723616062.9131925
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1723615842.5446699
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\migrations\__init__.py first seen with mtime 1725068316.2976162
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1723615842.548671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\migrations\0001_initial.py first seen with mtime 1725068350.972721
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1723615842.546669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1723615844.4406688
+File C:\Program Files\Python312\Lib\stringprep.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1723615841.8866687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\migrations\0001_initial.py first seen with mtime 1725068316.301616
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1723615844.2486718
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1723615842.57667
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1723615843.05167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1723615842.5456698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\migrations\__init__.py first seen with mtime 1725068350.9697273
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1723615842.5746684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1723615842.543671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1723615844.8366725
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1723615842.5776713
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\migrations\0001_initial.py first seen with mtime 1725068330.6430306
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1723615844.4406688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1723615842.5476687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1723615842.548671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1723615843.0506704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1723615842.546669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1723615841.8836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1723615842.5776713
+File C:\Program Files\Python312\Lib\encodings\idna.py first seen with mtime 1702009214.0
+Invalid HTTP_HOST header: '192.168.0.137:8000'. You may need to add '192.168.0.137' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.137:8000'. You may need to add '192.168.0.137' to ALLOWED_HOSTS.
+Bad Request: /usuarios/dashboard/
+"GET /usuarios/dashboard/ HTTP/1.1" 400 143
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1723615844.24367
+Invalid HTTP_HOST header: '192.168.0.137:8000'. You may need to add '192.168.0.137' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.137:8000'. You may need to add '192.168.0.137' to ALLOWED_HOSTS.
+Bad Request: /
+"GET / HTTP/1.1" 400 143
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py previous mtime: 1725224470.3901522, current mtime: 1725224836.4828918
+C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py notified as changed. Signal results: [(<function template_changed at 0x000001881C5676A0>, None), (<function translation_file_changed at 0x000001881D4E3A60>, None)].
+C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates with glob **/*.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\locale with glob **/*.mo.
+Watching dir C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\locale with glob **/*.mo.
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\__init__.py first seen with mtime 1723615845.0726695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\debug.py first seen with mtime 1723615845.0826705
+File C:\Program Files\Python312\Lib\traceback.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\operations.py first seen with mtime 1723615844.7886727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\__init__.py first seen with mtime 1723615844.6616702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dateparse.py first seen with mtime 1723615845.0446708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\__init__.py first seen with mtime 1723615844.7766688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\log.py first seen with mtime 1723615842.045671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\move.py first seen with mtime 1723615844.7186706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\utils.py first seen with mtime 1723615845.007686
+File C:\Program Files\Python312\Lib\pkgutil.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\grouping.py first seen with mtime 1723615840.4476695
+File C:\Program Files\Python312\Lib\enum.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\fnmatch.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\security.py first seen with mtime 1723615844.995673
+File C:\Program Files\Python312\Lib\asyncio\proactor_events.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\ctypes\_endian.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\validators.py first seen with mtime 1723615844.6666684
+File C:\Program Files\Python312\Lib\asyncio\transports.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\wsgiref\handlers.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\local.py first seen with mtime 1723615840.88967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\filesystem.py first seen with mtime 1723615844.7246685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\utils.py first seen with mtime 1723615844.6686692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\__init__.py first seen with mtime 1723615844.6466691
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\views.py first seen with mtime 1725069990.084296
+File C:\Program Files\Python312\Lib\shutil.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py first seen with mtime 1723615842.0396712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_psycopg.cp312-win_amd64.pyd first seen with mtime 1724214950.0316415
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\base.py first seen with mtime 1723615844.7156744
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\constraints.py first seen with mtime 1723615844.84867
+File C:\Program Files\Python312\Lib\asyncio\base_events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\models.py first seen with mtime 1725215624.8807528
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\base.py first seen with mtime 1723615844.9976704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\memory.py first seen with mtime 1723615844.725677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\l10n.py first seen with mtime 1723615845.0216725
+File C:\Program Files\Python312\Lib\calendar.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\errors.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1723615844.832669
+File C:\Program Files\Python312\Lib\collections\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\mixins.py first seen with mtime 1723615844.87167
+File C:\Program Files\Python312\Lib\datetime.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\admin.py first seen with mtime 1724887727.0868363
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\base.py first seen with mtime 1723615844.7116685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\handler.py first seen with mtime 1723615844.7246685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\asyncio.py first seen with mtime 1723615845.0386758
+File C:\Program Files\Python312\Lib\linecache.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_range.py first seen with mtime 1724214950.0336418
+File C:\Program Files\Python312\Lib\sysconfig.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\graphlib.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\bisect.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\mixins.py first seen with mtime 1723615844.72667
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\__init__.py first seen with mtime 1723615845.0086691
+File C:\Program Files\Python312\Lib\email\charset.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\__init__.py first seen with mtime 1723615844.6766694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\layout_slice.py first seen with mtime 1723725765.7207148
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\__init__.py first seen with mtime 1723725765.7149515
+File C:\Program Files\Python312\Lib\email\_header_value_parser.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_hashlib.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\manage.py first seen with mtime 1723616062.883193
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\urls\__init__.py first seen with mtime 1723615841.489669
+File C:\Program Files\Python312\Lib\email\contentmanager.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loader_tags.py first seen with mtime 1723615845.0056696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\apps.py first seen with mtime 1723616097.8173928
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\middleware.py first seen with mtime 1723615843.7846751
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\__init__.py first seen with mtime 1723615844.8296733
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\subqueries.py first seen with mtime 1723615844.8966706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\__init__.py first seen with mtime 1723615844.2386694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\utils.py first seen with mtime 1723615845.0356688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\sql.py first seen with mtime 1723615840.4446683
+File C:\Program Files\Python312\Lib\asyncio\windows_utils.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\__init__.py first seen with mtime 1723615844.2446697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\model_checks.py first seen with mtime 1723615844.6806686
+File C:\Program Files\Python312\DLLs\select.pyd first seen with mtime 1702009264.0
+File C:\Program Files\Python312\Lib\subprocess.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\tokens.py first seen with mtime 1723615840.4446683
+File C:\Program Files\Python312\Lib\hmac.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\__init__.py first seen with mtime 1724455939.7553954
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\base.py first seen with mtime 1723615844.72367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\__init__.py first seen with mtime 1723615840.4486701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\query.py first seen with mtime 1723615844.8566701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\images.py first seen with mtime 1723615844.71667
+File C:\Program Files\Python312\Lib\decimal.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\checks.py first seen with mtime 1723615842.5836692
+File C:\Program Files\Python312\Lib\base64.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\dataclasses.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_overlapped.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\context.py first seen with mtime 1723615844.9986763
+File C:\Program Files\Python312\Lib\email\utils.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\common.py first seen with mtime 1723615844.990671
+File C:\Program Files\Python312\Lib\pickle.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\socketserver.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\gzip.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\__init__.py first seen with mtime 1723615840.4396703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py first seen with mtime 1723615844.658672
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\client.py first seen with mtime 1723615844.78467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\smartif.py first seen with mtime 1723615845.0066743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\json.py first seen with mtime 1723615844.8626692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\datastructures.py first seen with mtime 1723615844.8766692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\comparison.py first seen with mtime 1723615844.86967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\storage\__init__.py first seen with mtime 1723615844.722669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\hashers.py first seen with mtime 1723615842.3376706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\temp.py first seen with mtime 1723615844.7196686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1723615844.9896686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\window.py first seen with mtime 1723615844.8736696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\filesystem.py first seen with mtime 1723615845.017669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\formatter.py first seen with mtime 1723615840.4416685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\apps.py first seen with mtime 1723615843.7816753
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\base.py first seen with mtime 1723615844.2456694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\apps.py first seen with mtime 1723615842.5826707
+File C:\Program Files\Python312\Lib\queue.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\current_thread_executor.py first seen with mtime 1723615840.88967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\renderers.py first seen with mtime 1723615844.9066706
+File C:\Program Files\Python312\Lib\numbers.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\concurrent\futures\thread.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\library.py first seen with mtime 1723615845.0046704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templatetags\__init__.py first seen with mtime 1724218508.2730172
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\__init__.py first seen with mtime 1723615844.4456706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\creation.py first seen with mtime 1723615844.8166735
+File C:\Program Files\Python312\Lib\email\_policybase.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\signal.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\compatibility\django_4_0.py first seen with mtime 1723615844.710668
+File C:\Program Files\Python312\Lib\importlib\_abc.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\sslproto.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\errors.py first seen with mtime 1724214950.0346408
+File C:\Program Files\Python312\Lib\re\_parser.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\feedparser.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\_parseaddr.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\schema.py first seen with mtime 1723615844.8206701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\__init__.py first seen with mtime 1723615841.1416712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\fields.py first seen with mtime 1723615844.9026694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\request.py first seen with mtime 1723615844.9866695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\sessions.py first seen with mtime 1723615844.7136686
+File C:\Program Files\Python312\Lib\ipaddress.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\__init__.py first seen with mtime 1723615843.7806764
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\schema.py first seen with mtime 1723615844.7896705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\filters.py first seen with mtime 1723615841.4966688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deprecation.py first seen with mtime 1723615845.0476696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\__init__.py first seen with mtime 1723615844.7276688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\checks.py first seen with mtime 1723615841.49467
+File C:\Program Files\Python312\Lib\email\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\formats.py first seen with mtime 1723615845.0506775
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\commands\runserver.py first seen with mtime 1723615844.7576692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\__init__.py first seen with mtime 1723615842.0376697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\tokens.py first seen with mtime 1723615842.3426714
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\utils.py first seen with mtime 1723615840.4456692
+File C:\Program Files\Python312\Lib\email\parser.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\filebased.py first seen with mtime 1723615844.6726706
+File C:\Program Files\Python312\Lib\random.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\csrf.py first seen with mtime 1723615845.0736687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\management\__init__.py first seen with mtime 1723615842.5406694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\base.py first seen with mtime 1723615845.01567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\utils.py first seen with mtime 1723615844.7826703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\shortcuts.py first seen with mtime 1723615841.135671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\numberformat.py first seen with mtime 1723615845.0606692
+File C:\Program Files\Python312\Lib\json\scanner.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\__init__.py first seen with mtime 1723615844.6556695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\forms.py first seen with mtime 1725223557.2234583
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\__init__.py first seen with mtime 1723615845.0866723
+File C:\Program Files\Python312\Lib\encodings\cp1252.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\compatibility\__init__.py first seen with mtime 1723615844.6846704
+File C:\Program Files\Python312\DLLs\_lzma.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\locale.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\utils.py first seen with mtime 1723615844.9076686
+File C:\Program Files\Python312\Lib\keyword.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\exceptions.py first seen with mtime 1723615841.495669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\i18n.py first seen with mtime 1723615845.020669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_json.py first seen with mtime 1724214950.0146418
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\models.py first seen with mtime 1723615844.90567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\locmem.py first seen with mtime 1723615844.6736696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\introspection.py first seen with mtime 1723615844.78767
+File C:\Program Files\Python312\Lib\asyncio\exceptions.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\windows_events.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\headerregistry.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\forms.py first seen with mtime 1723615842.5846686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\management\__init__.py first seen with mtime 1723615843.045671
+File C:\Program Files\Python312\Lib\_compat_pickle.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\iterators.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\text.py first seen with mtime 1723615844.8726697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\widgets.py first seen with mtime 1723615844.9086697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\__init__.py first seen with mtime 1723615844.7116685
+File C:\Program Files\Python312\Lib\copy.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\backends.py first seen with mtime 1723615842.3326695
+File C:\Program Files\Python312\Lib\functools.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\apps.py first seen with mtime 1723616116.4230378
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\__init__.py first seen with mtime 1723615844.874669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\__init__.py first seen with mtime 1723616116.4250393
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\creation.py first seen with mtime 1723615844.7856698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\base.py first seen with mtime 1723725765.7159553
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\__init__.py first seen with mtime 1723615842.045671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\urls.py first seen with mtime 1725068218.6709704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\__init__.py first seen with mtime 1723616097.8203936
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py first seen with mtime 1725224836.4828918
+File C:\Program Files\Python312\Lib\difflib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\generated.py first seen with mtime 1723615844.8616683
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\__init__.py first seen with mtime 1723615844.8686705
+File C:\Program Files\Python312\Lib\uuid.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\base_subprocess.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\_encoded_words.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\glob.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\__init__.py first seen with mtime 1723615842.3296688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\layout.py first seen with mtime 1723725765.7197196
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1723615843.787677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\ddl_references.py first seen with mtime 1723615844.7806704
+File C:\Program Files\Python312\Lib\asyncio\queues.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\email\mime\nonmultipart.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\ctypes\wintypes.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\_compression.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\timeouts.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\tz.py first seen with mtime 1723615845.0226688
+File C:\Program Files\Python312\DLLs\_bz2.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\apps.py first seen with mtime 1723615842.3316696
+File C:\Program Files\Python312\Lib\html\entities.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\dis.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\expressions.py first seen with mtime 1723615844.851671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\duration.py first seen with mtime 1723615845.0486765
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\common.py first seen with mtime 1723615845.0806713
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\query.py first seen with mtime 1723615844.8956685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\helper.py first seen with mtime 1723725765.7197196
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\defaulttags.py first seen with mtime 1723615845.0016732
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\views.py first seen with mtime 1723615842.587669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\management\commands\__init__.py first seen with mtime 1723615844.6556695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\__init__.py first seen with mtime 1723615840.4456692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\utils.py first seen with mtime 1723615841.5026689
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\urls.py first seen with mtime 1724914416.6254811
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\introspection.py first seen with mtime 1723615844.818677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\static.py first seen with mtime 1723615845.0766702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\app_directories.py first seen with mtime 1723615845.0146706
+File C:\Program Files\Python312\Lib\urllib\error.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\zoneinfo\__init__.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\urls.py first seen with mtime 1724906775.087431
+File C:\Program Files\Python312\Lib\logging\handlers.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\apps.py first seen with mtime 1723615844.647669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\datastructures.py first seen with mtime 1723615845.043671
+File C:\Program Files\Python312\Lib\_weakrefset.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\aggregates.py first seen with mtime 1723615844.8456724
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\sync.py first seen with mtime 1723615840.8926694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\admin.py first seen with mtime 1723616097.8154206
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\models.py first seen with mtime 1724485587.7972074
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\decorators.py first seen with mtime 1723615841.495669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\utils.py first seen with mtime 1723615844.653673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\requests.py first seen with mtime 1723615844.451671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\__init__.py first seen with mtime 1723615844.7146697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\base.py first seen with mtime 1723615844.7406704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\utils.py first seen with mtime 1723615844.8396685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\__init__.py first seen with mtime 1723615844.9876716
+File C:\Program Files\Python312\Lib\warnings.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\exceptions.py first seen with mtime 1723615845.0346708
+File C:\Program Files\Python312\DLLs\_decimal.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\keywords.py first seen with mtime 1723615840.4426732
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\signals.py first seen with mtime 1723615842.341669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1723615844.8316703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\asgi.py first seen with mtime 1723615844.7276688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\main.py first seen with mtime 1725224612.8831515
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\exceptions.py first seen with mtime 1723615844.662673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\files.py first seen with mtime 1723615844.860669
+File C:\Program Files\Python312\Lib\ssl.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\dispatch\__init__.py first seen with mtime 1723615844.898669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\indexes.py first seen with mtime 1723615844.8526683
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\output.py first seen with mtime 1723615840.451671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\csrf.py first seen with mtime 1723615844.9916697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\extensions.py first seen with mtime 1724214950.0356412
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\special.py first seen with mtime 1723615844.8446696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\__init__.py first seen with mtime 1723615845.0306692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\edit.py first seen with mtime 1723615845.0926716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\parser.py first seen with mtime 1725224612.884152
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\signals.py first seen with mtime 1723615844.7816699
+File C:\Program Files\Python312\Lib\importlib\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\reloader.py first seen with mtime 1723615845.0696688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\utils.py first seen with mtime 1723615844.8586707
+File C:\Program Files\Python312\Lib\urllib\parse.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\sql.py first seen with mtime 1724214950.0396423
+File C:\Program Files\Python312\Lib\asyncio\log.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\__init__.py first seen with mtime 1723725765.7217162
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_modify.py first seen with mtime 1723615842.0416698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\forms.py first seen with mtime 1723615844.9036694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\decorators.py first seen with mtime 1723615845.0476696
+File C:\Program Files\Python312\DLLs\unicodedata.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\forms.py first seen with mtime 1724905380.858044
+File C:\Program Files\Python312\Lib\http\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_socket.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\email\mime\message.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\http\client.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\middleware.py first seen with mtime 1723615842.338669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\text.py first seen with mtime 1723615845.0636747
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\bootstrap.py first seen with mtime 1723725765.716955
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\psycopg_any.py first seen with mtime 1723615844.819679
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\paginator.py first seen with mtime 1723615844.6636763
+File C:\Program Files\Python312\Lib\email\mime\text.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_utils.py first seen with mtime 1723725765.7257178
+File C:\Program Files\Python312\Lib\asyncio\staggered.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\validation.py first seen with mtime 1723615844.7906704
+File C:\Program Files\Python312\Lib\wsgiref\headers.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\password_validation.py first seen with mtime 1723615842.340671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\reindent.py first seen with mtime 1723615840.451671
+File C:\Program Files\Python312\Lib\_markupbase.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\zoneinfo\_common.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\signals.py first seen with mtime 1723615844.6646707
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\cookie.py first seen with mtime 1723615844.9846702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\options.py first seen with mtime 1723615841.500669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\response.py first seen with mtime 1723615844.9876716
+File C:\Program Files\Python312\Lib\wsgiref\__init__.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\color.py first seen with mtime 1723615844.7416704
+File C:\Program Files\Python312\Lib\gettext.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\trans_real.py first seen with mtime 1723615845.0716703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\wsgi.py first seen with mtime 1723615844.7306678
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\_ipaddress.py first seen with mtime 1724214950.0136402
+File C:\Program Files\Python312\Lib\html\parser.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\futures.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\hashlib.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\streams.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\__init__.py first seen with mtime 1724214950.012679
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related.py first seen with mtime 1723615844.8656697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\base.py first seen with mtime 1723615845.0096755
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\exceptions.py first seen with mtime 1723725765.7187085
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\asgiref\__init__.py first seen with mtime 1723615840.8876686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\base_session.py first seen with mtime 1723615844.24067
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\http.py first seen with mtime 1723615845.054669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\utils.py first seen with mtime 1723615844.7326698
+File C:\Program Files\Python312\Lib\email\policy.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\json\decoder.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\signals.py first seen with mtime 1723615844.8576703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py first seen with mtime 1723725765.7247167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\formsets.py first seen with mtime 1723615844.9046807
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\admin_urls.py first seen with mtime 1723615842.0436714
+File C:\Program Files\Python312\Lib\wsgiref\util.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\opcode.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\mixins.py first seen with mtime 1723615844.8636694
+File C:\Program Files\Python312\Lib\re\_constants.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\__init__.py first seen with mtime 1723615845.0366712
+File C:\Program Files\Python312\Lib\asyncio\subprocess.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\taskgroups.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\cache.py first seen with mtime 1723615845.0196698
+File C:\Program Files\Python312\Lib\logging\config.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\utils.py first seen with mtime 1723725765.7217162
+File C:\Program Files\Python312\Lib\asyncio\coroutines.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\math.py first seen with mtime 1723615844.8706694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\dates.py first seen with mtime 1723615845.0886743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\locale\__init__.py first seen with mtime 1723615841.1496694
+File C:\Program Files\Python312\Lib\typing.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\email\mime\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\wsgiref\simple_server.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\pprint.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\enums.py first seen with mtime 1723615844.8506696
+File C:\Program Files\Python312\DLLs\_ssl.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\exceptions.py first seen with mtime 1723615844.8306708
+File C:\Program Files\Python312\Lib\asyncio\locks.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\token.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\lorem_ipsum.py first seen with mtime 1723615845.0596757
+File C:\Program Files\Python312\Lib\threading.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\tree.py first seen with mtime 1723615845.0656703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\api.py first seen with mtime 1723615843.7816753
+File C:\Program Files\Python312\Lib\email\quoprimime.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\__init__.py first seen with mtime 1723615844.9836693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dates.py first seen with mtime 1723615845.0456693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\__init__.py first seen with mtime 1723615844.6686692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\response.py first seen with mtime 1723615845.0066743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\utils.py first seen with mtime 1723615843.7856784
+File C:\Program Files\Python312\Lib\asyncio\constants.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\security\csrf.py first seen with mtime 1723615844.712668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\base.py first seen with mtime 1723615844.7286716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\base.py first seen with mtime 1723615845.0316727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\views.py first seen with mtime 1724906719.5022912
+File C:\Program Files\Python312\Lib\asyncio\events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\where.py first seen with mtime 1723615844.8976693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\safestring.py first seen with mtime 1723615845.0616684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\psycopg2\extras.py first seen with mtime 1724214950.0376413
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\inspect.py first seen with mtime 1723615845.055673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\views.py first seen with mtime 1723615844.6546698
+File C:\Program Files\Python312\Lib\zoneinfo\_tzpath.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\variables.py first seen with mtime 1725224612.8851507
+File C:\Program Files\Python312\Lib\re\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\mixins.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\__init__.py first seen with mtime 1723615844.66967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\uploadedfile.py first seen with mtime 1723615844.7206688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py first seen with mtime 1723725765.7247167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\detail.py first seen with mtime 1723615845.0906708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\right_margin.py first seen with mtime 1723615840.4526694
+File C:\Program Files\Python312\Lib\encodings\aliases.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\files.py first seen with mtime 1723615844.6796682
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\utils.py first seen with mtime 1723615844.7216697
+File C:\Program Files\Python312\Lib\email\encoders.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\__init__.py first seen with mtime 1723615844.995673
+File C:\Program Files\Python312\Lib\ctypes\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\registry.py first seen with mtime 1723615844.681674
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\fields.py first seen with mtime 1723615842.5836692
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\actions.py first seen with mtime 1723615841.4926705
+File C:\Program Files\Python312\Lib\asyncio\format_helpers.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1723615844.83367
+File C:\Program Files\Python312\DLLs\_queue.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\base.py first seen with mtime 1723615845.0876706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\dateformat.py first seen with mtime 1723615845.0446708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\features.py first seen with mtime 1723615844.8166735
+File C:\Program Files\Python312\Lib\email\message.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\tasks.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\static.py first seen with mtime 1723615845.0216725
+File C:\Program Files\Python312\Lib\ast.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\deconstruct.py first seen with mtime 1723615845.0466805
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\mixins.py first seen with mtime 1723615842.339671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\defaultfilters.py first seen with mtime 1723615845.00067
+File C:\Program Files\Python312\Lib\platform.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\quopri.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\reprlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\checks.py first seen with mtime 1723615842.3336716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\messages.py first seen with mtime 1723615844.6806686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\manager.py first seen with mtime 1723615844.8536694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\middleware\cache.py first seen with mtime 1723615844.9886687
+File C:\Program Files\Python312\Lib\json\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\models.py first seen with mtime 1723615841.499668
+File C:\Program Files\Python312\Lib\contextlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\base.py first seen with mtime 1723615844.8416698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\boundfield.py first seen with mtime 1723615844.9016695
+File C:\Program Files\Python312\Lib\string.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\__init__.py first seen with mtime 1723615845.0136719
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\dispatch\dispatcher.py first seen with mtime 1723615844.89967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\forms\__init__.py first seen with mtime 1723615844.9006686
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\apps.py first seen with mtime 1723616086.2074687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\proxy.py first seen with mtime 1723615844.8646698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\encoding.py first seen with mtime 1723615845.0496793
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\client.py first seen with mtime 1723615844.8156695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\decorators.py first seen with mtime 1724884851.8394916
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\autoreload.py first seen with mtime 1723615845.0396752
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\forms.py first seen with mtime 1723615842.336669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\registry.py first seen with mtime 1723615841.1386704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\constants.py first seen with mtime 1723615844.8756697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\conf.py first seen with mtime 1723615845.032676
+File C:\Program Files\Python312\Lib\urllib\request.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\asyncio\threads.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\autocomplete.py first seen with mtime 1723615842.0476708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\models.py first seen with mtime 1723615842.5856698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\finders.py first seen with mtime 1723615844.6486695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\caches.py first seen with mtime 1723615844.6776702
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\base.py first seen with mtime 1723615844.846673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\__init__.py first seen with mtime 1723615842.5806694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\http\multipartparser.py first seen with mtime 1723615844.985669
+File C:\Program Files\Python312\Lib\re\_casefix.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\transaction.py first seen with mtime 1723615844.7776697
+File C:\Program Files\Python312\Lib\json\encoder.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\__init__.py first seen with mtime 1723616086.2214313
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\cache.py first seen with mtime 1723615845.0786698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\exceptions.py first seen with mtime 1723615840.4416685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\cache\backends\base.py first seen with mtime 1723615844.6706698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\log.py first seen with mtime 1723615845.0586698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\apps.py first seen with mtime 1723615841.4936688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\csrf.py first seen with mtime 1723615845.0816693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\aligned_indent.py first seen with mtime 1723615840.4496691
+File C:\Program Files\Python312\Lib\operator.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\forms.py first seen with mtime 1725218563.0639467
+File C:\Program Files\Python312\Lib\secrets.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\statement_splitter.py first seen with mtime 1723615840.4476695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\functions\datetime.py first seen with mtime 1723615844.8706694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\uploadhandler.py first seen with mtime 1723615844.7216697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\constants.py first seen with mtime 1723615843.782677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\templates.py first seen with mtime 1723615844.68268
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\__init__.py first seen with mtime 1723615844.8596685
+File C:\Program Files\Python312\Lib\urllib\__init__.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sites\shortcuts.py first seen with mtime 1723615844.4526694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\templatetags\base.py first seen with mtime 1723615842.0446699
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\models.py first seen with mtime 1723615842.340671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\sites.py first seen with mtime 1723615841.500669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\termcolors.py first seen with mtime 1723615845.0626807
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\fields.py first seen with mtime 1723615844.8416698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\engine.py first seen with mtime 1723615845.0026743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\generic\list.py first seen with mtime 1723615845.0936706
+File C:\Program Files\Python312\Lib\email\generator.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\views.py first seen with mtime 1723615842.3446698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\admin.py first seen with mtime 1723615842.3306704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\base.py first seen with mtime 1723615844.7836704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\translation.py first seen with mtime 1723615844.6836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\widgets.py first seen with mtime 1723615841.5036676
+File C:\Program Files\Python312\Lib\mimetypes.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\copyreg.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\contextvars.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\getpass.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\urls.py first seen with mtime 1723615844.6836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\config.py first seen with mtime 1723615841.1376712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\helpers.py first seen with mtime 1723615841.49867
+File C:\Program Files\Python312\Lib\logging\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\base.py first seen with mtime 1723615844.8146727
+File C:\Program Files\Python312\Lib\email\base64mime.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\protocols.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\tokenize.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\crypto.py first seen with mtime 1723615845.0426714
+File C:\Program Files\Python312\DLLs\_ctypes.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\reverse_related.py first seen with mtime 1723615844.8676693
+File C:\Program Files\Python312\Lib\lzma.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\utils.py first seen with mtime 1723615844.7786715
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\message.py first seen with mtime 1723615844.7316694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\cli.py first seen with mtime 1723615840.440668
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\html.py first seen with mtime 1723615845.0536761
+File C:\Program Files\Python312\Lib\bz2.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\__init__.py first seen with mtime 1723615843.787677
+File C:\Program Files\Python312\Lib\weakref.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\admin.py first seen with mtime 1723616116.4210374
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\engine\filter_stack.py first seen with mtime 1723615840.446668
+File C:\Program Files\Python312\Lib\types.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\state.py first seen with mtime 1723615844.8386683
+File C:\Program Files\Python312\Lib\socket.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\__init__.py first seen with mtime 1723615844.7396686
+File C:\Program Files\Python312\Lib\struct.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\DLLs\_zoneinfo.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\functional.py first seen with mtime 1723615845.051672
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\regex_helper.py first seen with mtime 1723615845.0616684
+File C:\Program Files\Python312\Lib\encodings\utf_8.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\heapq.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\others.py first seen with mtime 1723615840.4506693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\models.py first seen with mtime 1723615844.24367
+File C:\Program Files\Python312\Lib\asyncio\base_futures.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\encodings\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\wsgi.py first seen with mtime 1723615844.6676688
+File C:\Program Files\Python312\Lib\nturl2path.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\filters\tokens.py first seen with mtime 1723615840.4536695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\lookups.py first seen with mtime 1723615844.8536694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\deletion.py first seen with mtime 1723615844.849672
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\async_checks.py first seen with mtime 1723615844.6766694
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\decorators\__init__.py first seen with mtime 1723615845.0776706
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\__init__.py first seen with mtime 1723615844.8446696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\__init__.py first seen with mtime 1723615841.1336758
+File C:\Program Files\Python312\Lib\asyncio\selector_events.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\__init__.py first seen with mtime 1723615841.4916697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\__init__.py first seen with mtime 1723615844.7796707
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\features.py first seen with mtime 1723615844.7866697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related_descriptors.py first seen with mtime 1723615844.8666744
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\constants.py first seen with mtime 1723615844.8476698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\__init__.py first seen with mtime 1723615844.768671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\cache.py first seen with mtime 1723615845.0406702
+File C:\Program Files\Python312\Lib\email\header.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\exceptions.py first seen with mtime 1723615845.00367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\apps\__init__.py first seen with mtime 1723615841.1366718
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\models.py first seen with mtime 1723615844.8436708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\query_utils.py first seen with mtime 1723615844.8566701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\admin.py first seen with mtime 1723615842.5816703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\__init__.py first seen with mtime 1723615841.4926705
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\models.py first seen with mtime 1725067669.9854548
+File C:\Program Files\Python312\Lib\tempfile.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\middleware.py first seen with mtime 1723615844.2426715
+File C:\Program Files\Python312\Lib\inspect.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\pathlib.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\timesince.py first seen with mtime 1723615845.06467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1723615844.8366725
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\translation\__init__.py first seen with mtime 1723615845.06867
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py first seen with mtime 1723725765.7227156
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\apps.py first seen with mtime 1723615844.2396703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\servers\__init__.py first seen with mtime 1723615844.7746696
+File C:\Program Files\Python312\Lib\re\_compiler.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\fields\related_lookups.py first seen with mtime 1723615844.8676693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\views\main.py first seen with mtime 1723615842.0496707
+File C:\Program Files\Python312\Lib\concurrent\futures\__init__.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\asyncio\base_tasks.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\base.py first seen with mtime 1723615844.7696698
+File C:\Program Files\Python312\Lib\asyncio\trsock.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\python.py first seen with mtime 1723615844.772671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\_os.py first seen with mtime 1723615845.037671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\signing.py first seen with mtime 1723615844.6656766
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\converters.py first seen with mtime 1723615845.0336695
+File C:\Program Files\Python312\DLLs\_wmi.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\connection.py first seen with mtime 1723615845.0416696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\debug.py first seen with mtime 1723615845.0746694
+File C:\Program Files\Python312\Lib\http\cookies.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\urllib\response.py first seen with mtime 1702009216.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\validators.py first seen with mtime 1723615842.3436701
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\views.py first seen with mtime 1725218527.7133496
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\i18n.py first seen with mtime 1723615845.07567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\timezone.py first seen with mtime 1723615845.0656703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\servers\basehttp.py first seen with mtime 1723615844.7756712
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\conf\global_settings.py first seen with mtime 1723615841.1426704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\urls\resolvers.py first seen with mtime 1723615845.0346708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\files\locks.py first seen with mtime 1723615844.71767
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\options.py first seen with mtime 1723615844.8546708
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\management\commands\__init__.py first seen with mtime 1723615844.74467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\autoreload.py first seen with mtime 1723615844.9966784
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\mail\__init__.py first seen with mtime 1723615844.7306678
+File C:\Program Files\Python312\DLLs\_asyncio.pyd first seen with mtime 1702009266.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\handlers\exception.py first seen with mtime 1723615844.729669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\handlers.py first seen with mtime 1723615844.6496701
+File C:\Program Files\Python312\Lib\email\mime\multipart.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\version.py first seen with mtime 1723615845.066669
+File C:\Program Files\Python312\Lib\http\server.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\hashable.py first seen with mtime 1723615845.0526693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\templatetags\__init__.py first seen with mtime 1723615845.018669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loader.py first seen with mtime 1723615845.0046704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\choices.py first seen with mtime 1723615845.0416696
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\sqlparse\lexer.py first seen with mtime 1723615840.4436715
+File C:\Program Files\Python312\DLLs\_uuid.pyd first seen with mtime 1702009266.0
+File C:\Program Files\Python312\Lib\email\mime\base.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\collections\abc.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\module_loading.py first seen with mtime 1723615845.0596757
+File C:\Program Files\Python312\Lib\concurrent\futures\_base.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\operations\__init__.py first seen with mtime 1723615844.8406692
+File C:\Program Files\Python312\Lib\html\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\checks\database.py first seen with mtime 1723615844.678676
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\dotenv\__init__.py first seen with mtime 1725224612.881152
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\loaders\cached.py first seen with mtime 1723615845.0166693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\urls.py first seen with mtime 1724483770.535436
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\__init__.py first seen with mtime 1723616062.9141948
+File C:\Program Files\Python312\Lib\selectors.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\concurrent\__init__.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\core\serializers\json.py first seen with mtime 1723615844.7706716
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\__init__.py first seen with mtime 1723615844.8126726
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\views\defaults.py first seen with mtime 1723615845.07567
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\base\__init__.py first seen with mtime 1723615844.7826703
+File C:\Program Files\Python312\Lib\asyncio\runners.py first seen with mtime 1702009214.0
+File C:\Program Files\Python312\Lib\textwrap.py first seen with mtime 1702009216.0
+File C:\Program Files\Python312\Lib\argparse.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\backends\postgresql\operations.py first seen with mtime 1723615844.818677
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\checks.py first seen with mtime 1723615844.647669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\migrations\migration.py first seen with mtime 1723615844.8346727
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\utils\ipv6.py first seen with mtime 1723615845.055673
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\base_user.py first seen with mtime 1723615842.3326695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\exceptions.py first seen with mtime 1723615844.2416685
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\backends\django.py first seen with mtime 1723615845.0106697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templatetags\form_tags.py first seen with mtime 1724218339.3450503
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\decorators.py first seen with mtime 1723615842.336669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4 first seen with mtime 1724455939.765396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\accordion-group.html first seen with mtime 1724455939.7563965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\accordion.html first seen with mtime 1724455939.7573965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\betterform.html first seen with mtime 1724455939.7573965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\display_form.html first seen with mtime 1724455939.7583995
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\errors.html first seen with mtime 1724455939.7593968
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\errors_formset.html first seen with mtime 1724455939.7603972
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\field.html first seen with mtime 1724455939.7603972
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\inputs.html first seen with mtime 1724455939.761397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout first seen with mtime 1724455939.7843983
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\table_inline_formset.html first seen with mtime 1724455939.7623963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\uni_form.html first seen with mtime 1724455939.7633967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\uni_formset.html first seen with mtime 1724455939.7633967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\whole_uni_form.html first seen with mtime 1724455939.7643974
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\whole_uni_formset.html first seen with mtime 1724455939.765396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\alert.html first seen with mtime 1724455939.7663963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\attrs.html first seen with mtime 1724455939.7663963
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\baseinput.html first seen with mtime 1724455939.767398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\button.html first seen with mtime 1724455939.7683957
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\buttonholder.html first seen with mtime 1724455939.7683957
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\checkboxselectmultiple.html first seen with mtime 1724455939.7693985
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\checkboxselectmultiple_inline.html first seen with mtime 1724455939.7693985
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\column.html first seen with mtime 1724455939.7703989
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\div.html first seen with mtime 1724455939.771397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\fieldset.html first seen with mtime 1724455939.7733967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_errors.html first seen with mtime 1724455939.771397
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_errors_block.html first seen with mtime 1724455939.7723956
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_file.html first seen with mtime 1724455939.7723956
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\field_with_buttons.html first seen with mtime 1724455939.7733967
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\formactions.html first seen with mtime 1724455939.7743986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\help_text.html first seen with mtime 1724455939.7753975
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\help_text_and_errors.html first seen with mtime 1724455939.776396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\inline_field.html first seen with mtime 1724455939.7773986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\modal.html first seen with mtime 1724455939.7773986
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\multifield.html first seen with mtime 1724455939.778398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\prepended_appended_text.html first seen with mtime 1724455939.779398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\radioselect.html first seen with mtime 1724455939.780398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\radioselect_inline.html first seen with mtime 1724455939.7813966
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\row.html first seen with mtime 1724455939.7813966
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\tab-link.html first seen with mtime 1724455939.7823977
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\tab.html first seen with mtime 1724455939.7833965
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\crispy_bootstrap4\templates\bootstrap4\layout\uneditable_input.html first seen with mtime 1724455939.785398
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes first seen with mtime 1724914204.5014217
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\crear_paciente.html first seen with mtime 1725218592.1266198
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\detalle_paciente.html first seen with mtime 1725214451.1935334
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\editar_paciente.html first seen with mtime 1725218623.9656434
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\templates\pacientes\lista_pacientes.html first seen with mtime 1724915538.6793954
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\templates\base.html first seen with mtime 1724867183.4364297
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios first seen with mtime 1724906817.2582743
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\dashboard.html first seen with mtime 1725068537.839754
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\login.html first seen with mtime 1724892377.2211792
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\perfil.html first seen with mtime 1724903902.7907133
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\signup.html first seen with mtime 1724904189.7163606
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_confirm_delete.html first seen with mtime 1724887330.4162598
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_detail.html first seen with mtime 1724906819.0751057
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_list.html first seen with mtime 1724907073.9348688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\templates\usuarios\user_update.html first seen with mtime 1724904650.457551
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes first seen with mtime 1724222118.5953138
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\menu_reportes.html first seen with mtime 1724481116.109396
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\registrar_sesion.html first seen with mtime 1725224174.7230918
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\templates\reportes\ver_estadisticas.html first seen with mtime 1724481140.27616
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\migrations\0001_initial.py first seen with mtime 1725068316.301616
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1723615844.2486718
+File C:\Program Files\Python312\Lib\encodings\idna.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1723615841.88467
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1723615842.546669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\usuarios\migrations\__init__.py first seen with mtime 1725068316.2976162
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1723615843.0506704
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1723615843.05167
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\migrations\0001_initial.py first seen with mtime 1725068330.6430306
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1723615841.8836703
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1723615842.548671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1723615843.052675
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1723615842.5456698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1723615842.5426693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1723615842.5776713
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1723615842.5776713
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1723615841.8866687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1723615842.5446699
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\pacientes\migrations\__init__.py first seen with mtime 1725068330.6390293
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\migrations\0001_initial.py first seen with mtime 1725068350.972721
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1723615842.57667
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1723615842.548671
+File C:\Program Files\Python312\Lib\stringprep.py first seen with mtime 1702009214.0
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1723615844.4406688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1723615842.5476687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\reportes\migrations\__init__.py first seen with mtime 1725068350.9697273
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1723615841.8866687
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1723615842.5746684
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1723615842.546669
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1723615842.543671
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1723615844.4406688
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1723615844.8756697
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\wsgi.py first seen with mtime 1723616062.9131925
+"GET / HTTP/1.1" 200 2545
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1723615844.24367
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1723615843.7836695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1723615843.7896693
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1723615843.790678
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1723615842.3356695
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\template\context_processors.py first seen with mtime 1723615844.9996698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1723615844.6506698
+File C:\Users\luisc\OneDrive\Escritorio\PG2\env\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1723615843.7886758
+Session data corrupted
+"POST / HTTP/1.1" 302 0
+"GET /usuarios/dashboard/ HTTP/1.1" 302 0
+"GET /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 200 2545
+"GET /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 200 2545
+"POST /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 302 0
+"GET /usuarios/dashboard/ HTTP/1.1" 302 0
+"GET /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 200 2545
+"POST /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 302 0
+"GET /usuarios/dashboard/ HTTP/1.1" 302 0
+"GET /usuarios/login/?next=/usuarios/dashboard/ HTTP/1.1" 200 2545
+File C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py previous mtime: 1725224836.4828918, current mtime: 1725224883.9838994
+C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py notified as changed. Signal results: [(<function template_changed at 0x0000029568CE76A0>, None), (<function translation_file_changed at 0x0000029569C63A60>, None)].
+C:\Users\luisc\OneDrive\Escritorio\PG2\ompedis_project\ompedis_project\settings.py changed, reloading.

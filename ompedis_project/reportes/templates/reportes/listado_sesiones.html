@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de Sesiones{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Listado de Sesiones</h2>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Diagnóstico</th>
+                <th>Género</th>
+                <th>Edad</th>
+                <th>Área</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sesion in sesiones %}
+            <tr>
+                <td>{{ sesion.paciente.nombre }}</td>
+                <td>{{ sesion.diagnostico }}</td>
+                <td>{{ sesion.genero }}</td>
+                <td>{{ sesion.paciente.calcular_edad }}</td>
+                <td>{{ sesion.area }}</td>
+                <td>{{ sesion.fecha_sesion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

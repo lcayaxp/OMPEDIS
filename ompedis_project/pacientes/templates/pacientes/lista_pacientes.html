@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Lista de Pacientes</h2>
+
+    <!-- Menú de Filtros de Estado -->
+    <div class="mb-3">
+        <div class="btn-group" role="group">
+            <a href="?estado=activos" class="btn btn-outline-primary {% if estado == 'activos' %}active{% endif %}">
+                Pacientes Activos
+            </a>
+            <a href="?estado=inactivos" class="btn btn-outline-primary {% if estado == 'inactivos' %}active{% endif %}">
+                Pacientes Inactivos
+            </a>
+        </div>
+    </div>
+
+    <!-- Formulario de Búsqueda -->
+    <form method="GET" action="" class="mb-3">
+        <input type="hidden" name="estado" value="{{ estado }}">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Buscar por nombre o apellido..." value="{{ query }}">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+
+    <a href="{% url 'pacientes:crear_paciente' %}" class="btn btn-success mb-3">Agregar Nuevo Paciente</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for paciente in pacientes %}
+                <tr>
+                    <td>
+                        <a href="{% url 'pacientes:detalle_paciente' paciente.id %}">{{ paciente.nombre }} {{ paciente.apellido }}</a>
+                    </td>
+                    <td class="d-flex align-items-center">
+                        <!-- Toggle de Estado Activo/Inactivo -->
+                        <label class="toggle-switch mb-0 me-2">
+                            <input type="checkbox" disabled {% if paciente.estado_activo %}checked{% endif %}>
+                            <span class="slider"></span>
+                        </label>
+                        <!-- Texto de Estado con margen adicional -->
+                        <span class="ms-4">{% if paciente.estado_activo %}Activo{% else %}Inactivo{% endif %}</span>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="2" class="text-center">No hay pacientes {{ estado }} registrados.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

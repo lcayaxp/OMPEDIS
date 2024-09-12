@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registrar Sesión de Terapia{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Registrar Sesión de Terapia</h1>
+    <form method="post" class="form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_paciente">Nombre del Paciente:</label>
+            {{ form.paciente }}
+            <small class="form-text text-muted">
+                Selecciona un paciente de la lista o 
+                <a href="{{ registrar_paciente_url }}">registra uno nuevo</a>.
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="id_diagnostico">Diagnóstico:</label>
+            {{ form.diagnostico }}
+        </div>
+        <div class="form-group">
+            <label for="id_area">Área:</label>
+            {{ form.area }}
+        </div>
+        <div class="form-group">
+            <label for="id_fecha_sesion">Fecha de la Sesión:</label>
+            {{ form.fecha_sesion }}
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar Sesión</button>
+    </form>
+</div>
+{% endblock %}
+
+<!-- Incluir CSS de Select2 -->
+<link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" />
+
+<!-- Incluir jQuery -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+<!-- Incluir JS de Select2 -->
+<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+
+<!-- Incluir tu archivo de inicialización select2_init.js -->
+<script src="{% static 'js/select2_init.js' %}"></script>
+
+<!-- Mostrar errores si hay alguno en el formulario -->
+{% if form.errors %}
+<div class="alert alert-danger mt-3">
+    <ul>
+        {% for field, errors in form.errors.items %}
+            <li><strong>{{ field }}:</strong> {{ errors|join:", " }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Perfil de Usuario{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="text-center">Perfil de {{ user.username }}</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre de usuario:</label>
+                        <p class="form-control-plaintext">{{ user.username }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo electrónico:</label>
+                        <p class="form-control-plaintext">{{ user.email }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Rol:</label>
+                        <p class="form-control-plaintext">{{ user.get_rol_display }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Departamento:</label>
+                        <p class="form-control-plaintext">{{ user.departamento }}</p>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
