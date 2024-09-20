@@ -43,8 +43,8 @@
             {% endif %}
         </div>
         <div class="card-footer d-flex justify-content-between">
-            <a href="{% url 'pacientes:editar_paciente' paciente.pk %}" class="btn btn-warning">Editar</a>
             <a href="{% url 'pacientes:lista_pacientes' %}" class="btn btn-secondary">Regresar</a>
+            <a href="{% url 'pacientes:editar_paciente' paciente.pk %}" class="btn btn-warning">Editar</a>
         </div>
     </div>
 </div>

@@ -10,36 +10,76 @@
         </div>
     </div>
 
-    <div class="row mt-5">
+    <!-- Centrar las tarjetas -->
+    <div class="row justify-content-center mt-5">
         <!-- Gestión de Pacientes -->
-        <div class="col-md-3">
+        <div class="col-md-3 mb-4">
             <div class="card shadow-sm border-0 rounded-lg text-center">
                 <div class="card-body">
-                    <img src="{% static 'images/gestion.png' %}" alt="Gestión de Pacientes" class="mb-3" style="width: 50px; height: 50px;">
+                    <a href="{% url 'lista_pacientes' %}">
+                        <img src="{% static 'images/gestion.png' %}" alt="Gestión de Pacientes" class="mb-3" style="width: 50px; height: 50px;">
+                    </a>
                     <h5 class="card-title font-weight-bold text-primary">Gestión de Pacientes</h5>
-                    <p class="card-text text-muted">Gestiona pacientes: edita o añade registros..</p>
+                    <p class="card-text text-muted">Gestiona pacientes: edita o añade registros.</p>
                     <a href="{% url 'lista_pacientes' %}" class="btn btn-outline-primary btn-block">Ver Pacientes</a>
                 </div>
             </div>
         </div>
 
-        <!-- Reportes -->
-        <div class="col-md-3">
+        <!-- Sesiones de Terapia -->
+        <div class="col-md-3 mb-4">
             <div class="card shadow-sm border-0 rounded-lg text-center">
                 <div class="card-body">
-                    <img src="{% static 'images/reportes.png' %}" alt="Reportes" class="mb-3" style="width: 50px; height: 50px;">
-                    <h5 class="card-title font-weight-bold text-success">Reportes</h5>
-                    <p class="card-text text-muted">Genera y visualiza reportes de actividades.</p>
-                    <a href="{% url 'menu_reportes' %}" class="btn btn-outline-success btn-block">Ver Reportes</a>
+                    <a href="{% url 'registrar_sesion' %}">
+                        <img src="{% static 'images/sesiones.png' %}" alt="Sesiones de Terapia" class="mb-3" style="width: 50px; height: 50px;">
+                    </a>
+                    <h5 class="card-title font-weight-bold text-info">Sesiones de Terapia</h5>
+                    <p class="card-text text-muted">Registra nuevas sesiones o visualiza el historial de terapias.</p>
+                    <a href="{% url 'registrar_sesion' %}" class="btn btn-outline-info btn-block">Registrar Sesión</a>
                 </div>
             </div>
         </div>
 
-        <!-- Gestión de Usuarios -->
-        <div class="col-md-3">
+        <!-- Reportes -->
+        <div class="col-md-3 mb-4">
             <div class="card shadow-sm border-0 rounded-lg text-center">
                 <div class="card-body">
-                    <img src="{% static 'images/usuario.png' %}" alt="Gestión de Usuarios" class="mb-3" style="width: 50px; height: 50px;">
+                    <a href="{% url 'generar_reporte' %}">
+                        <img src="{% static 'images/report.png' %}" alt="Reportes" class="mb-3" style="width: 50px; height: 50px;">
+                    </a>
+                    <h5 class="card-title font-weight-bold text-success">Reportes</h5>
+                    <p class="card-text text-muted">Genera y visualiza reportes de actividades.</p>
+                    <a href="{% url 'generar_reporte' %}" class="btn btn-outline-success btn-block">Ver Reportes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg text-center">
+                <div class="card-body">
+                    <a href="{% url 'ver_estadisticas' %}">
+                        <img src="{% static 'images/estadisticas.png' %}" alt="Estadísticas" class="mb-3" style="width: 50px; height: 50px;">
+                    </a>
+                    <h5 class="card-title font-weight-bold text-warning">Estadísticas</h5>
+                    <p class="card-text text-muted">Visualiza estadísticas y reportes de rendimiento.</p>
+                    <a href="{% url 'ver_estadisticas' %}" class="btn btn-outline-warning btn-block">Ver Estadísticas</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center mt-3">
+
+        
+                <!-- Gestión de Usuarios -->
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg text-center">
+                <div class="card-body">
+                    <a href="{% url 'user_list' %}">
+                        <img src="{% static 'images/usuario.png' %}" alt="Gestión de Usuarios" class="mb-3" style="width: 50px; height: 50px;">
+                    </a>
                     <h5 class="card-title font-weight-bold text-danger">Gestión de Usuarios</h5>
                     <p class="card-text text-muted">Gestiona los usuarios del sistema.</p>
                     <a href="{% url 'user_list' %}" class="btn btn-outline-danger btn-block">Ver Usuarios</a>

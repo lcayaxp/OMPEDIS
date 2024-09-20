@@ -12,11 +12,13 @@ body {
 .navbar {
     background-color: #006d77; /* Verde azulado oscuro */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem; /* Ajusta los valores de padding */
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 30px; /* Ajusta el tamaño del logo */
 }
+
 
 .navbar-light .navbar-nav .nav-link {
     color: #ffffff;
@@ -35,17 +37,17 @@ body {
 
 /* Estilo para el pie de página */
 footer {
-    background-color: #006d77; /* Verde azulado oscuro */
+    background-color: #006d77; /* Color verde azulado oscuro */
     color: #ffffff;
     border-top: 4px solid #2ec4b6; /* Verde agua */
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px; /* Para que no quede pegado al contenido */
+    position: relative; /* Elimina el fixed */
+    bottom: 0;
 }
 
 footer p {
@@ -53,12 +55,12 @@ footer p {
     padding: 10px;
 }
 
-/* Estilos para el interruptor toggle-switch */
+/* Toggle Switch Chilero*/
 .toggle-switch {
     position: relative;
     display: inline-block;
-    width: 80px;
-    height: 40px;
+    width: 50px;  /* Ajusta el ancho */
+    height: 25px;  /* Ajusta la altura */
     cursor: pointer;
 }
 
@@ -73,17 +75,17 @@ footer p {
     width: 100%;
     height: 100%;
     background-color: #ddd;
-    border-radius: 20px;
+    border-radius: 15px; /* Ajusta el borde para hacerlo más pequeño */
     box-shadow: inset 0 0 0 2px #ccc;
     transition: background-color 0.3s ease-in-out;
 }
 
 .toggle-switch-handle {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 30px;
-    height: 30px;
+    top: 3px;  /* Ajusta la posición superior */
+    left: 3px;  /* Ajusta la posición izquierda */
+    width: 20px;  /* Ajusta el tamaño del círculo */
+    height: 20px;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -96,51 +98,6 @@ footer p {
 }
 
 .toggle-switch input[type="checkbox"]:checked + .toggle-switch-background .toggle-switch-handle {
-    transform: translateX(40px);
+    transform: translateX(25px); /* Ajusta la distancia de desplazamiento */
 }
 
-/* Estilos para el interruptor toggle-switch-alt */
-.toggle-switch-alt {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.toggle-switch-alt input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #04b360;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}

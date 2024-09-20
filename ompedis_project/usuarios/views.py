@@ -12,6 +12,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomAuthenticationForm
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
+from django.contrib.auth import views as auth_views
 
 # Vista para el login mejorada usando AuthenticationForm
 def login_view(request):
@@ -86,3 +87,21 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     model = CustomUser
     template_name = 'usuarios/user_detail.html'
     context_object_name = 'user'
+
+
+# Vistas para la recuperación de contraseña
+class CustomPasswordResetView(auth_views.PasswordResetView):
+    template_name = 'usuarios/password_reset.html'
+    email_template_name = 'usuarios/password_reset_email.html'
+    subject_template_name = 'usuarios/password_reset_subject.txt'
+    success_url = reverse_lazy('password_reset_done')
+
+class CustomPasswordResetDoneView(auth_views.PasswordResetDoneView):
+    template_name = 'usuarios/password_reset_sent.html'
+
+class CustomPasswordResetConfirmView(auth_views.PasswordResetConfirmView):
+    template_name = 'usuarios/password_reset_form.html'
+    success_url = reverse_lazy('password_reset_complete')
+
+class CustomPasswordResetCompleteView(auth_views.PasswordResetCompleteView):
+    template_name = 'usuarios/password_reset_done.html'

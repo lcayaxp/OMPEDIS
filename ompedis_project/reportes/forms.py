@@ -16,3 +16,8 @@ class SesionTerapiaForm(forms.ModelForm):
             'area': forms.Select(choices=[('Neurología', 'Neurología'), ('Traumatología', 'Traumatología')], attrs={'class': 'form-control'}),
             'fecha_sesion': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
         }
+
+class ReporteGeneracionForm(forms.Form):
+    fecha_inicio = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}), required=False)
+    fecha_fin = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}), required=False)
+    paciente = forms.ModelChoiceField(queryset=Paciente.objects.all(), required=False, label="Paciente")

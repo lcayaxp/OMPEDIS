@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 <div class="container mt-5">
     <h2>Lista de Pacientes</h2>
@@ -25,6 +27,7 @@
     </form>
 
     <a href="{% url 'pacientes:crear_paciente' %}" class="btn btn-success mb-3">Agregar Nuevo Paciente</a>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -40,9 +43,11 @@
                     </td>
                     <td class="d-flex align-items-center">
                         <!-- Toggle de Estado Activo/Inactivo -->
-                        <label class="toggle-switch mb-0 me-2">
-                            <input type="checkbox" disabled {% if paciente.estado_activo %}checked{% endif %}>
-                            <span class="slider"></span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" data-id="{{ paciente.id }}" {% if paciente.estado_activo %}checked{% endif %} onchange="toggleEstadoPaciente(this)">
+                            <span class="toggle-switch-background">
+                                <span class="toggle-switch-handle"></span>
+                            </span>
                         </label>
                         <!-- Texto de Estado con margen adicional -->
                         <span class="ms-4">{% if paciente.estado_activo %}Activo{% else %}Inactivo{% endif %}</span>
@@ -57,3 +62,5 @@
     </table>
 </div>
 {% endblock %}
+
+<script src="{% static 'js/lista_pacientes.js' %}"></script>

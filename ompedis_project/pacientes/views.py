@@ -7,6 +7,8 @@ from .models import Paciente, Municipio
 from .forms import PacienteForm, ResponsableForm
 from django.http import JsonResponse
 from django.db.models import Q
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
@@ -98,3 +100,21 @@ class PacienteDetailView(DetailView):
     model = Paciente
     template_name = 'pacientes/detalle_paciente.html'
     context_object_name = 'paciente'
+
+
+@login_required
+@require_POST
+@csrf_exempt
+def cambiar_estado_paciente_view(request):
+    try:
+        data = json.loads(request.body)
+        paciente_id = data.get('id')
+        nuevo_estado = data.get('estado') == 'activo'
+
+        paciente = Paciente.objects.get(id=paciente_id)
+        paciente.estado_activo = nuevo_estado
+        paciente.save()
+
+        return JsonResponse({'success': True})
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)})

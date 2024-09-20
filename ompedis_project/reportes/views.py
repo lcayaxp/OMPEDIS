@@ -6,6 +6,16 @@ from django.db.models import Count, Func
 from django.urls import reverse
 from datetime import date
 from django.db import models 
+from django.http import HttpResponse
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import letter, A4
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import inch
+from reportlab.lib.enums import TA_CENTER
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from io import BytesIO
+from django.http import FileResponse
+from .forms import ReporteGeneracionForm
 
 @login_required
 def menu_reportes_view(request):
@@ -78,3 +88,94 @@ def ver_estadisticas_graficas_view(request):
     }
 
     return render(request, 'reportes/estadisticas_graficas.html', context)
+
+@login_required
+def generar_reporte_view(request):
+    if request.method == 'POST':
+        form = ReporteGeneracionForm(request.POST)
+        if form.is_valid():
+            # Filtrar sesiones de terapia con los parámetros del formulario
+            sesiones = SesionTerapia.objects.all()
+
+            fecha_inicio = form.cleaned_data['fecha_inicio']
+            fecha_fin = form.cleaned_data['fecha_fin']
+            paciente = form.cleaned_data['paciente']
+
+            if fecha_inicio:
+                sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+            if fecha_fin:
+                sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+            if paciente:
+                sesiones = sesiones.filter(paciente=paciente)
+
+            # Crear buffer
+            buffer = BytesIO()
+
+            # Crear el PDF
+            pdf = SimpleDocTemplate(buffer, pagesize=A4)
+
+            # Estilos de texto y elementos
+            styles = getSampleStyleSheet()
+            title_style = styles["Title"]
+            normal_style = styles["BodyText"]
+
+            # Contenido del PDF
+            content = []
+
+            # Encabezado
+            content.append(Paragraph("Reporte de Actividades", title_style))
+            content.append(Spacer(1, 12))
+
+            # Mostrar nombre completo del paciente si está seleccionado
+            if paciente:
+                nombre_completo = f"{paciente.nombre} {paciente.apellido or ''} {paciente.nombre} {paciente.apellido or ''}".strip()
+                content.append(Paragraph(f"Paciente: {nombre_completo}", normal_style))
+                content.append(Spacer(1, 12))
+
+            # Añadir información general
+            content.append(Paragraph("Este informe resume las actividades realizadas durante las sesiones de terapia.", normal_style))
+            content.append(Spacer(1, 12))
+
+            # Crear tabla de datos dinámicamente a partir de las sesiones filtradas
+            data = [['Fecha', 'Diagnóstico', 'Área', 'Género']]  # Encabezados de la tabla
+
+            for sesion in sesiones:
+                data.append([
+                    sesion.fecha_sesion.strftime('%Y-%m-%d'),
+                    sesion.diagnostico,
+                    sesion.area,
+                    'Masculino' if sesion.genero == 'M' else 'Femenino'
+                ])
+
+            # Estilo para la tabla
+            table_style = TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ])
+
+            table = Table(data)
+            table.setStyle(table_style)
+
+            content.append(table)
+            content.append(Spacer(1, 12))
+
+            # Firma final o pie de página
+            content.append(Spacer(1, 48))
+            content.append(Paragraph("Este reporte fue generado automáticamente por el sistema OMPEDIS.", normal_style))
+
+            # Construir PDF
+            pdf.build(content)
+
+            # Enviar PDF como respuesta
+            buffer.seek(0)
+            return FileResponse(buffer, as_attachment=True, filename='reporte_formal.pdf')
+    else:
+        form = ReporteGeneracionForm()
+
+    return render(request, 'reportes/generar_reporte.html', {'form': form})
+
