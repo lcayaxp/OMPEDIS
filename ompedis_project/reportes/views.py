@@ -16,6 +16,15 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from io import BytesIO
 from django.http import FileResponse
 from .forms import ReporteGeneracionForm
+import openpyxl
+from openpyxl.utils import get_column_letter
+from PIL import Image as PILImage
+from base64 import b64decode
+from django.core.files.base import ContentFile
+from PIL import Image
+import io
+import json
+from django.http import JsonResponse
 
 @login_required
 def menu_reportes_view(request):
@@ -35,7 +44,11 @@ def registrar_sesion_view(request):
             sesion = form.save(commit=False)
             sesion.genero = sesion.paciente.genero  # Asignar el género desde el paciente seleccionado
             sesion.save()
-            return redirect('reportes:menu_reportes')
+            # Aquí añadimos el mensaje de éxito
+            return render(request, 'reportes/registrar_sesion.html', {
+                'form': SesionTerapiaForm(),  # Nuevo formulario
+                'success_message': 'Se registró la sesión de terapia con éxito'
+            })
         else:
             print(form.errors)  # Esto ayudará a identificar otros errores si existen
     else:
@@ -45,10 +58,47 @@ def registrar_sesion_view(request):
         'form': form,
     }
     return render(request, 'reportes/registrar_sesion.html', context)
-
+    
 @login_required
 def ver_estadisticas_view(request):
-    return render(request, 'reportes/ver_estadisticas.html')
+    # Filtrar todas las sesiones de terapia con filtros de fecha
+    sesiones = SesionTerapia.objects.all()
+
+    fecha_inicio = request.GET.get('fecha_inicio')
+    fecha_fin = request.GET.get('fecha_fin')
+
+    if fecha_inicio:
+        sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+    if fecha_fin:
+        sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
+    # Calcular rangos de edad para los pacientes
+    rangos_edad = {
+        '0_18': sum(1 for sesion in sesiones if sesion.paciente.calcular_edad() <= 18),
+        '19_35': sum(1 for sesion in sesiones if 19 <= sesion.paciente.calcular_edad() <= 35),
+        '36_60': sum(1 for sesion in sesiones if 36 <= sesion.paciente.calcular_edad() <= 60),
+        '60_plus': sum(1 for sesion in sesiones if sesion.paciente.calcular_edad() > 60),
+    }
+
+    # Contar el total de pacientes femeninos y masculinos
+    total_femeninos = sesiones.filter(genero='Femenino').count()
+    total_masculinos = sesiones.filter(genero='Masculino').count()
+
+    # Obtener el número de terapias por semana
+    terapias_por_semana = sesiones.annotate(
+        week=Week('fecha_sesion')
+    ).values('week').annotate(total=Count('id')).order_by('week')
+
+    # Pasar los datos al contexto
+    context = {
+        'total_femeninos': total_femeninos,
+        'total_masculinos': total_masculinos,
+        'rangos_edad': rangos_edad,
+        'terapias_por_semana': terapias_por_semana,
+        'sesiones': sesiones,  # Añadir las sesiones al contexto para la tabla
+    }
+
+    return render(request, 'reportes/ver_estadisticas.html', context)
 
 @login_required
 def ver_listado_sesiones_view(request):
@@ -58,36 +108,6 @@ def ver_listado_sesiones_view(request):
         'sesiones': sesiones,
     }
     return render(request, 'reportes/listado_sesiones.html', context)
-
-@login_required
-def ver_estadisticas_graficas_view(request):
-    today = date.today()
-
-    # Filtrar sesiones de terapia por rangos de edad calculando la edad del paciente en Python
-    sesiones = SesionTerapia.objects.all()
-    
-    rangos_edad = {
-        '0_18': sum(1 for sesion in sesiones if sesion.paciente.calcular_edad() <= 18),
-        '19_35': sum(1 for sesion in sesiones if 19 <= sesion.paciente.calcular_edad() <= 35),
-        '36_60': sum(1 for sesion in sesiones if 36 <= sesion.paciente.calcular_edad() <= 60),
-        '60_plus': sum(1 for sesion in sesiones if sesion.paciente.calcular_edad() > 60),
-    }
-
-    total_femeninos = SesionTerapia.objects.filter(genero='F').count()
-    total_masculinos = SesionTerapia.objects.filter(genero='M').count()
-
-    terapias_por_semana = SesionTerapia.objects.annotate(
-        week=Week('fecha_sesion')
-    ).values('week').annotate(total=Count('id')).order_by('week')
-
-    context = {
-        'total_femeninos': total_femeninos,
-        'total_masculinos': total_masculinos,
-        'rangos_edad': rangos_edad,
-        'terapias_por_semana': terapias_por_semana,
-    }
-
-    return render(request, 'reportes/estadisticas_graficas.html', context)
 
 @login_required
 def generar_reporte_view(request):
@@ -179,3 +199,99 @@ def generar_reporte_view(request):
 
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
+@login_required
+def exportar_pdf_view(request):
+    if request.method == 'POST':
+        try:
+            # Capturar los datos enviados desde el frontend
+            data = json.loads(request.body)
+            gender_chart_data = data.get('gender_chart')
+            age_range_chart_data = data.get('age_range_chart')
+            weekly_therapies_chart_data = data.get('weekly_therapies_chart')
+
+            # Verificar que los datos no sean None
+            if not gender_chart_data or not age_range_chart_data or not weekly_therapies_chart_data:
+                return JsonResponse({"error": "Faltan gráficos para generar el PDF."}, status=400)
+
+            # Decodificar las imágenes base64
+            gender_chart_img = PILImage.open(io.BytesIO(b64decode(gender_chart_data.split(',')[1])))
+            age_range_chart_img = PILImage.open(io.BytesIO(b64decode(age_range_chart_data.split(',')[1])))
+            weekly_therapies_chart_img = PILImage.open(io.BytesIO(b64decode(weekly_therapies_chart_data.split(',')[1])))
+
+            # Crear el PDF
+            buffer = io.BytesIO()
+            pdf = SimpleDocTemplate(buffer, pagesize=A4)
+
+            elements = []
+
+            # Añadir las imágenes al PDF
+            charts = [
+                gender_chart_img,
+                age_range_chart_img,
+                weekly_therapies_chart_img
+            ]
+
+            for chart in charts:
+                img_buffer = io.BytesIO()
+                chart.save(img_buffer, format='PNG')
+                img_buffer.seek(0)
+                reportlab_img = Image(img_buffer)
+                reportlab_img.drawHeight = 3 * inch  # Ajusta el tamaño de la imagen
+                reportlab_img.drawWidth = 6 * inch
+                elements.append(reportlab_img)
+
+            # Construir el PDF
+            pdf.build(elements)
+
+            # Enviar el PDF como respuesta
+            buffer.seek(0)
+            return FileResponse(buffer, as_attachment=True, filename='reportes_con_graficas.pdf')
+
+        except Exception as e:
+            # Capturar cualquier error y devolver una respuesta JSON con el error
+            return JsonResponse({"error": f"Ocurrió un error: {str(e)}"}, status=500)
+
+    # Si el método no es POST, devolvemos un error
+    return JsonResponse({"error": "Método no permitido."}, status=405)
+@login_required
+def exportar_excel_view(request):
+    # Filtrar las sesiones
+    sesiones = SesionTerapia.objects.all()
+
+    fecha_inicio = request.GET.get('fecha_inicio')
+    fecha_fin = request.GET.get('fecha_fin')
+
+    if fecha_inicio:
+        sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+    if fecha_fin:
+        sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
+    # Crear un archivo Excel en memoria
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    sheet.title = 'Sesiones de Terapia'
+
+    # Crear encabezados
+    headers = ['Fecha', 'Paciente', 'Diagnóstico', 'Área', 'Género']
+    sheet.append(headers)
+
+    # Agregar datos
+    for sesion in sesiones:
+        sheet.append([
+            sesion.fecha_sesion.strftime('%Y-%m-%d'),
+            f"{sesion.paciente.nombre} {sesion.paciente.apellido}",
+            sesion.diagnostico,
+            sesion.area,
+            'Masculino' if sesion.genero == 'M' else 'Femenino'
+        ])
+
+    # Ajustar el ancho de las columnas
+    for col in range(1, len(headers) + 1):
+        sheet.column_dimensions[get_column_letter(col)].width = 20
+
+    # Crear un archivo en memoria
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=estadisticas_sesiones_terapia.xlsx'
+
+    workbook.save(response)
+    return response

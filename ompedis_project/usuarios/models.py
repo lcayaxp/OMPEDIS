@@ -3,12 +3,13 @@ from django.db import models
 
 # Definición de roles
 ROLES_CHOICES = [
-    ('administrador', 'administrador'),
-    ('trabajador', 'Trabajador'),
+    ('administrador', 'Administrador'),
+    ('moderador', 'Moderador'),
+    ('usuario', 'Usuario'),
 ]
 
 class CustomUser(AbstractUser):
-    rol = models.CharField(max_length=20, choices=ROLES_CHOICES, default='trabajador')
+    rol = models.CharField(max_length=20, choices=ROLES_CHOICES, default='moderador')
     departamento = models.CharField(max_length=100)
 
     def __str__(self):

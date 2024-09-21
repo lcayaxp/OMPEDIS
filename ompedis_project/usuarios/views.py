@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin  # Importación corregida
 from .models import CustomUser
 from .forms import PerfilUsuarioForm, UsuarioCreationForm, UsuarioChangeForm
-from .decorators import administrador_required, trabajador_required
+from .decorators import administrador_required, moderador_required, usuario_required
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomAuthenticationForm
 from django.utils.decorators import method_decorator
@@ -33,7 +33,7 @@ def dashboard_view(request):
 
 # Vista para listar pacientes, accesible solo para trabajadores
 @login_required
-@trabajador_required
+@moderador_required
 def lista_pacientes_view(request):
     return render(request, 'pacientes/lista_pacientes.html')
 

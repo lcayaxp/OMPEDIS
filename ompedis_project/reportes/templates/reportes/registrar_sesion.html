@@ -6,15 +6,19 @@
 {% block content %}
 <div class="container mt-4">
     <h1 class="text-center">Registrar Sesión de Terapia</h1>
+
+    <!-- Mensaje de éxito -->
+    {% if success_message %}
+    <div id="success-message" class="alert alert-success">
+        {{ success_message }}
+    </div>
+    {% endif %}
+
     <form method="post" class="form">
         {% csrf_token %}
         <div class="form-group">
             <label for="id_paciente">Nombre del Paciente:</label>
             {{ form.paciente }}
-            <small class="form-text text-muted">
-                Selecciona un paciente de la lista o 
-                <a href="{{ registrar_paciente_url }}">registra uno nuevo</a>.
-            </small>
         </div>
         <div class="form-group">
             <label for="id_diagnostico">Diagnóstico:</label>
@@ -33,6 +37,9 @@
 </div>
 {% endblock %}
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="{% static 'js/alert.js' %}"></script>
 <!-- Incluir CSS de Select2 -->
 <link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" />
 
@@ -44,6 +51,10 @@
 
 <!-- Incluir tu archivo de inicialización select2_init.js -->
 <script src="{% static 'js/select2_init.js' %}"></script>
+
+
+
+
 
 <!-- Mostrar errores si hay alguno en el formulario -->
 {% if form.errors %}

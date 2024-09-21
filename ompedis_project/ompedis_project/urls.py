@@ -23,7 +23,7 @@ urlpatterns = [
     path('', login_view, name='login'),  # Ruta principal para el login
     path('dashboard/', dashboard_view, name='dashboard'),  # Ruta para el dashboard
     path('usuarios/', include('usuarios.urls')),  # Incluye las URLs del app 'usuarios'
-   path('pacientes/', include('pacientes.urls', namespace='pacientes')),  # Usando namespaces para evitar conflictos
+    path('pacientes/', include('pacientes.urls', namespace='pacientes')),  # Usando namespaces para evitar conflictos
     path('reportes/', include('reportes.urls')),  # Incluye las URLs del app 'reportes'
 ]
 

@@ -38,7 +38,7 @@ body {
     }
 
     .navbar-brand img {
-        height: 25px; /* Tamaño más pequeño para el logo en pantallas pequeñas */
+        height: 30px; /* Tamaño más pequeño para el logo en pantallas pequeñas */
     }
 
     .navbar-light .navbar-nav .nav-link {

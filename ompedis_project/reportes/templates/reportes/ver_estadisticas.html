@@ -1,25 +1,210 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Ver Estadísticas{% endblock %}
+{% block title %}Estadísticas con Gráficas{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
-    <h2 class="text-center">Ver Estadísticas</h2>
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-6">
+    <h2 class="text-center mb-4">Estadísticas de Sesiones de Terapia</h2>
+    
+    <!-- Panel de Filtros -->
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0">Filtrar Estadísticas</h5>
+        </div>
+        <div class="card-body">
+            <form method="GET">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="fecha_inicio">Fecha Inicio</label>
+                        <input type="date" class="form-control" name="fecha_inicio" id="fecha_inicio" value="{{ fecha_inicio }}">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fecha_fin">Fecha Fin</label>
+                        <input type="date" class="form-control" name="fecha_fin" id="fecha_fin" value="{{ fecha_fin }}">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary">Filtrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12 text-right">
+            <a href="{% url 'exportar_pdf' %}" class="btn btn-danger">Exportar a PDF</a>
+            <a href="{% url 'exportar_excel' %}" class="btn btn-success">Exportar a Excel</a>
+        </div>
+    </div>
+
+
+    <!-- Collage de Gráficas: Dos por Fila -->
+    <div class="row">
+        <!-- Gráfico de Total de Pacientes por Género -->
+        <div class="col-md-6 mb-4">
             <div class="card">
-                <div class="card-body text-center">
-                    <a href="{% url 'listado_sesiones' %}" class="btn btn-primary btn-lg btn-block">Listado de Sesiones</a>
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Pacientes Femeninos y Masculinos</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="genderChart"></canvas>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+
+        <!-- Gráfico de Rango de Edades -->
+        <div class="col-md-6 mb-4">
             <div class="card">
-                <div class="card-body text-center">
-                    <a href="{% url 'estadisticas_graficas' %}" class="btn btn-info btn-lg btn-block">Estadísticas con Gráficas</a>
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Rango de Edades de Pacientes</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="ageRangeChart"></canvas>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Fila de Gráfico: Terapias por Semana -->
+    <div class="row">
+        <!-- Gráfico de Terapias por Semana -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 text-center">Total de Terapias por Semana</h5>
+                </div>
+                <div class="card-body" style="height: 300px;">
+                    <canvas id="weeklyTherapiesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabla Dinámica con DataTables -->
+    <div class="card">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0">Datos de Sesiones de Terapia</h5>
+        </div>
+        <div class="card-body">
+            <table id="sesionesTable" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Paciente</th>
+                        <th>Diagnóstico</th>
+                        <th>Área</th>
+                        <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sesion in sesiones %}
+                    <tr>
+                        <td>{{ sesion.fecha_sesion }}</td>
+                        <td>{{ sesion.paciente.nombre }} {{ sesion.paciente.apellido }}</td>
+                        <td>{{ sesion.diagnostico }}</td>
+                        <td>{{ sesion.area }}</td>
+                        <td>{{ sesion.paciente.get_genero_display }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+<!-- Scripts para Chart.js y DataTables -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="{% static 'js/capturar_graficas.js' %}"></script>
+
+<script>
+    // Opciones comunes para los gráficos
+    const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    boxWidth: 10
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        let label = context.dataset.label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y !== null) {
+                            label += new Intl.NumberFormat('es-ES', { style: 'decimal' }).format(context.parsed.y);
+                        }
+                        return label;
+                    }
+                }
+            }
+        }
+    };
+
+    // Gráfico de género
+    var genderCtx = document.getElementById('genderChart').getContext('2d');
+    var genderChart = new Chart(genderCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Femenino', 'Masculino'],
+            datasets: [{
+                data: [{{ total_femeninos }}, {{ total_masculinos }}],
+                backgroundColor: ['#FF6384', '#36A2EB'],
+                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+            }]
+        },
+        options: chartOptions
+    });
+
+    // Gráfico de rango de edades
+    var ageRangeCtx = document.getElementById('ageRangeChart').getContext('2d');
+    var ageRangeChart = new Chart(ageRangeCtx, {
+        type: 'bar',
+        data: {
+            labels: ['0-18', '19-35', '36-60', '60+'],
+            datasets: [{
+                data: [{{ rangos_edad.0_18 }}, {{ rangos_edad.19_35 }}, {{ rangos_edad.36_60 }}, {{ rangos_edad.60_plus }}],
+                backgroundColor: ['#FFCE56', '#4BC0C0', '#FF6384', '#36A2EB'],
+                hoverBackgroundColor: ['#FFCE56', '#4BC0C0', '#FF6384', '#36A2EB']
+            }]
+        },
+        options: chartOptions
+    });
+
+    // Gráfico de terapias por semana
+    var weeklyTherapiesCtx = document.getElementById('weeklyTherapiesChart').getContext('2d');
+    var weeklyTherapiesChart = new Chart(weeklyTherapiesCtx, {
+        type: 'line',
+        data: {
+            labels: [{% for semana in terapias_por_semana %} 'Semana {{ semana.week }}', {% endfor %}],
+            datasets: [{
+                label: 'Sesiones por Semana',
+                data: [{% for semana in terapias_por_semana %} {{ semana.total }}, {% endfor %}],
+                backgroundColor: '#36A2EB',
+                borderColor: '#36A2EB',
+                fill: false
+            }]
+        },
+        options: chartOptions
+    });
+
+    // Inicializar DataTable
+    $(document).ready(function() {
+        $('#sesionesTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json"
+            }
+        });
+    });
+</script>
+
 {% endblock %}
