@@ -7,11 +7,9 @@
     <ul class="list-group">
         {% for user in users %}
             <li class="list-group-item">
-                <a href="{% url 'user_detail' user.pk %}">{{ user.username }}</a>
+                <a href="{% url 'user_detail' user.pk %}">{{ user.first_name }} {{ user.last_name }}</a>
             </li>
         {% endfor %}
     </ul>
 </div>
 {% endblock %}
-
-

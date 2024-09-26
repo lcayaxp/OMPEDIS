@@ -18,6 +18,16 @@
                             {{ form.username.errors }}
                         </div>
                         <div class="mb-3">
+                            <label for="{{ form.first_name.id_for_label }}" class="form-label">Nombres</label>
+                            <input type="text" name="{{ form.first_name.name }}" id="{{ form.first_name.id_for_label }}" value="{{ form.first_name.value }}" class="form-control">
+                            {{ form.first_name.errors }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.last_name.id_for_label }}" class="form-label">Apellidos</label>
+                            <input type="text" name="{{ form.last_name.name }}" id="{{ form.last_name.id_for_label }}" value="{{ form.last_name.value }}" class="form-control">
+                            {{ form.last_name.errors }}
+                        </div>
+                        <div class="mb-3">
                             <label for="{{ form.email.id_for_label }}" class="form-label">Correo Electrónico</label>
                             <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value }}" class="form-control">
                             {{ form.email.errors }}

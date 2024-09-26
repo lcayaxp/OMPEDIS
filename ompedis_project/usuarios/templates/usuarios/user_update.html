@@ -18,6 +18,16 @@
                             {{ form.username.errors }}
                         </div>
                         <div class="mb-3">
+                            <label for="{{ form.first_name.id_for_label }}" class="form-label">Nombres</label>
+                            {{ form.first_name }}
+                            {{ form.first_name.errors }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.last_name.id_for_label }}" class="form-label">Apellidos</label>
+                            {{ form.last_name }}
+                            {{ form.last_name.errors }}
+                        </div>
+                        <div class="mb-3">
                             <label for="{{ form.email.id_for_label }}" class="form-label">Correo Electrónico</label>
                             {{ form.email }}
                             {{ form.email.errors }}
