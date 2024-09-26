@@ -5,36 +5,56 @@
 
 {% block content %}
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Perfil de {{ user.username }}</h3>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Perfil de {{ user.username }}</h3>
                 </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label class="form-label">Usuario:</label>
-                        <p class="form-control-plaintext">{{ user.username }}</p>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label font-weight-bold">Usuario:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-plaintext">{{ user.username }}</p>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Nombre completo:</label>
-                        <p class="form-control-plaintext">{{ user.first_name }} {{ user.last_name }}</p>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label font-weight-bold">Nombre completo:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-plaintext">{{ user.first_name }} {{ user.last_name }}</p>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Correo electrónico:</label>
-                        <p class="form-control-plaintext">{{ user.email }}</p>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label font-weight-bold">Correo electrónico:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-plaintext">{{ user.email }}</p>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Rol:</label>
-                        <p class="form-control-plaintext">{{ user.get_rol_display }}</p>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label font-weight-bold">Rol:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-plaintext">{{ user.get_rol_display }}</p>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Departamento:</label>
-                        <p class="form-control-plaintext">{{ user.departamento }}</p>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label font-weight-bold">Departamento:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="form-control-plaintext">{{ user.departamento }}</p>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end mt-4">
-                        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Regresar</a>
-                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-center">
+                    <a href="{% url 'dashboard' %}" class="btn btn-secondary">Regresar</a>
                 </div>
             </div>
         </div>
