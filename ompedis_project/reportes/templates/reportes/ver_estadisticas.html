@@ -39,17 +39,17 @@
         </div>
     </div>
 
-
     <!-- Collage de Gráficas: Dos por Fila -->
     <div class="row">
-        <!-- Gráfico de Total de Pacientes por Género -->
+
+        <!-- Gráfico de Número de Pacientes por Género (Bar Chart) -->
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0 text-center">Pacientes Femeninos y Masculinos</h5>
+                    <h5 class="mb-0 text-center">Número de Pacientes por Género</h5>
                 </div>
                 <div class="card-body" style="height: 300px;">
-                    <canvas id="genderChart"></canvas>
+                    <canvas id="genderBarChart"></canvas>
                 </div>
             </div>
         </div>
@@ -150,19 +150,51 @@
         }
     };
 
-    // Gráfico de género
-    var genderCtx = document.getElementById('genderChart').getContext('2d');
-    var genderChart = new Chart(genderCtx, {
-        type: 'pie',
+    // Gráfico de género (Bar Chart)
+    var genderBarCtx = document.getElementById('genderBarChart').getContext('2d');
+    var genderBarChart = new Chart(genderBarCtx, {
+        type: 'bar',
         data: {
             labels: ['Femenino', 'Masculino'],
             datasets: [{
+                label: 'Número de Pacientes',
                 data: [{{ total_femeninos }}, {{ total_masculinos }}],
                 backgroundColor: ['#FF6384', '#36A2EB'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                borderColor: ['#FF6384', '#36A2EB'],
+                borderWidth: 1
             }]
         },
-        options: chartOptions
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        boxWidth: 10
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += new Intl.NumberFormat('es-ES', { style: 'decimal' }).format(context.parsed.y);
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
     });
 
     // Gráfico de rango de edades
