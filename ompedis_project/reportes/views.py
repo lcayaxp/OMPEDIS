@@ -164,7 +164,7 @@ def generar_reporte_view(request):
                     sesion.fecha_sesion.strftime('%Y-%m-%d'),
                     sesion.diagnostico,
                     sesion.area,
-                    'Masculino' if sesion.genero == 'M' else 'Femenino'
+                    'Masculino' if sesion.genero == 'Masculino' else 'Femenino'
                 ])
 
             # Estilo para la tabla
@@ -282,7 +282,7 @@ def exportar_excel_view(request):
             f"{sesion.paciente.nombre} {sesion.paciente.apellido}",
             sesion.diagnostico,
             sesion.area,
-            'Masculino' if sesion.genero == 'M' else 'Femenino'
+            'Masculino' if sesion.genero == 'Masculino' else 'Femenino'
         ])
 
     # Ajustar el ancho de las columnas
