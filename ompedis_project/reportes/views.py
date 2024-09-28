@@ -1,30 +1,37 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import SesionTerapia
-from .forms import SesionTerapiaForm
-from django.db.models import Count, Func
 from django.urls import reverse
+from django.http import HttpResponse, JsonResponse, FileResponse
+from django.db.models import Count, Func
+from django.db import models
 from datetime import date
-from django.db import models 
-from django.http import HttpResponse
+from io import BytesIO
+from base64 import b64decode
+
+from .models import SesionTerapia
+from .forms import SesionTerapiaForm, ReporteGeneracionForm
+
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
-from io import BytesIO
-from django.http import FileResponse
-from .forms import ReporteGeneracionForm
+
 import openpyxl
 from openpyxl.utils import get_column_letter
+from openpyxl.styles import PatternFill, Font, Alignment
+from openpyxl.chart import BarChart, Reference, PieChart
+from collections import Counter
+from datetime import datetime, timedelta
+
 from PIL import Image as PILImage
-from base64 import b64decode
 from django.core.files.base import ContentFile
-from PIL import Image
 import io
 import json
-from django.http import JsonResponse
+
+# Vistas que utilicen estos imports se pueden definir a continuación
+
 
 @login_required
 def menu_reportes_view(request):
@@ -96,6 +103,8 @@ def ver_estadisticas_view(request):
         'rangos_edad': rangos_edad,
         'terapias_por_semana': terapias_por_semana,
         'sesiones': sesiones,  # Añadir las sesiones al contexto para la tabla
+        'fecha_inicio': fecha_inicio,  # Añadir fecha_inicio al contexto
+        'fecha_fin': fecha_fin,  # Añadir fecha_fin al contexto
     }
 
     return render(request, 'reportes/ver_estadisticas.html', context)
@@ -200,60 +209,6 @@ def generar_reporte_view(request):
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
 @login_required
-def exportar_pdf_view(request):
-    if request.method == 'POST':
-        try:
-            # Capturar los datos enviados desde el frontend
-            data = json.loads(request.body)
-            gender_chart_data = data.get('gender_chart')
-            age_range_chart_data = data.get('age_range_chart')
-            weekly_therapies_chart_data = data.get('weekly_therapies_chart')
-
-            # Verificar que los datos no sean None
-            if not gender_chart_data or not age_range_chart_data or not weekly_therapies_chart_data:
-                return JsonResponse({"error": "Faltan gráficos para generar el PDF."}, status=400)
-
-            # Decodificar las imágenes base64
-            gender_chart_img = PILImage.open(io.BytesIO(b64decode(gender_chart_data.split(',')[1])))
-            age_range_chart_img = PILImage.open(io.BytesIO(b64decode(age_range_chart_data.split(',')[1])))
-            weekly_therapies_chart_img = PILImage.open(io.BytesIO(b64decode(weekly_therapies_chart_data.split(',')[1])))
-
-            # Crear el PDF
-            buffer = io.BytesIO()
-            pdf = SimpleDocTemplate(buffer, pagesize=A4)
-
-            elements = []
-
-            # Añadir las imágenes al PDF
-            charts = [
-                gender_chart_img,
-                age_range_chart_img,
-                weekly_therapies_chart_img
-            ]
-
-            for chart in charts:
-                img_buffer = io.BytesIO()
-                chart.save(img_buffer, format='PNG')
-                img_buffer.seek(0)
-                reportlab_img = Image(img_buffer)
-                reportlab_img.drawHeight = 3 * inch  # Ajusta el tamaño de la imagen
-                reportlab_img.drawWidth = 6 * inch
-                elements.append(reportlab_img)
-
-            # Construir el PDF
-            pdf.build(elements)
-
-            # Enviar el PDF como respuesta
-            buffer.seek(0)
-            return FileResponse(buffer, as_attachment=True, filename='reportes_con_graficas.pdf')
-
-        except Exception as e:
-            # Capturar cualquier error y devolver una respuesta JSON con el error
-            return JsonResponse({"error": f"Ocurrió un error: {str(e)}"}, status=500)
-
-    # Si el método no es POST, devolvemos un error
-    return JsonResponse({"error": "Método no permitido."}, status=405)
-@login_required
 def exportar_excel_view(request):
     # Filtrar las sesiones
     sesiones = SesionTerapia.objects.all()
@@ -262,36 +217,141 @@ def exportar_excel_view(request):
     fecha_fin = request.GET.get('fecha_fin')
 
     if fecha_inicio:
-        sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+        try:
+            fecha_inicio = datetime.strptime(fecha_inicio, '%Y-%m-%d').date()
+            sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+        except ValueError:
+            pass  # Manejar el error de formato de fecha si es necesario
+
     if fecha_fin:
-        sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+        try:
+            fecha_fin = datetime.strptime(fecha_fin, '%Y-%m-%d').date()
+            sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+        except ValueError:
+            pass  # Manejar el error de formato de fecha si es necesario
 
     # Crear un archivo Excel en memoria
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     sheet.title = 'Sesiones de Terapia'
 
-    # Crear encabezados
-    headers = ['Fecha', 'Paciente', 'Diagnóstico', 'Área', 'Género']
+    # Crear encabezados con formato
+    headers = ['No.', 'Nombre', 'Diagnóstico', 'Sexo', 'Edad', 'Área', 'Fecha de Ingreso']
     sheet.append(headers)
+    
+    header_fill = PatternFill(start_color="B0C4DE", end_color="B0C4DE", fill_type="solid")
+    header_font = Font(bold=True)
+    
+    for col_num, header in enumerate(headers, 1):
+        cell = sheet.cell(row=1, column=col_num)
+        cell.fill = header_fill
+        cell.font = header_font
+        sheet.column_dimensions[get_column_letter(col_num)].width = 20
 
     # Agregar datos
-    for sesion in sesiones:
-        sheet.append([
-            sesion.fecha_sesion.strftime('%Y-%m-%d'),
+    for idx, sesion in enumerate(sesiones, start=2):
+        edad = (datetime.now().date() - sesion.paciente.fecha_nacimiento).days // 365
+        data = [
+            idx - 1,
             f"{sesion.paciente.nombre} {sesion.paciente.apellido}",
             sesion.diagnostico,
+            'Masculino' if sesion.genero == 'Masculino' else 'Femenino',
+            edad,
             sesion.area,
-            'Masculino' if sesion.genero == 'Masculino' else 'Femenino'
-        ])
+            sesion.fecha_sesion.strftime('%Y-%m-%d')
+        ]
+        sheet.append(data)
+    
+    # Aplicar alineación a todas las celdas de la tabla
+    for row in sheet.iter_rows(min_row=2, max_row=len(sesiones) + 1, min_col=1, max_col=len(headers)):
+        for cell in row:
+            cell.alignment = Alignment(horizontal='center', vertical='center')
 
-    # Ajustar el ancho de las columnas
-    for col in range(1, len(headers) + 1):
-        sheet.column_dimensions[get_column_letter(col)].width = 20
+    # Contar pacientes por género
+    genero_count = Counter(sesion.genero for sesion in sesiones)
 
-    # Crear un archivo en memoria
-    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    # Calcular el rango de edades de los pacientes
+    edades = [((datetime.now().date() - sesion.paciente.fecha_nacimiento).days // 365) for sesion in sesiones]
+    rango_edades = Counter((edad // 10) * 10 for edad in edades)
+
+    # Contar terapias por semana
+    terapias_por_semana = Counter((sesion.fecha_sesion - timedelta(days=sesion.fecha_sesion.weekday())).strftime('%Y-%m-%d') for sesion in sesiones)
+
+    # Agregar el resumen de género
+    start_row = len(sesiones) + 3
+    sheet.append(['Total pacientes femeninos y masculinos'])
+    sheet.append(['Femenino', genero_count.get('Femenino', 0)])
+    sheet.append(['Masculino', genero_count.get('Masculino', 0)])
+    total_pacientes = genero_count.get('Femenino', 0) + genero_count.get('Masculino', 0)
+    sheet.append(['Total', total_pacientes])
+    
+    # Aplicar formato
+    for row in sheet.iter_rows(min_row=start_row, max_row=start_row + 3, min_col=1, max_col=2):
+        for cell in row:
+            cell.font = Font(bold=True)
+            cell.fill = PatternFill(start_color="FFFF99", end_color="FFFF99", fill_type="solid")
+            cell.alignment = Alignment(horizontal='center')
+
+    # Crear el gráfico de barras para género
+    chart_genero = BarChart()
+    data_genero = Reference(sheet, min_col=2, min_row=start_row + 1, max_row=start_row + 2)
+    categories_genero = Reference(sheet, min_col=1, min_row=start_row + 1, max_row=start_row + 2)
+    chart_genero.add_data(data_genero, titles_from_data=False)
+    chart_genero.set_categories(categories_genero)
+    chart_genero.title = "Total pacientes femeninos y masculinos"
+    chart_genero.x_axis.title = "Sexo"
+    chart_genero.y_axis.title = "Total"
+    sheet.add_chart(chart_genero, f"E{start_row}")
+
+    # Agregar el resumen del rango de edades
+    start_row_edades = start_row + 5
+    sheet.append(['Edades', 'Cantidad'])
+    for rango, count in rango_edades.items():
+        sheet.append([f"{rango} - {rango + 9} años", count])
+    sheet.append(['Total', len(sesiones)])
+
+    # Aplicar formato
+    for row in sheet.iter_rows(min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades) + 1, min_col=1, max_col=2):
+        for cell in row:
+            cell.alignment = Alignment(horizontal='center')
+
+    # Crear el gráfico de pastel (torta) para el rango de edades
+    chart_edades = PieChart()
+    data_edades = Reference(sheet, min_col=2, min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades))
+    categories_edades = Reference(sheet, min_col=1, min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades))
+    chart_edades.add_data(data_edades, titles_from_data=False)
+    chart_edades.set_categories(categories_edades)
+    chart_edades.title = "Rango de edades de pacientes atendidos en Ompedis Ostuncalco"
+    sheet.add_chart(chart_edades, f"E{start_row_edades}")
+
+    # Agregar el resumen de terapias por semana
+    start_row_terapias = start_row_edades + len(rango_edades) + 5
+    sheet.append(['Semana', 'Sesiones Realizadas'])
+    for semana, count in terapias_por_semana.items():
+        sheet.append([semana, count])
+    total_terapias = sum(terapias_por_semana.values())
+    sheet.append(['Total', total_terapias])
+
+    # Aplicar formato
+    for row in sheet.iter_rows(min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana) + 1, min_col=1, max_col=2):
+        for cell in row:
+            cell.alignment = Alignment(horizontal='center')
+
+    # Crear el gráfico de barras para terapias por semana
+    chart_terapias = BarChart()
+    data_terapias = Reference(sheet, min_col=2, min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana))
+    categories_terapias = Reference(sheet, min_col=1, min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana))
+    chart_terapias.add_data(data_terapias, titles_from_data=False)
+    chart_terapias.set_categories(categories_terapias)
+    chart_terapias.title = "Total de terapias dadas a pacientes atendidos por semana en el mes "
+    chart_terapias.x_axis.title = "Semana"
+    chart_terapias.y_axis.title = "Sesiones Realizadas"
+    sheet.add_chart(chart_terapias, f"E{start_row_terapias}")
+
+    # Crear un archivo en memoria para guardar el workbook
+    response = HttpResponse(
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
     response['Content-Disposition'] = 'attachment; filename=estadisticas_sesiones_terapia.xlsx'
-
     workbook.save(response)
     return response
