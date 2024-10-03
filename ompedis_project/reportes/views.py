@@ -213,6 +213,17 @@ def generar_reporte_view(request):
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
 def exportar_excel_view(request):
+    # Obtener parámetros de filtro
+    fecha_inicio = request.GET.get('fecha_inicio')
+    fecha_fin = request.GET.get('fecha_fin')
+
+    # Filtrar sesiones de terapia con los parámetros de fecha
+    sesiones = SesionTerapia.objects.all()
+    if fecha_inicio:
+        sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+    if fecha_fin:
+        sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
     # Crear un archivo Excel en memoria
     workbook = openpyxl.Workbook()
     sheet = workbook.active
@@ -225,7 +236,7 @@ def exportar_excel_view(request):
 
     # Crear el encabezado principal
     sheet.merge_cells('A1:H1')
-    sheet['A1'] = "UNIVERSIDAD DA VINCI DE GUATEMALA"
+    sheet['A1'] = "UNIVERSIDAD MARIANO GALVEZ DE GUATEMALA"
     sheet['A1'].font = Font(bold=True, size=14)
     sheet['A1'].alignment = Alignment(horizontal='center')
 
@@ -235,8 +246,6 @@ def exportar_excel_view(request):
     sheet['A2'].alignment = Alignment(horizontal='center')
 
     sheet.merge_cells('A3:H3')
-    fecha_inicio = request.GET.get('fecha_inicio', 'N/A')
-    fecha_fin = request.GET.get('fecha_fin', 'N/A')
     sheet['A3'] = f"PERIODO: {fecha_inicio} - {fecha_fin}"
     sheet['A3'].font = Font(bold=True, size=12)
     sheet['A3'].alignment = Alignment(horizontal='center')
@@ -251,7 +260,6 @@ def exportar_excel_view(request):
         cell.border = border_style
 
     # Obtener datos reales de la base de datos
-    sesiones = SesionTerapia.objects.all()
     pacientes = [
         {
             'nombre': f'{sesion.paciente.nombre} {sesion.paciente.apellido}',
