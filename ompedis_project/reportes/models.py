@@ -1,5 +1,6 @@
 from django.db import models
 from pacientes.models import Paciente
+from datetime import date
 
 class Reporte(models.Model):
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)

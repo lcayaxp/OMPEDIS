@@ -4,13 +4,16 @@ from django.urls import reverse
 from django.http import HttpResponse, JsonResponse, FileResponse
 from django.db.models import Count, Func
 from django.db import models
-from datetime import date
+from datetime import date, datetime, timedelta
 from io import BytesIO
 from base64 import b64decode
+import json
+import logging  # Para depuración y registro
 
 from .models import SesionTerapia
 from .forms import SesionTerapiaForm, ReporteGeneracionForm
 
+# Para la generación de PDFs
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.styles import getSampleStyleSheet
@@ -18,17 +21,18 @@ from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 
+# Para la generación y manipulación de archivos Excel
 import openpyxl
 from openpyxl.utils import get_column_letter
-from openpyxl.styles import PatternFill, Font, Alignment
+from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
 from openpyxl.chart import BarChart, Reference, PieChart
-from collections import Counter
-from datetime import datetime, timedelta
+from openpyxl.drawing.image import Image  # Para insertar imágenes en el archivo Excel
 
-from PIL import Image as PILImage
+# Otros
+from collections import Counter
+from PIL import Image as PILImage  # Para el manejo de imágenes
 from django.core.files.base import ContentFile
-import io
-import json
+
 
 # Vistas que utilicen estos imports se pueden definir a continuación
 
@@ -208,150 +212,175 @@ def generar_reporte_view(request):
 
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
-@login_required
 def exportar_excel_view(request):
-    # Filtrar las sesiones
-    sesiones = SesionTerapia.objects.all()
-
-    fecha_inicio = request.GET.get('fecha_inicio')
-    fecha_fin = request.GET.get('fecha_fin')
-
-    if fecha_inicio:
-        try:
-            fecha_inicio = datetime.strptime(fecha_inicio, '%Y-%m-%d').date()
-            sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
-        except ValueError:
-            pass  # Manejar el error de formato de fecha si es necesario
-
-    if fecha_fin:
-        try:
-            fecha_fin = datetime.strptime(fecha_fin, '%Y-%m-%d').date()
-            sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
-        except ValueError:
-            pass  # Manejar el error de formato de fecha si es necesario
-
     # Crear un archivo Excel en memoria
     workbook = openpyxl.Workbook()
     sheet = workbook.active
-    sheet.title = 'Sesiones de Terapia'
+    sheet.title = 'Estadísticas OMPEDIS'
 
-    # Crear encabezados con formato
+    # Definir estilos comunes
+    header_fill = PatternFill(start_color="B0C4DE", end_color="B0C4DE", fill_type="solid")
+    header_font = Font(bold=True, size=12)
+    border_style = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
+
+    # Crear el encabezado principal
+    sheet.merge_cells('A1:H1')
+    sheet['A1'] = "UNIVERSIDAD DA VINCI DE GUATEMALA"
+    sheet['A1'].font = Font(bold=True, size=14)
+    sheet['A1'].alignment = Alignment(horizontal='center')
+
+    sheet.merge_cells('A2:H2')
+    sheet['A2'] = "ESTADÍSTICA OMPEDIS OSTUNCALCO"
+    sheet['A2'].font = Font(bold=True, size=14)
+    sheet['A2'].alignment = Alignment(horizontal='center')
+
+    sheet.merge_cells('A3:H3')
+    fecha_inicio = request.GET.get('fecha_inicio', 'N/A')
+    fecha_fin = request.GET.get('fecha_fin', 'N/A')
+    sheet['A3'] = f"PERIODO: {fecha_inicio} - {fecha_fin}"
+    sheet['A3'].font = Font(bold=True, size=12)
+    sheet['A3'].alignment = Alignment(horizontal='center')
+
+    # Crear encabezados de la tabla principal
     headers = ['No.', 'Nombre', 'Diagnóstico', 'Sexo', 'Edad', 'Área', 'Fecha de Ingreso']
     sheet.append(headers)
-    
-    header_fill = PatternFill(start_color="B0C4DE", end_color="B0C4DE", fill_type="solid")
-    header_font = Font(bold=True)
-    
-    for col_num, header in enumerate(headers, 1):
-        cell = sheet.cell(row=1, column=col_num)
+    for col in range(1, len(headers) + 1):
+        cell = sheet.cell(row=4, column=col)
         cell.fill = header_fill
         cell.font = header_font
-        sheet.column_dimensions[get_column_letter(col_num)].width = 20
+        cell.border = border_style
 
-    # Agregar datos
-    for idx, sesion in enumerate(sesiones, start=2):
-        edad = (datetime.now().date() - sesion.paciente.fecha_nacimiento).days // 365
-        data = [
-            idx - 1,
-            f"{sesion.paciente.nombre} {sesion.paciente.apellido}",
-            sesion.diagnostico,
-            'Masculino' if sesion.genero == 'Masculino' else 'Femenino',
-            edad,
-            sesion.area,
-            sesion.fecha_sesion.strftime('%Y-%m-%d')
-        ]
-        sheet.append(data)
-    
-    # Aplicar alineación a todas las celdas de la tabla
-    for row in sheet.iter_rows(min_row=2, max_row=len(sesiones) + 1, min_col=1, max_col=len(headers)):
+    # Obtener datos reales de la base de datos
+    sesiones = SesionTerapia.objects.all()
+    pacientes = [
+        {
+            'nombre': f'{sesion.paciente.nombre} {sesion.paciente.apellido}',
+            'diagnostico': sesion.diagnostico,
+            'sexo': sesion.get_genero_display(),
+            'edad': sesion.calcular_edad(),
+            'area': sesion.area,
+            'fecha_ingreso': sesion.fecha_sesion.strftime('%d/%m/%Y')
+        }
+        for sesion in sesiones
+    ]
+
+    # Agregar datos reales a la tabla principal
+    for idx, paciente in enumerate(pacientes, start=1):
+        sheet.append([idx, paciente['nombre'], paciente['diagnostico'], paciente['sexo'], paciente['edad'], paciente['area'], paciente['fecha_ingreso']])
+
+    # Aplicar estilo a las celdas de la tabla principal
+    for row in sheet.iter_rows(min_row=5, max_row=4 + len(pacientes), min_col=1, max_col=len(headers)):
         for cell in row:
-            cell.alignment = Alignment(horizontal='center', vertical='center')
+            cell.border = border_style
 
-    # Contar pacientes por género
-    genero_count = Counter(sesion.genero for sesion in sesiones)
+    # Calcular totales de género
+    total_femeninos = sesiones.filter(genero='Femenino').count()
+    total_masculinos = sesiones.filter(genero='Masculino').count()
 
-    # Calcular el rango de edades de los pacientes
-    edades = [((datetime.now().date() - sesion.paciente.fecha_nacimiento).days // 365) for sesion in sesiones]
-    rango_edades = Counter((edad // 10) * 10 for edad in edades)
+    # Crear sección de Resumen de Pacientes por Género
+    sheet['J1'] = "Total pacientes femeninos y masculinos"
+    sheet['J1'].font = Font(bold=True, size=12)
+    sheet['J1'].alignment = Alignment(horizontal='center')
 
-    # Contar terapias por semana
-    terapias_por_semana = Counter((sesion.fecha_sesion - timedelta(days=sesion.fecha_sesion.weekday())).strftime('%Y-%m-%d') for sesion in sesiones)
+    sheet['J2'] = "Femenino"
+    sheet['K2'] = total_femeninos
+    sheet['J3'] = "Masculino"
+    sheet['K3'] = total_masculinos
+    sheet['J4'] = "Total"
+    sheet['K4'] = total_femeninos + total_masculinos
 
-    # Agregar el resumen de género
-    start_row = len(sesiones) + 3
-    sheet.append(['Total pacientes femeninos y masculinos'])
-    sheet.append(['Femenino', genero_count.get('Femenino', 0)])
-    sheet.append(['Masculino', genero_count.get('Masculino', 0)])
-    total_pacientes = genero_count.get('Femenino', 0) + genero_count.get('Masculino', 0)
-    sheet.append(['Total', total_pacientes])
-    
-    # Aplicar formato
-    for row in sheet.iter_rows(min_row=start_row, max_row=start_row + 3, min_col=1, max_col=2):
-        for cell in row:
-            cell.font = Font(bold=True)
-            cell.fill = PatternFill(start_color="FFFF99", end_color="FFFF99", fill_type="solid")
-            cell.alignment = Alignment(horizontal='center')
+    # Estilo para la tabla de género
+    for col in range(10, 12):
+        for row in range(1, 5):
+            cell = sheet.cell(row=row, column=col)
+            cell.border = border_style
 
-    # Crear el gráfico de barras para género
+    # Crear gráfico de barras para género
     chart_genero = BarChart()
-    data_genero = Reference(sheet, min_col=2, min_row=start_row + 1, max_row=start_row + 2)
-    categories_genero = Reference(sheet, min_col=1, min_row=start_row + 1, max_row=start_row + 2)
+    data_genero = Reference(sheet, min_col=11, min_row=2, max_row=3)
+    categories_genero = Reference(sheet, min_col=10, min_row=2, max_row=3)
     chart_genero.add_data(data_genero, titles_from_data=False)
     chart_genero.set_categories(categories_genero)
     chart_genero.title = "Total pacientes femeninos y masculinos"
     chart_genero.x_axis.title = "Sexo"
     chart_genero.y_axis.title = "Total"
-    sheet.add_chart(chart_genero, f"E{start_row}")
+    sheet.add_chart(chart_genero, "M1")
 
-    # Agregar el resumen del rango de edades
-    start_row_edades = start_row + 5
-    sheet.append(['Edades', 'Cantidad'])
-    for rango, count in rango_edades.items():
-        sheet.append([f"{rango} - {rango + 9} años", count])
-    sheet.append(['Total', len(sesiones)])
+    # Calcular rango de edades
+    rangos_edad = {
+        '0 a 10 años': sesiones.filter(paciente__fecha_nacimiento__gte=date.today() - timedelta(days=365*10)).count(),
+        '11 a 20 años': sesiones.filter(paciente__fecha_nacimiento__gte=date.today() - timedelta(days=365*20), paciente__fecha_nacimiento__lt=date.today() - timedelta(days=365*10)).count(),
+        '21 a 30 años': sesiones.filter(paciente__fecha_nacimiento__gte=date.today() - timedelta(days=365*30), paciente__fecha_nacimiento__lt=date.today() - timedelta(days=365*20)).count(),
+    }
 
-    # Aplicar formato
-    for row in sheet.iter_rows(min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades) + 1, min_col=1, max_col=2):
-        for cell in row:
-            cell.alignment = Alignment(horizontal='center')
+    # Crear sección de Rango de Edades
+    sheet['J6'] = "Rango de Edades"
+    sheet['J6'].font = Font(bold=True, size=12)
+    sheet['J6'].alignment = Alignment(horizontal='center')
 
-    # Crear el gráfico de pastel (torta) para el rango de edades
+    sheet['J7'] = "Rango"
+    sheet['K7'] = "Cantidad"
+    row_idx = 8
+    for rango, count in rangos_edad.items():
+        sheet[f'J{row_idx}'] = rango
+        sheet[f'K{row_idx}'] = count
+        row_idx += 1
+    sheet[f'J{row_idx}'] = "Total"
+    sheet[f'K{row_idx}'] = sum(rangos_edad.values())
+
+    # Estilo para la tabla de edades
+    for col in range(10, 12):
+        for row in range(6, row_idx + 1):
+            cell = sheet.cell(row=row, column=col)
+            cell.border = border_style
+
+    # Crear gráfico de pastel para rango de edades
     chart_edades = PieChart()
-    data_edades = Reference(sheet, min_col=2, min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades))
-    categories_edades = Reference(sheet, min_col=1, min_row=start_row_edades + 1, max_row=start_row_edades + len(rango_edades))
+    data_edades = Reference(sheet, min_col=11, min_row=8, max_row=row_idx - 1)
+    categories_edades = Reference(sheet, min_col=10, min_row=8, max_row=row_idx - 1)
     chart_edades.add_data(data_edades, titles_from_data=False)
     chart_edades.set_categories(categories_edades)
-    chart_edades.title = "Rango de edades de pacientes atendidos en Ompedis Ostuncalco"
-    sheet.add_chart(chart_edades, f"E{start_row_edades}")
+    chart_edades.title = "Rango de edades de pacientes atendidos en Clínica Ompedis Ostuncalco"
+    sheet.add_chart(chart_edades, "M15")
 
-    # Agregar el resumen de terapias por semana
-    start_row_terapias = start_row_edades + len(rango_edades) + 5
-    sheet.append(['Semana', 'Sesiones Realizadas'])
-    for semana, count in terapias_por_semana.items():
-        sheet.append([semana, count])
-    total_terapias = sum(terapias_por_semana.values())
-    sheet.append(['Total', total_terapias])
+    # Calcular sesiones realizadas por semana
+    sesiones_por_semana = sesiones.annotate(week=Week('fecha_sesion')).values('week').annotate(total=Count('id')).order_by('week')
 
-    # Aplicar formato
-    for row in sheet.iter_rows(min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana) + 1, min_col=1, max_col=2):
-        for cell in row:
-            cell.alignment = Alignment(horizontal='center')
+    # Crear sección de Sesiones Realizadas por Semana
+    sheet['J20'] = "Sesiones Realizadas por Semana"
+    sheet['J20'].font = Font(bold=True, size=12)
+    sheet['J20'].alignment = Alignment(horizontal='center')
 
-    # Crear el gráfico de barras para terapias por semana
-    chart_terapias = BarChart()
-    data_terapias = Reference(sheet, min_col=2, min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana))
-    categories_terapias = Reference(sheet, min_col=1, min_row=start_row_terapias + 1, max_row=start_row_terapias + len(terapias_por_semana))
-    chart_terapias.add_data(data_terapias, titles_from_data=False)
-    chart_terapias.set_categories(categories_terapias)
-    chart_terapias.title = "Total de terapias dadas a pacientes atendidos por semana en el mes "
-    chart_terapias.x_axis.title = "Semana"
-    chart_terapias.y_axis.title = "Sesiones Realizadas"
-    sheet.add_chart(chart_terapias, f"E{start_row_terapias}")
+    sheet['J21'] = "Semana"
+    sheet['K21'] = "Sesiones Realizadas"
+    row_idx = 22
+    for sesion in sesiones_por_semana:
+        sheet[f'J{row_idx}'] = f'Semana {int(sesion["week"])}'
+        sheet[f'K{row_idx}'] = sesion['total']
+        row_idx += 1
+    sheet[f'J{row_idx}'] = "Total"
+    sheet[f'K{row_idx}'] = sum(sesion['total'] for sesion in sesiones_por_semana)
 
-    # Crear un archivo en memoria para guardar el workbook
-    response = HttpResponse(
-        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    )
-    response['Content-Disposition'] = 'attachment; filename=estadisticas_sesiones_terapia.xlsx'
-    workbook.save(response)
-    return response
+    # Estilo para la tabla de sesiones por semana
+    for col in range(10, 12):
+        for row in range(20, row_idx + 1):
+            cell = sheet.cell(row=row, column=col)
+            cell.border = border_style
+
+    # Crear gráfico de barras para sesiones por semana
+    chart_sesiones = BarChart()
+    data_sesiones = Reference(sheet, min_col=11, min_row=22, max_row=row_idx - 1)
+    categories_sesiones = Reference(sheet, min_col=10, min_row=22, max_row=row_idx - 1)
+    chart_sesiones.add_data(data_sesiones, titles_from_data=False)
+    chart_sesiones.set_categories(categories_sesiones)
+    chart_sesiones.title = "Total de terapias dadas a pacientes atendidos por semana en Clínica Ompedis Ostuncalco"
+    chart_sesiones.x_axis.title = "Semana"
+    chart_sesiones.y_axis.title = "Total"
+    sheet.add_chart(chart_sesiones, "M30")
+
+    # Guardar el archivo en memoria
+    buffer = BytesIO()
+    workbook.save(buffer)
+    buffer.seek(0)
+
+    return FileResponse(buffer, as_attachment=True, filename='reporte_sesiones_ompedis.xlsx')
