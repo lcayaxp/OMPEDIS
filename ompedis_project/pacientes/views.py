@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import CreateView, UpdateView, DetailView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
@@ -9,6 +9,9 @@ from django.http import JsonResponse
 from django.db.models import Q
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+import json
 
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
@@ -64,7 +67,8 @@ class EditarPacienteView(UpdateView):
             responsable = responsable_form.save(commit=False)
             responsable.paciente = paciente  # Asocia el responsable con el paciente
             responsable.save()  # Guarda el responsable
-            return super().form_valid(form)
+            form.save_m2m()  # Guarda las relaciones ManyToMany
+            return redirect(self.success_url)
         else:
             return self.form_invalid(form)
 
@@ -89,11 +93,10 @@ def lista_pacientes_view(request):
 
 @login_required
 def cargar_municipios(request):
-    departamento_id = request.GET.get('departamento_id')
-    if departamento_id:
-        municipios = Municipio.objects.filter(departamento_id=departamento_id).order_by('nombre')
-        return JsonResponse(list(municipios.values('id', 'nombre')), safe=False)
-    return JsonResponse({'error': 'No se proporcionó un departamento válido'}, status=400)
+    departamento_id = request.GET.get('departamento')
+    municipios = Municipio.objects.filter(departamento_id=departamento_id).order_by('nombre')
+    html = render_to_string('pacientes/municipios_dropdown_list_options.html', {'municipios': municipios})
+    return HttpResponse(html)
 
 @method_decorator(login_required, name='dispatch')
 class PacienteDetailView(DetailView):
@@ -101,6 +104,16 @@ class PacienteDetailView(DetailView):
     template_name = 'pacientes/detalle_paciente.html'
     context_object_name = 'paciente'
 
+
+
+
+@login_required
+def confirmar_cambio_estado(request, pk):
+    paciente = get_object_or_404(Paciente, pk=pk)
+    context = {
+        'paciente': paciente,
+    }
+    return render(request, 'pacientes/confirmar_cambio_estado.html', context)
 
 @login_required
 @require_POST
@@ -115,6 +128,24 @@ def cambiar_estado_paciente_view(request):
         paciente.estado_activo = nuevo_estado
         paciente.save()
 
-        return JsonResponse({'success': True})
+        # Filtrar los pacientes según el estado actual para actualizar la lista
+        estado = request.GET.get('estado', 'activos')
+        if estado == 'inactivos':
+            pacientes = Paciente.objects.filter(estado_activo=False)
+        else:
+            pacientes = Paciente.objects.filter(estado_activo=True)
+
+        query = request.GET.get('q', '')
+        if query:
+            pacientes = pacientes.filter(Q(nombre__icontains=query) | Q(apellido__icontains=query))
+
+        context = {
+            'pacientes': pacientes,
+            'estado': estado,
+            'query': query,
+        }
+
+        # Retornar la lista de pacientes actualizada
+        return render(request, 'pacientes/lista_pacientes.html', context)
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)})

@@ -28,39 +28,56 @@
 
     <a href="{% url 'pacientes:crear_paciente' %}" class="btn btn-success mb-3">Agregar Nuevo Paciente</a>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for paciente in pacientes %}
+    <!-- Contenedor para la tabla de pacientes -->
+    <div id="pacientes-lista">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>
-                        <a href="{% url 'pacientes:detalle_paciente' paciente.id %}">{{ paciente.nombre }} {{ paciente.apellido }}</a>
-                    </td>
-                    <td class="d-flex align-items-center">
-                        <!-- Toggle de Estado Activo/Inactivo -->
-                        <label class="toggle-switch">
-                            <input type="checkbox" data-id="{{ paciente.id }}" {% if paciente.estado_activo %}checked{% endif %} onchange="toggleEstadoPaciente(this)">
-                            <span class="toggle-switch-background">
-                                <span class="toggle-switch-handle"></span>
-                            </span>
-                        </label>
-                        <!-- Texto de Estado con margen adicional -->
-                        <span class="ms-4">{% if paciente.estado_activo %}Activo{% else %}Inactivo{% endif %}</span>
-                    </td>
+                    <th>Nombre</th>
+                    <th>Estado</th>
                 </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="2" class="text-center">No hay pacientes {{ estado }} registrados.</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for paciente in pacientes %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'pacientes:detalle_paciente' paciente.id %}">{{ paciente.nombre }} {{ paciente.apellido }}</a>
+                        </td>
+                        <td class="d-flex align-items-center">
+                            <!-- Toggle de Estado Activo/Inactivo -->
+                            <label class="toggle-switch">
+                                <input type="checkbox" data-id="{{ paciente.id }}" {% if paciente.estado_activo %}checked{% endif %}
+                                    hx-get="{% url 'pacientes:confirmar_cambio_estado' paciente.id %}"
+                                    hx-target="#confirm-modal .modal-content"
+                                    hx-trigger="change"
+                                    data-bs-toggle="modal" data-bs-target="#confirm-modal">
+                                <span class="toggle-switch-background">
+                                    <span class="toggle-switch-handle"></span>
+                                </span>
+                            </label>
+
+                            <!-- Texto de Estado con margen adicional -->
+                            <span class="ms-4">{% if paciente.estado_activo %}Activo{% else %}Inactivo{% endif %}</span>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-center">No hay pacientes {{ estado }} registrados.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirm-modal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- El contenido del modal se cargará aquí con HTMX -->
+        </div>
+    </div>
 </div>
 {% endblock %}
 
-<script src="{% static 'js/lista_pacientes.js' %}"></script>
+<script src="https://unpkg.com/htmx.org@1.6.1"></script>

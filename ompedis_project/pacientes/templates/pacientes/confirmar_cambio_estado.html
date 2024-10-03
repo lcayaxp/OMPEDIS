@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="confirmModalLabel">Confirmar Cambio de Estado</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <p>¿Estás seguro de que deseas cambiar el estado de <strong>{{ paciente.nombre }} {{ paciente.apellido }}</strong>?</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-primary" 
+            hx-post="{% url 'pacientes:cambiar_estado_paciente' %}" 
+            hx-include="[name=csrfmiddlewaretoken]" 
+            hx-vals='{"id": "{{ paciente.id }}", "estado": "{% if paciente.estado_activo %}inactivo{% else %}activo{% endif %}"}' 
+            hx-target="#pacientes-lista" 
+            hx-swap="outerHTML"
+            data-bs-dismiss="modal">
+        Confirmar
+    </button>
+</div>

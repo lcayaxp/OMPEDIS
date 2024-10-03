@@ -125,6 +125,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+DATE_INPUT_FORMATS = ['%d/%m/%Y', '%Y-%m-%d']
+
 LOGIN_URL = '/usuarios/login/'  # Aquí se define la URL de login
 
 # Static files (CSS, JavaScript, Images)

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Paciente, Departamento, Municipio, Responsable, Servicio
+from .models import Paciente, Responsable, Municipio
 
 class ResponsableForm(forms.ModelForm):
     class Meta:
@@ -21,10 +21,12 @@ class PacienteForm(forms.ModelForm):
             'estado_activo': forms.CheckboxInput(attrs={'class': 'toggle-switch'}),
             'servicios': forms.CheckboxSelectMultiple(),
             'medicamentos': forms.Textarea(attrs={'placeholder': 'Lista los medicamentos separados por comas'}),
+            'departamento': forms.Select(attrs={
+                'hx-get': '/pacientes/cargar-municipios/',  # Usa la URL directamente
+                'hx-target': '#id_municipio',
+                'hx-trigger': 'change'
+            }),
         }
-
-    departamento = forms.ModelChoiceField(queryset=Departamento.objects.all(), empty_label="Seleccione un Departamento")
-    municipio = forms.ModelChoiceField(queryset=Municipio.objects.all(), empty_label="Seleccione un Municipio")
 
     def __init__(self, *args, **kwargs):
         super(PacienteForm, self).__init__(*args, **kwargs)
@@ -33,6 +35,8 @@ class PacienteForm(forms.ModelForm):
                 departamento_id = int(self.data.get('departamento'))
                 self.fields['municipio'].queryset = Municipio.objects.filter(departamento_id=departamento_id).order_by('nombre')
             except (ValueError, TypeError):
-                pass
+                self.fields['municipio'].queryset = Municipio.objects.none()
         elif self.instance.pk:
             self.fields['municipio'].queryset = self.instance.departamento.municipio_set.order_by('nombre')
+        else:
+            self.fields['municipio'].queryset = Municipio.objects.none()

@@ -14,7 +14,7 @@
                     <form method="post" id="pacienteForm">
                         {% csrf_token %}
                         
-                        <!-- Campos del Paciente -->
+                        <!-- Renderiza todos los campos del formulario -->
                         {{ form|crispy }}
                         
                         <!-- Campos del Responsable -->
@@ -33,22 +33,3 @@
     </div>
 </div>
 {% endblock %}
-
-<!-- Incluye CSS de Select2 -->
-<link href="{% static 'vendor/select2/select2.min.css' %}" rel="stylesheet" />
-
-<!-- Incluye jQuery -->
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-
-<!-- Incluye JS de Select2 -->
-<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
-
-<!-- Incluye tu archivo JS para la inicialización -->
-<script src="{% static 'js/crear_paciente.js' %}"></script>
-
-<script>
-    $(document).ready(function() {
-        // Asigna la URL a un atributo data para su uso en JS
-        $('#id_departamento').attr('data-url', "{% url 'pacientes:cargar_municipios' %}");
-    });
-</script>
