@@ -12,6 +12,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 import json
+import openpyxl
+
 
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
@@ -149,3 +151,53 @@ def cambiar_estado_paciente_view(request):
         return render(request, 'pacientes/lista_pacientes.html', context)
     except Exception as e:
         return JsonResponse({'success': False, 'error': str(e)})
+
+
+
+@login_required
+def exportar_pacientes_excel(request):
+    estado = request.GET.get('estado', 'activos')
+    if estado == 'inactivos':
+        pacientes = Paciente.objects.filter(estado_activo=False)
+    else:
+        pacientes = Paciente.objects.filter(estado_activo=True)
+
+    # Crear un libro de trabajo y una hoja
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Pacientes"
+
+    # Escribir los encabezados
+    headers = [
+        'Nombre', 'Apellido', 'ID Partida Nacimiento', 'Fecha Nacimiento', 'Género', 'Estado Activo', 
+        'Departamento', 'Municipio', 'Domicilio', 'Diagnóstico Médico', 'Medicamentos', 
+        'Responsable Nombre', 'Responsable Apellido', 'Responsable Parentesco', 'Responsable Teléfono'
+    ]
+    ws.append(headers)
+
+    # Escribir los datos de los pacientes
+    for paciente in pacientes:
+        responsable = paciente.responsables.first() if paciente.responsables.exists() else None
+        ws.append([
+            paciente.nombre,
+            paciente.apellido,
+            paciente.id_partida_nacimiento,
+            paciente.fecha_nacimiento,
+            paciente.genero,
+            'Activo' if paciente.estado_activo else 'Inactivo',
+            paciente.departamento.nombre if paciente.departamento else '',
+            paciente.municipio.nombre if paciente.municipio else '',
+            paciente.domicilio,
+            paciente.diagnostico_medico,
+            paciente.medicamentos,
+            responsable.nombre if responsable else '',
+            responsable.apellido if responsable else '',
+            responsable.parentesco if responsable else '',
+            responsable.telefono if responsable else ''
+        ])
+
+    # Crear una respuesta HTTP con el archivo Excel
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = f'attachment; filename=pacientes_{estado}.xlsx'
+    wb.save(response)
+    return response

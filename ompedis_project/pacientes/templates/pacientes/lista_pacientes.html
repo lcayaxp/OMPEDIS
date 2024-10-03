@@ -27,6 +27,7 @@
     </form>
 
     <a href="{% url 'pacientes:crear_paciente' %}" class="btn btn-success mb-3">Agregar Nuevo Paciente</a>
+    <a href="{% url 'pacientes:exportar_pacientes' %}?estado={{ estado }}" class="btn btn-info mb-3">Exportar a Excel</a>
 
     <!-- Contenedor para la tabla de pacientes -->
     <div id="pacientes-lista">
