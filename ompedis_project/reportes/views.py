@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.http import HttpResponse, JsonResponse, FileResponse
 from django.db.models import Count, Func
 from django.db import models
@@ -9,6 +9,7 @@ from io import BytesIO
 from base64 import b64decode
 import json
 import logging  # Para depuración y registro
+from django.views.generic.edit import UpdateView, DeleteView
 
 from .models import SesionTerapia
 from .forms import SesionTerapiaForm, ReporteGeneracionForm
@@ -212,10 +213,23 @@ def generar_reporte_view(request):
 
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
-def exportar_excel_view(request):
+def exportar_excel_view(request): 
+
+
     # Obtener parámetros de filtro
     fecha_inicio = request.GET.get('fecha_inicio')
     fecha_fin = request.GET.get('fecha_fin')
+
+        # Convertir fechas a objetos de fecha si están presentes
+    try:
+        if fecha_inicio:
+            fecha_inicio = datetime.strptime(fecha_inicio, '%Y-%m-%d').date()
+        if fecha_fin:
+            fecha_fin = datetime.strptime(fecha_fin, '%Y-%m-%d').date()
+    except ValueError:
+        fecha_inicio = None
+        fecha_fin = None
+
 
     # Filtrar sesiones de terapia con los parámetros de fecha
     sesiones = SesionTerapia.objects.all()
@@ -392,3 +406,33 @@ def exportar_excel_view(request):
     buffer.seek(0)
 
     return FileResponse(buffer, as_attachment=True, filename='reporte_sesiones_ompedis.xlsx')
+
+@login_required
+def historial_sesiones_view(request):
+    sesiones = SesionTerapia.objects.all()
+
+    fecha_inicio = request.GET.get('fecha_inicio')
+    fecha_fin = request.GET.get('fecha_fin')
+
+    if fecha_inicio:
+        sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
+    if fecha_fin:
+        sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
+    context = {
+        'sesiones': sesiones,
+        'fecha_inicio': fecha_inicio,
+        'fecha_fin': fecha_fin,
+    }
+    return render(request, 'reportes/historial_sesiones.html', context)
+
+class SesionTerapiaUpdateView(UpdateView):
+    model = SesionTerapia
+    form_class = SesionTerapiaForm
+    template_name = 'reportes/editar_sesion.html'
+    success_url = reverse_lazy('historial_sesiones')
+
+class SesionTerapiaDeleteView(DeleteView):
+    model = SesionTerapia
+    template_name = 'reportes/eliminar_sesion.html'
+    success_url = reverse_lazy('historial_sesiones')

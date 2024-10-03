@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Historial de Sesiones</h2>
+    <form method="get" class="form-inline mb-4">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="fecha_inicio">Fecha Inicio</label>
+            <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" value="{{ fecha_inicio }}">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="fecha_fin">Fecha Fin</label>
+            <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" value="{{ fecha_fin }}">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Filtrar</button>
+    </form>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Diagnóstico</th>
+                <th>Área</th>
+                <th>Fecha de Sesión</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sesion in sesiones %}
+            <tr>
+                <td>{{ sesion.paciente }}</td>
+                <td>{{ sesion.diagnostico }}</td>
+                <td>{{ sesion.area }}</td>
+                <td>{{ sesion.fecha_sesion }}</td>
+                <td>
+                    <a href="{% url 'editar_sesion' sesion.pk %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'eliminar_sesion' sesion.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

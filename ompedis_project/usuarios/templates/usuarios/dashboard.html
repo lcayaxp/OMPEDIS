@@ -29,17 +29,34 @@
         <!-- Sesiones de Terapia -->
         <div class="col-md-3 mb-4">
             <div class="card shadow-sm border-0 rounded-lg text-center">
-                <div class="card-body">
-                    <a href="{% url 'registrar_sesion' %}">
-                        <img src="{% static 'images/sesiones.png' %}" alt="Sesiones de Terapia" class="mb-3" style="width: 50px; height: 50px;">
-                    </a>
-                    <h5 class="card-title font-weight-bold text-info">Sesiones de Terapia</h5>
-                    <p class="card-text text-muted">Registra nuevas sesiones o visualiza el historial de terapias.</p>
-                    <a href="{% url 'registrar_sesion' %}" class="btn btn-outline-info btn-block">Registrar Sesión</a>
-                </div>
+            <div class="card-body">
+                <a href="#" data-toggle="modal" data-target="#sesionModal">
+                <img src="{% static 'images/sesiones.png' %}" alt="Sesiones de Terapia" class="mb-3" style="width: 50px; height: 50px;">
+                </a>
+                <h5 class="card-title font-weight-bold text-info">Sesiones de Terapia</h5>
+                <p class="card-text text-muted">Registra nuevas sesiones o visualiza el historial de terapias.</p>
+                <a href="#" class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#sesionModal">Ver Sesiones</a>
+            </div>
             </div>
         </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="sesionModal" tabindex="-1" role="dialog" aria-labelledby="sesionModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="sesionModalLabel">Sesiones de Terapia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <a class="dropdown-item" href="{% url 'registrar_sesion' %}">Registrar Sesión de Terapia</a>
+                <a class="dropdown-item" href="{% url 'historial_sesiones' %}">Historial de Sesiones</a>
+                </div>
+            </div>
+            </div>
+        </div>
         <!-- Reportes -->
         <div class="col-md-3 mb-4">
             <div class="card shadow-sm border-0 rounded-lg text-center">
@@ -47,8 +64,8 @@
                     <a href="{% url 'generar_reporte' %}">
                         <img src="{% static 'images/report.png' %}" alt="Reportes" class="mb-3" style="width: 50px; height: 50px;">
                     </a>
-                    <h5 class="card-title font-weight-bold text-success">Reportes</h5>
-                    <p class="card-text text-muted">Genera y visualiza reportes de actividades.</p>
+                    <h5 class="card-title font-weight-bold text-success">Reportes Individuales</h5>
+                    <p class="card-text text-muted">Genera y visualiza reportes de actividades de cada paciente.</p>
                     <a href="{% url 'generar_reporte' %}" class="btn btn-outline-success btn-block">Ver Reportes</a>
                 </div>
             </div>
