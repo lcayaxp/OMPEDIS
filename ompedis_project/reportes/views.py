@@ -33,7 +33,8 @@ from openpyxl.drawing.image import Image  # Para insertar imágenes en el archiv
 from collections import Counter
 from PIL import Image as PILImage  # Para el manejo de imágenes
 from django.core.files.base import ContentFile
-
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Vistas que utilicen estos imports se pueden definir a continuación
 
@@ -56,13 +57,11 @@ def registrar_sesion_view(request):
             sesion = form.save(commit=False)
             sesion.genero = sesion.paciente.genero  # Asignar el género desde el paciente seleccionado
             sesion.save()
-            # Aquí añadimos el mensaje de éxito
-            return render(request, 'reportes/registrar_sesion.html', {
-                'form': SesionTerapiaForm(),  # Nuevo formulario
-                'success_message': 'Se registró la sesión de terapia con éxito'
-            })
+            # Agregar un mensaje de éxito
+            messages.success(request, 'Se registró la sesión de terapia con éxito.')
+            return redirect('historial_sesiones')
         else:
-            print(form.errors)  # Esto ayudará a identificar otros errores si existen
+            messages.error(request, 'Hubo un error al registrar la sesión de terapia. Por favor, verifique los datos ingresados.')
     else:
         form = SesionTerapiaForm()
 
@@ -432,7 +431,17 @@ class SesionTerapiaUpdateView(UpdateView):
     template_name = 'reportes/editar_sesion.html'
     success_url = reverse_lazy('historial_sesiones')
 
-class SesionTerapiaDeleteView(DeleteView):
+    def form_valid(self, form):
+        messages.success(self.request, 'La sesión de terapia se ha actualizado con éxito.')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, 'Hubo un error al actualizar la sesión de terapia. Por favor, verifique los datos ingresados.')
+        return super().form_invalid(form)
+
+
+class SesionTerapiaDeleteView(SuccessMessageMixin, DeleteView):
     model = SesionTerapia
     template_name = 'reportes/eliminar_sesion.html'
     success_url = reverse_lazy('historial_sesiones')
+    success_message = 'La sesión de terapia se ha eliminado con éxito.'
