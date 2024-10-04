@@ -14,6 +14,8 @@ from django.http import HttpResponse
 import json
 import openpyxl
 from django import forms
+from django.contrib import messages
+
 
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
@@ -34,12 +36,21 @@ class CrearPacienteView(CreateView):
         context = self.get_context_data()
         responsable_form = context['responsable_form']
         if responsable_form.is_valid():
+            # Primero guardamos el paciente sin hacer commit, para poder asociar el responsable luego
             paciente = form.save(commit=False)
-            responsable = responsable_form.save()
-            paciente.responsable = responsable
             paciente.save()
-            if isinstance(form, ModelForm):
-                form.save_m2m()  # Guarda las relaciones ManyToMany
+
+            # Guardamos el responsable y lo asociamos con el paciente
+            responsable = responsable_form.save(commit=False)
+            responsable.paciente = paciente
+            responsable.save()
+
+            # Si hay relaciones ManyToMany, ahora podemos guardarlas
+            form.save_m2m()
+
+            # Añadir un mensaje de éxito
+            messages.success(self.request, 'Se agregó el paciente con éxito.')
+
             return redirect(self.success_url)
         else:
             return self.form_invalid(form)
@@ -75,6 +86,7 @@ class EditarPacienteView(UpdateView):
             paciente.save()
             if isinstance(form, forms.ModelForm):
                 form.save_m2m()  # Guarda las relaciones ManyToMany
+            messages.success(self.request, 'Paciente editado con éxito.')  # Mensaje de éxito
             return redirect(self.success_url)
         else:
             return self.form_invalid(form)

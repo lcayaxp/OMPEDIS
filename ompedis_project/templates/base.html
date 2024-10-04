@@ -9,7 +9,6 @@
     <title>OMPEDIS - {% block title %}Dashboard{% endblock %}</title>
 
     {% load static %} <!-- Carga de etiquetas estáticas de Django -->
-    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -48,6 +47,20 @@
         </div>
     </header>
 
+    <!-- Mensajes de Django -->
+    {% if messages %}
+        <div class="container mt-3">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <!-- Main Content -->
     <div class="container mt-5">
         {% block content %}
@@ -73,6 +86,21 @@
     <!-- Script de inicialización select2_init.js -->
     <script src="{% static 'js/select2_init.js' %}"></script>
 
-    
+    <!-- SweetAlert2 para mensajes personalizados -->
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                Swal.fire({
+                    icon: '{{ message.tags }}',
+                    title: '{{ message }}',
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true
+                });
+            {% endfor %}
+        {% endif %}
+    </script>
 </body>
 </html>
