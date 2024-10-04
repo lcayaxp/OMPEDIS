@@ -59,7 +59,7 @@ def registrar_sesion_view(request):
             sesion.save()
             # Agregar un mensaje de éxito
             messages.success(request, 'Se registró la sesión de terapia con éxito.')
-            return redirect('historial_sesiones')
+            return redirect('registrar_sesion')
         else:
             messages.error(request, 'Hubo un error al registrar la sesión de terapia. Por favor, verifique los datos ingresados.')
     else:
