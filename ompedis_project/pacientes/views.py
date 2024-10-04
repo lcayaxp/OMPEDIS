@@ -14,7 +14,6 @@ from django.http import HttpResponse
 import json
 import openpyxl
 
-
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
     model = Paciente
