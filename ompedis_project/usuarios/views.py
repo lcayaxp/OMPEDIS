@@ -13,6 +13,9 @@ from .forms import CustomAuthenticationForm
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
 from django.contrib.auth import views as auth_views
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+
 
 # Vista para el login mejorada usando AuthenticationForm
 def login_view(request):
@@ -21,7 +24,10 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            messages.success(request, 'Inicio de sesión exitoso.')  # Mensaje de éxito
             return redirect('dashboard')
+        else:
+            messages.error(request, 'Credenciales inválidas, intente nuevamente.')
     else:
         form = CustomAuthenticationForm()
     return render(request, 'usuarios/login.html', {'form': form})
@@ -52,6 +58,7 @@ def perfil_view(request):
 # Vista para cerrar sesión
 def logout_view(request):
     logout(request)
+    messages.success(request, 'Has cerrado sesión exitosamente.')  # Mensaje de éxito
     return redirect('login')
 
 # Vista para registrar un nuevo usuario
@@ -61,6 +68,11 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('user_list')
     template_name = 'usuarios/signup.html'
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.success(self.request, 'Usuario registrado exitosamente.')  # Mensaje de éxito
+        return response
+
 @method_decorator(administrador_required, name='dispatch')
 # Vista para listar usuarios
 class UserListView(LoginRequiredMixin, ListView):
@@ -69,19 +81,23 @@ class UserListView(LoginRequiredMixin, ListView):
     context_object_name = 'users'
 
 @method_decorator(administrador_required, name='dispatch')
-# Vista para editar un usuario
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     model = CustomUser
     form_class = UsuarioChangeForm
     template_name = 'usuarios/user_update.html'
     success_url = reverse_lazy('user_list')
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.success(self.request, 'Usuario actualizado exitosamente.')  # Mensaje de éxito
+        return response
+
 @method_decorator(administrador_required, name='dispatch')
-# Vista para eliminar un usuario
-class UserDeleteView(LoginRequiredMixin, DeleteView):
+class UserDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = CustomUser
     template_name = 'usuarios/user_confirm_delete.html'
     success_url = reverse_lazy('user_list')
+    success_message = "El usuario fue eliminado exitosamente."
 
 class UserDetailView(LoginRequiredMixin, DetailView):
     model = CustomUser
