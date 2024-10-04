@@ -13,6 +13,7 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 import json
 import openpyxl
+from django import forms
 
 @method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
@@ -33,13 +34,12 @@ class CrearPacienteView(CreateView):
         context = self.get_context_data()
         responsable_form = context['responsable_form']
         if responsable_form.is_valid():
-            # Guarda el paciente y luego asocia el responsable
             paciente = form.save(commit=False)
+            responsable = responsable_form.save()
+            paciente.responsable = responsable
             paciente.save()
-            responsable = responsable_form.save(commit=False)
-            responsable.paciente = paciente
-            responsable.save()
-            form.save_m2m()  # Guarda las relaciones ManyToMany
+            if isinstance(form, ModelForm):
+                form.save_m2m()  # Guarda las relaciones ManyToMany
             return redirect(self.success_url)
         else:
             return self.form_invalid(form)
@@ -53,22 +53,28 @@ class EditarPacienteView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        paciente = self.object
         if self.request.POST:
-            context['responsable_form'] = ResponsableForm(self.request.POST, instance=paciente.responsables.first(), prefix='responsable')
+            context['responsable_form'] = ResponsableForm(self.request.POST, prefix='responsable')
         else:
-            context['responsable_form'] = ResponsableForm(instance=paciente.responsables.first(), prefix='responsable')
+            paciente = self.get_object()
+            responsable = paciente.responsables.first()  # Obtener el primer responsable asociado
+            if responsable:
+                context['responsable_form'] = ResponsableForm(instance=responsable, prefix='responsable')
+            else:
+                context['responsable_form'] = ResponsableForm(prefix='responsable')
         return context
 
     def form_valid(self, form):
         context = self.get_context_data()
         responsable_form = context['responsable_form']
         if responsable_form.is_valid():
-            paciente = form.save()  # Guarda el paciente
+            paciente = form.save(commit=False)
             responsable = responsable_form.save(commit=False)
-            responsable.paciente = paciente  # Asocia el responsable con el paciente
-            responsable.save()  # Guarda el responsable
-            form.save_m2m()  # Guarda las relaciones ManyToMany
+            responsable.paciente = paciente  # Asocia el responsable al paciente
+            responsable.save()
+            paciente.save()
+            if isinstance(form, forms.ModelForm):
+                form.save_m2m()  # Guarda las relaciones ManyToMany
             return redirect(self.success_url)
         else:
             return self.form_invalid(form)
