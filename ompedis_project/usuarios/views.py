@@ -17,7 +17,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-# Vista para el login mejorada usando AuthenticationForm
+# Vista para el login
 def login_view(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)

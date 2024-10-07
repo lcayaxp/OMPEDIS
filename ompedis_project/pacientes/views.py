@@ -102,7 +102,7 @@ def lista_pacientes_view(request):
 
     if query:
         pacientes = pacientes.filter(Q(nombre__icontains=query) | Q(apellido__icontains=query))
-
+    pacientes= pacientes.order_by('nombre', 'apellido')
     context = {
         'pacientes': pacientes,
         'estado': estado,
@@ -178,7 +178,7 @@ def exportar_pacientes_excel(request):
         pacientes = Paciente.objects.filter(estado_activo=False)
     else:
         pacientes = Paciente.objects.filter(estado_activo=True)
-
+    pacientes = pacientes.order_by('nombre', 'apellido')
     # Crear un libro de trabajo y una hoja
     wb = openpyxl.Workbook()
     ws = wb.active

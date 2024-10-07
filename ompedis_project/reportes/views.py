@@ -49,6 +49,7 @@ class Week(Func):
     template = "%(function)s('week' FROM %(expressions)s)"
     output_field = models.FloatField()  # Especificar el tipo de campo de salida
 
+#vista para registrar una nueva sesión de terapia
 @login_required
 def registrar_sesion_view(request):
     if request.method == 'POST':
@@ -70,6 +71,7 @@ def registrar_sesion_view(request):
     }
     return render(request, 'reportes/registrar_sesion.html', context)
     
+#vista para ver las estadísticas de las sesiones de terapia    
 @login_required
 def ver_estadisticas_view(request):
     # Filtrar todas las sesiones de terapia con filtros de fecha
