@@ -27,36 +27,38 @@ class Servicio(models.Model):
 
 # Modelo para representar un paciente
 class Paciente(models.Model):
-    nombre = models.CharField(max_length=100)  # Nombre del paciente
-    apellido = models.CharField(max_length=100)  # Apellido del paciente
-    id_partida_nacimiento = models.CharField(max_length=100, unique=True)  # Identificación única del paciente
-    fecha_nacimiento = models.DateField()  # Fecha de nacimiento del paciente
-    genero = models.CharField(max_length=10, choices=[('Masculino', 'Masculino'), ('Femenino', 'Femenino')])  # Género del paciente
-    estado_activo = models.BooleanField(default=True)  # Indica si el paciente está activo o no
-    departamento = models.ForeignKey(Departamento, on_delete=models.SET_NULL, null=True)  # Relación con el departamento
-    municipio = models.ForeignKey(Municipio, on_delete=models.SET_NULL, null=True)  # Relación con el municipio
-    domicilio = models.TextField()  # Dirección del domicilio del paciente
-    diagnostico_medico = models.TextField()  # Campo para el diagnóstico médico del paciente
-    servicios = models.ManyToManyField(Servicio, related_name='pacientes')  # Relación con los servicios que recibe el paciente
-    medicamentos = models.TextField(blank=True, null=True)  # Campo para registrar los medicamentos (opcional)
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    id_partida_nacimiento = models.CharField(max_length=100, unique=True)
+    fecha_nacimiento = models.DateField()
+    genero = models.CharField(max_length=10, choices=[('Masculino', 'Masculino'), ('Femenino', 'Femenino')])
+    estado_activo = models.BooleanField(default=True)
+    departamento = models.ForeignKey(Departamento, on_delete=models.SET_NULL, null=True)
+    municipio = models.ForeignKey(Municipio, on_delete=models.SET_NULL, null=True)
+    domicilio = models.TextField()
+    diagnostico_medico = models.TextField()
+    servicios = models.ManyToManyField(Servicio, related_name='pacientes')
+    medicamentos = models.TextField(blank=True, null=True)
+    
+    # Campos de Responsable
+    responsable_nombre = models.CharField(max_length=100)
+    responsable_apellido = models.CharField(max_length=100)
+    responsable_parentesco = models.CharField(max_length=50)
+    responsable_telefono = models.CharField(max_length=20)
 
     def calcular_edad(self):
-        # Método para calcular la edad del paciente
         today = date.today()
         return today.year - self.fecha_nacimiento.year - (
             (today.month, today.day) < (self.fecha_nacimiento.month, self.fecha_nacimiento.day)
         )
 
     def es_mayor_edad(self):
-        # Método para determinar si el paciente es mayor de edad
         return self.calcular_edad() >= 18
 
     def save(self, *args, **kwargs):
-        # Método personalizado de guardado, en este caso no se añade lógica adicional, solo se llama al método padre
         super().save(*args, **kwargs)
 
     def __str__(self):
-        # Devuelve el nombre completo del paciente como representación de la instancia
         return f"{self.nombre} {self.apellido}"
 
 # Modelo para representar un diagnóstico
@@ -79,14 +81,13 @@ class HistoriaClinica(models.Model):
         # Devuelve una representación indicando a quién pertenece la historia clínica
         return f'Historia Clínica de {self.paciente.nombre}'
 
-# Modelo para representar un responsable (familiar o tutor) de un paciente
-class Responsable(models.Model):
-    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='responsables')  # Relación con el paciente
-    nombre = models.CharField(max_length=100)  # Nombre del responsable
-    apellido = models.CharField(max_length=100)  # Apellido del responsable
-    parentesco = models.CharField(max_length=50)  # Relación con el paciente (por ejemplo, madre, padre, tutor)
-    telefono = models.CharField(max_length=20)  # Teléfono de contacto del responsable
+# Elimina esta clase
+# class Responsable(models.Model):
+#     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='responsables')
+#     nombre = models.CharField(max_length=100)
+#     apellido = models.CharField(max_length=100)
+#     parentesco = models.CharField(max_length=50)
+#     telefono = models.CharField(max_length=20)
 
-    def __str__(self):
-        # Devuelve el nombre completo del responsable junto con su parentesco con el paciente
-        return f'{self.nombre} {self.apellido} - {self.parentesco}'
+#     def __str__(self):
+#         return f'{self.nombre} {self.apellido} - {self.parentesco}'

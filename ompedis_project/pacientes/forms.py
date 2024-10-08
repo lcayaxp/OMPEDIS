@@ -1,20 +1,13 @@
 from django import forms
-from .models import Paciente, Responsable, Municipio
-
-class ResponsableForm(forms.ModelForm):
-    class Meta:
-        model = Responsable
-        fields = ['nombre', 'apellido', 'parentesco', 'telefono']
-        widgets = {
-            'telefono': forms.TextInput(attrs={'placeholder': 'Formato: 0000-0000'}),
-        }
+from .models import Paciente, Municipio
 
 class PacienteForm(forms.ModelForm):
     class Meta:
         model = Paciente
         fields = [
             'nombre', 'apellido', 'id_partida_nacimiento', 'fecha_nacimiento', 'genero',
-            'estado_activo', 'domicilio', 'departamento', 'municipio', 'diagnostico_medico', 'servicios', 'medicamentos'
+            'estado_activo', 'domicilio', 'departamento', 'municipio', 'diagnostico_medico', 'servicios', 'medicamentos',
+            'responsable_nombre', 'responsable_apellido', 'responsable_parentesco', 'responsable_telefono'
         ]
         widgets = {
             'fecha_nacimiento': forms.DateInput(attrs={'type': 'date'}),
@@ -22,10 +15,11 @@ class PacienteForm(forms.ModelForm):
             'servicios': forms.CheckboxSelectMultiple(),
             'medicamentos': forms.Textarea(attrs={'placeholder': 'Lista los medicamentos separados por comas'}),
             'departamento': forms.Select(attrs={
-                'hx-get': '/pacientes/cargar-municipios/',  # Usa la URL directamente
+                'hx-get': '/pacientes/cargar-municipios/',
                 'hx-target': '#id_municipio',
                 'hx-trigger': 'change'
             }),
+            'responsable_telefono': forms.TextInput(attrs={'placeholder': 'Formato: 0000-0000'}),
         }
 
     def __init__(self, *args, **kwargs):

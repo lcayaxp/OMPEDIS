@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Paciente, Municipio
-from .forms import PacienteForm, ResponsableForm
+from .forms import PacienteForm
 from django.http import JsonResponse
 from django.db.models import Q
 from django.views.decorators.http import require_POST
@@ -18,42 +18,16 @@ from django.contrib import messages
 
 
 @method_decorator(login_required, name='dispatch')
+@method_decorator(login_required, name='dispatch')
 class CrearPacienteView(CreateView):
     model = Paciente
     form_class = PacienteForm
     template_name = 'pacientes/crear_paciente.html'
     success_url = reverse_lazy('pacientes:lista_pacientes')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        if self.request.POST:
-            context['responsable_form'] = ResponsableForm(self.request.POST, prefix='responsable')
-        else:
-            context['responsable_form'] = ResponsableForm(prefix='responsable')
-        return context
-
     def form_valid(self, form):
-        context = self.get_context_data()
-        responsable_form = context['responsable_form']
-        if responsable_form.is_valid():
-            # Primero guardamos el paciente sin hacer commit, para poder asociar el responsable luego
-            paciente = form.save(commit=False)
-            paciente.save()
-
-            # Guardamos el responsable y lo asociamos con el paciente
-            responsable = responsable_form.save(commit=False)
-            responsable.paciente = paciente
-            responsable.save()
-
-            # Si hay relaciones ManyToMany, ahora podemos guardarlas
-            form.save_m2m()
-
-            # Añadir un mensaje de éxito
-            messages.success(self.request, 'Se agregó el paciente con éxito.')
-
-            return redirect(self.success_url)
-        else:
-            return self.form_invalid(form)
+        messages.success(self.request, 'Se agregó el paciente con éxito.')
+        return super().form_valid(form)
 
 @method_decorator(login_required, name='dispatch')
 class EditarPacienteView(UpdateView):
@@ -62,36 +36,9 @@ class EditarPacienteView(UpdateView):
     template_name = 'pacientes/editar_paciente.html'
     success_url = reverse_lazy('pacientes:lista_pacientes')
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        if self.request.POST:
-            context['responsable_form'] = ResponsableForm(self.request.POST, prefix='responsable')
-        else:
-            paciente = self.get_object()
-            responsable = paciente.responsables.first()  # Obtener el primer responsable asociado
-            if responsable:
-                context['responsable_form'] = ResponsableForm(instance=responsable, prefix='responsable')
-            else:
-                context['responsable_form'] = ResponsableForm(prefix='responsable')
-        return context
-
     def form_valid(self, form):
-        context = self.get_context_data()
-        responsable_form = context['responsable_form']
-        if responsable_form.is_valid():
-            paciente = form.save(commit=False)
-            responsable = responsable_form.save(commit=False)
-            responsable.paciente = paciente  # Asocia el responsable al paciente
-            responsable.save()
-            paciente.save()
-            if isinstance(form, forms.ModelForm):
-                form.save_m2m()  # Guarda las relaciones ManyToMany
-            messages.success(self.request, 'Paciente editado con éxito.')  # Mensaje de éxito
-            return redirect(self.success_url)
-        else:
-            return self.form_invalid(form)
-
-@login_required
+        messages.success(self.request, 'Se actualizó el paciente con éxito.')
+        return super().form_valid(form)
 def lista_pacientes_view(request):
     estado = request.GET.get('estado', 'activos')
     query = request.GET.get('q', '')

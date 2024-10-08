@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'ompedis_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Backend para conectar con PostgreSQL
-        'NAME': 'ompedis1',  # Nombre de la base de datos
+        'NAME': 'ompedis2',  # Nombre de la base de datos
         'USER': 'postgres',  # Usuario para la conexión a la base de datos
         'PASSWORD': 'manager',  # Contraseña del usuario (debe mantenerse segura)
         'HOST': 'localhost',  # Dirección del servidor de la base de datos

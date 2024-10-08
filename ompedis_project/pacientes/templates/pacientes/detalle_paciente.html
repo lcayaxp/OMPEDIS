@@ -32,15 +32,9 @@
             <p>{{ paciente.medicamentos|default:"No se han registrado medicamentos." }}</p>
 
             <h4 class="mt-4">Información del Responsable</h4>
-            {% if paciente.responsables.exists %}
-                {% for responsable in paciente.responsables.all %}
-                    <p><strong>Nombre:</strong> {{ responsable.nombre }} {{ responsable.apellido }}</p>
-                    <p><strong>Parentesco:</strong> {{ responsable.parentesco }}</p>
-                    <p><strong>Teléfono:</strong> {{ responsable.telefono }}</p>
-                {% endfor %}
-            {% else %}
-                <p>No hay información de responsables registrados.</p>
-            {% endif %}
+            <p><strong>Nombre:</strong> {{ paciente.responsable_nombre }} {{ paciente.responsable_apellido }}</p>
+            <p><strong>Parentesco:</strong> {{ paciente.responsable_parentesco }}</p>
+            <p><strong>Teléfono:</strong> {{ paciente.responsable_telefono }}</p>
         </div>
         <div class="card-footer d-flex justify-content-between">
             <a href="{% url 'pacientes:lista_pacientes' %}" class="btn btn-secondary">Regresar</a>
