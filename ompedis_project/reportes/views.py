@@ -85,6 +85,7 @@ def ver_estadisticas_view(request):
     if fecha_fin:
         sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
 
+    sesiones = sesiones.order_by('fecha_sesion')    
     # Calcular rangos de edad para los pacientes
     rangos_edad = {
         '0_18': sum(1 for sesion in sesiones if sesion.paciente.calcular_edad() <= 18),
@@ -142,6 +143,8 @@ def generar_reporte_view(request):
                 sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
             if paciente:
                 sesiones = sesiones.filter(paciente=paciente)
+
+            sesiones = sesiones.order_by('fecha_sesion')
 
             # Crear buffer
             buffer = BytesIO()
@@ -238,6 +241,8 @@ def exportar_excel_view(request):
         sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
     if fecha_fin:
         sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
+    sesiones = sesiones.order_by('fecha_sesion')
 
     # Crear un archivo Excel en memoria
     workbook = openpyxl.Workbook()
@@ -419,6 +424,8 @@ def historial_sesiones_view(request):
         sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
     if fecha_fin:
         sesiones = sesiones.filter(fecha_sesion__lte=fecha_fin)
+
+    sesiones = sesiones.order_by('fecha_sesion')
 
     context = {
         'sesiones': sesiones,
