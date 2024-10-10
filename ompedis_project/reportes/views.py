@@ -271,7 +271,7 @@ def exportar_excel_view(request):
     sheet['A3'].alignment = Alignment(horizontal='center')
 
     # Crear encabezados de la tabla principal
-    headers = ['No.', 'Nombre', 'Diagnóstico', 'Sexo', 'Edad', 'Área', 'Fecha de Ingreso']
+    headers = ['No.', 'Nombre', 'Diagnóstico', 'Sexo', 'Edad', 'Área', 'Fecha de Inicio']
     sheet.append(headers)
     for col in range(1, len(headers) + 1):
         cell = sheet.cell(row=4, column=col)
