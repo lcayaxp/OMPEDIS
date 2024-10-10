@@ -1,16 +1,25 @@
+# forms.py
 from django import forms
 from .models import Paciente, Municipio
+from django.utils import timezone
 
 class PacienteForm(forms.ModelForm):
     class Meta:
         model = Paciente
         fields = [
             'nombre', 'apellido', 'id_partida_nacimiento', 'fecha_nacimiento', 'genero',
-            'estado_activo', 'domicilio', 'departamento', 'municipio', 'diagnostico_medico', 'servicios', 'medicamentos',
+            'estado_activo', 'domicilio', 'departamento', 'municipio', 'diagnostico_medico',
+            'servicios', 'medicamentos',
             'responsable_nombre', 'responsable_apellido', 'responsable_parentesco', 'responsable_telefono'
         ]
         widgets = {
-            'fecha_nacimiento': forms.DateInput(attrs={'type': 'date'}),
+            'fecha_nacimiento': forms.DateInput(
+                attrs={
+                    'type': 'date',
+                    'class': 'form-control',
+                },
+                format='%Y-%m-%d'
+            ),
             'estado_activo': forms.CheckboxInput(attrs={'class': 'toggle-switch'}),
             'servicios': forms.CheckboxSelectMultiple(),
             'medicamentos': forms.Textarea(attrs={'placeholder': 'Lista los medicamentos separados por comas'}),
@@ -34,3 +43,9 @@ class PacienteForm(forms.ModelForm):
             self.fields['municipio'].queryset = self.instance.departamento.municipio_set.order_by('nombre')
         else:
             self.fields['municipio'].queryset = Municipio.objects.none()
+
+    def clean_fecha_nacimiento(self):
+        fecha = self.cleaned_data.get('fecha_nacimiento')
+        if fecha and fecha > timezone.now().date():
+            raise forms.ValidationError("La fecha de nacimiento no puede estar en el futuro.")
+        return fecha

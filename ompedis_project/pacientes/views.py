@@ -39,6 +39,8 @@ class EditarPacienteView(UpdateView):
     def form_valid(self, form):
         messages.success(self.request, 'Se actualizó el paciente con éxito.')
         return super().form_valid(form)
+
+        
 def lista_pacientes_view(request):
     estado = request.GET.get('estado', 'activos')
     query = request.GET.get('q', '')
