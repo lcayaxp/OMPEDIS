@@ -123,11 +123,15 @@ def cambiar_estado_paciente_view(request):
 @login_required
 def exportar_pacientes_excel(request):
     estado = request.GET.get('estado', 'activos')
+    
+    # Filtrar pacientes según el estado activo o inactivo
     if estado == 'inactivos':
         pacientes = Paciente.objects.filter(estado_activo=False)
     else:
         pacientes = Paciente.objects.filter(estado_activo=True)
+
     pacientes = pacientes.order_by('nombre', 'apellido')
+
     # Crear un libro de trabajo y una hoja
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -143,12 +147,11 @@ def exportar_pacientes_excel(request):
 
     # Escribir los datos de los pacientes
     for paciente in pacientes:
-        responsable = paciente.responsables.first() if paciente.responsables.exists() else None
         ws.append([
             paciente.nombre,
             paciente.apellido,
             paciente.id_partida_nacimiento,
-            paciente.fecha_nacimiento,
+            paciente.fecha_nacimiento.strftime('%Y-%m-%d'),
             paciente.genero,
             'Activo' if paciente.estado_activo else 'Inactivo',
             paciente.departamento.nombre if paciente.departamento else '',
@@ -156,10 +159,10 @@ def exportar_pacientes_excel(request):
             paciente.domicilio,
             paciente.diagnostico_medico,
             paciente.medicamentos,
-            responsable.nombre if responsable else '',
-            responsable.apellido if responsable else '',
-            responsable.parentesco if responsable else '',
-            responsable.telefono if responsable else ''
+            paciente.responsable_nombre,
+            paciente.responsable_apellido,
+            paciente.responsable_parentesco,
+            paciente.responsable_telefono
         ])
 
     # Crear una respuesta HTTP con el archivo Excel
