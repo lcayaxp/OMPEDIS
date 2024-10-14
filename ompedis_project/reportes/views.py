@@ -36,10 +36,13 @@ from django.core.files.base import ContentFile
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
-# Vistas que utilicen estos imports se pueden definir a continuación
-
+# importaciones de decoradores
+from django.utils.decorators import method_decorator
+from usuarios.decorators import administrador_required, moderador_required, usuario_required, moderador_o_administrador_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required
+@moderador_o_administrador_required
 def menu_reportes_view(request):
     return render(request, 'reportes/menu_reportes.html')
 
@@ -51,6 +54,7 @@ class Week(Func):
 
 #vista para registrar una nueva sesión de terapia
 @login_required
+@moderador_o_administrador_required
 def registrar_sesion_view(request):
     if request.method == 'POST':
         form = SesionTerapiaForm(request.POST)
@@ -71,8 +75,10 @@ def registrar_sesion_view(request):
     }
     return render(request, 'reportes/registrar_sesion.html', context)
     
-#vista para ver las estadísticas de las sesiones de terapia    
+#vista para ver las estadísticas de las sesiones de terapia 
+   
 @login_required
+@moderador_o_administrador_required
 def ver_estadisticas_view(request):
     # Filtrar todas las sesiones de terapia con filtros de fecha
     sesiones = SesionTerapia.active_objects.all()
@@ -117,6 +123,7 @@ def ver_estadisticas_view(request):
     return render(request, 'reportes/ver_estadisticas.html', context)
 
 @login_required
+@moderador_o_administrador_required
 def ver_listado_sesiones_view(request):
     sesiones = SesionTerapia.active_objects.all()
 
@@ -126,6 +133,7 @@ def ver_listado_sesiones_view(request):
     return render(request, 'reportes/listado_sesiones.html', context)
 
 @login_required
+@moderador_o_administrador_required
 def generar_reporte_view(request):
     if request.method == 'POST':
         form = ReporteGeneracionForm(request.POST)
@@ -217,6 +225,9 @@ def generar_reporte_view(request):
 
     return render(request, 'reportes/generar_reporte.html', {'form': form})
 
+
+@login_required
+@moderador_o_administrador_required
 def exportar_excel_view(request): 
 
 
@@ -414,6 +425,7 @@ def exportar_excel_view(request):
     return FileResponse(buffer, as_attachment=True, filename='reporte_sesiones_ompedis.xlsx')
 
 @login_required
+@moderador_o_administrador_required
 def historial_sesiones_view(request):
     sesiones = SesionTerapia.active_objects.all()
 
@@ -433,7 +445,9 @@ def historial_sesiones_view(request):
         'fecha_fin': fecha_fin,
     }
     return render(request, 'reportes/historial_sesiones.html', context)
+    
 
+@method_decorator(moderador_o_administrador_required, name='dispatch')
 class SesionTerapiaUpdateView(UpdateView):
     model = SesionTerapia
     form_class = SesionTerapiaForm
@@ -449,6 +463,7 @@ class SesionTerapiaUpdateView(UpdateView):
         return super().form_invalid(form)
 
 
+@method_decorator(moderador_o_administrador_required, name='dispatch')
 class SesionTerapiaDeleteView(SuccessMessageMixin, DeleteView):
     model = SesionTerapia
     template_name = 'reportes/eliminar_sesion.html'

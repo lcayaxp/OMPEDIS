@@ -39,7 +39,6 @@ def dashboard_view(request):
 
 # Vista para listar pacientes, accesible solo para trabajadores
 @login_required
-@moderador_required
 def lista_pacientes_view(request):
     return render(request, 'pacientes/lista_pacientes.html')
 
