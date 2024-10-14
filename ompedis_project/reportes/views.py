@@ -75,7 +75,7 @@ def registrar_sesion_view(request):
 @login_required
 def ver_estadisticas_view(request):
     # Filtrar todas las sesiones de terapia con filtros de fecha
-    sesiones = SesionTerapia.objects.all()
+    sesiones = SesionTerapia.active_objects.all()
 
     fecha_inicio = request.GET.get('fecha_inicio')
     fecha_fin = request.GET.get('fecha_fin')
@@ -118,7 +118,7 @@ def ver_estadisticas_view(request):
 
 @login_required
 def ver_listado_sesiones_view(request):
-    sesiones = SesionTerapia.objects.all()
+    sesiones = SesionTerapia.active_objects.all()
 
     context = {
         'sesiones': sesiones,
@@ -131,7 +131,7 @@ def generar_reporte_view(request):
         form = ReporteGeneracionForm(request.POST)
         if form.is_valid():
             # Filtrar sesiones de terapia con los parámetros del formulario
-            sesiones = SesionTerapia.objects.all()
+            sesiones = SesionTerapia.active_objects.all()
 
             fecha_inicio = form.cleaned_data['fecha_inicio']
             fecha_fin = form.cleaned_data['fecha_fin']
@@ -236,7 +236,7 @@ def exportar_excel_view(request):
 
 
     # Filtrar sesiones de terapia con los parámetros de fecha
-    sesiones = SesionTerapia.objects.all()
+    sesiones = SesionTerapia.active_objects.all()
     if fecha_inicio:
         sesiones = sesiones.filter(fecha_sesion__gte=fecha_inicio)
     if fecha_fin:
@@ -415,7 +415,7 @@ def exportar_excel_view(request):
 
 @login_required
 def historial_sesiones_view(request):
-    sesiones = SesionTerapia.objects.all()
+    sesiones = SesionTerapia.active_objects.all()
 
     fecha_inicio = request.GET.get('fecha_inicio')
     fecha_fin = request.GET.get('fecha_fin')
@@ -454,3 +454,11 @@ class SesionTerapiaDeleteView(SuccessMessageMixin, DeleteView):
     template_name = 'reportes/eliminar_sesion.html'
     success_url = reverse_lazy('historial_sesiones')
     success_message = 'La sesión de terapia se ha eliminado con éxito.'
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        # Realizar el borrado lógico
+        self.object.is_active = False
+        self.object.save()
+        messages.success(self.request, self.success_message)
+        return redirect(self.success_url)

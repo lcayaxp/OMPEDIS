@@ -26,9 +26,21 @@ class SesionTerapia(models.Model):
     ])
     fecha_sesion = models.DateField()
 
+    is_active = models.BooleanField(default=True)
+
     def calcular_edad(self):
         today = date.today()
         return today.year - self.paciente.fecha_nacimiento.year - ((today.month, today.day) < (self.paciente.fecha_nacimiento.month, self.paciente.fecha_nacimiento.day))
 
     def __str__(self):
         return f"{self.paciente} - {self.fecha_sesion}"
+
+    
+    #Manager personalizado para manejar los registros activos
+    class ActiveManager(models.Manager):
+        def get_queryset(self):
+            return super().get_queryset().filter(is_active=True)
+
+    # Aplicar managers
+    objects = models.Manager()  # Manager por defecto
+    active_objects = ActiveManager()  # Manager para los registros activos
