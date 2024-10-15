@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+import dj_database_url
 
 # Configuración para el almacenamiento de mensajes en sesión
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -31,13 +32,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Configuración rápida para desarrollo - no se debe usar en producción
 # Verifica: https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-SECRET_KEY = 'django-insecure-b_%(9=h18+-wgb+rcrw_jib6sb1ll@=(-$nho9%b@of6*d!3@t'  # Clave secreta, debe mantenerse segura
+SECRET_KEY = os.getenv('SECRET_KEY', 'clave-secreta-de-django')
+  # Clave secreta, debe mantenerse segura
 
 # Configuración de depuración: debería ser False en producción para mayor seguridad
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+
 
 # Lista de hosts permitidos para acceder al proyecto (usar '*' permite todos los hosts, no recomendado para producción)
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ompedis.herokuapp.com', 'localhost', '127.0.0.1']
+
 
 # Aplicaciones instaladas en el proyecto
 INSTALLED_APPS = [
@@ -60,6 +64,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Middleware: componentes que se ejecutan en cada solicitud al servidor
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',  # Seguridad
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Middleware para servir archivos estáticos
     'django.contrib.sessions.middleware.SessionMiddleware',  # Manejo de sesiones
     'django.middleware.common.CommonMiddleware',  # Manejo común de solicitudes
     'django.middleware.csrf.CsrfViewMiddleware',  # Protección CSRF
@@ -92,16 +97,21 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ompedis_project.wsgi.application'
 
 # Configuración de la base de datos
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Backend para conectar con PostgreSQL
-        'NAME': 'ompedis2',  # Nombre de la base de datos
-        'USER': 'postgres',  # Usuario para la conexión a la base de datos
-        'PASSWORD': 'manager',  # Contraseña del usuario (debe mantenerse segura)
-        'HOST': 'localhost',  # Dirección del servidor de la base de datos
-        'PORT': '5432',  # Puerto predeterminado para PostgreSQL
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'nombre_de_tu_bd_local',
+            'USER': 'usuario',
+            'PASSWORD': 'contraseña',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 # Validación de contraseñas (para asegurar contraseñas seguras)
 AUTH_PASSWORD_VALIDATORS = [
@@ -132,6 +142,9 @@ LOGIN_URL = '/usuarios/login/'
 # Configuración de archivos estáticos (CSS, JavaScript, Imágenes)
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Directorios donde se almacenan los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio donde se almacenan los archivos estáticos en producción
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Configuración de tipo de campo de clave primaria predeterminado para modelos
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -144,5 +157,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP de Gmail
 EMAIL_PORT = 587  # Puerto de conexión
 EMAIL_USE_TLS = True  # Utilizar TLS para la conexión
-EMAIL_HOST_USER = 'lcayaxp@miumg.edu.gt'  # Correo electrónico que envía los emails
-EMAIL_HOST_PASSWORD = 'hafr duhd jlue avgm'  # Contraseña del correo electrónico (debería mantenerse segura)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Correo electrónico que envía los emails
+EMAIL_HOST_PASSWORD = os.getenv( 'EMAIL_HOST_PASSWORD')  # Contraseña del correo electrónico (debería mantenerse segura)

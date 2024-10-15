@@ -1,0 +1,116 @@
+/* Estilo para el cuerpo del documento */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Azul claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #006d77; /* Verde azulado oscuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.050rem 1rem; /* Ajuste para hacer el navbar más delgado */
+}
+
+.navbar-brand img {
+    height: 60px; /* Tamaño del logo  */
+    width: auto; /* Mantener proporción del logo */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    padding: 0.5rem 1rem; /* Reducir padding para enlaces */
+    font-size: 1rem; /* Ajustar el tamaño del texto */
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #83c5be; /* Verde menta */
+}
+
+/* Media query para mejorar en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .navbar-brand img {
+        height: 30px; /* Tamaño más pequeño para el logo en pantallas pequeñas */
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem; /* Ajustar padding en pantallas pequeñas */
+    }
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    flex: 1;
+    padding-bottom: 35px; /* Espacio extra para el pie de página */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #006d77; /* Verde azulado oscuro */
+    color: #ffffff;
+    border-top: 4px solid #2ec4b6; /* Verde agua */
+    width: 100%;
+    padding: 1rem; /* Asegura que el contenido del footer esté centrado */
+    text-align: center;
+    margin-top: 20px; /* Espacio extra sobre el footer */
+}
+
+/* Texto dentro del footer */
+footer p {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Estilo para el interruptor toggle-switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;  /* Ajusta el ancho */
+    height: 25px;  /* Ajusta la altura */
+    cursor: pointer;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 15px; /* Ajuste para un borde redondeado */
+    box-shadow: inset 0 0 0 2px #ccc;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch-handle {
+    position: absolute;
+    top: 3px;  /* Ajuste para centrar el círculo */
+    left: 3px;  /* Ajuste para centrar el círculo */
+    width: 20px;  /* Tamaño del círculo */
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background {
+    background-color: #05c46b; /* Color al activarse */
+    box-shadow: inset 0 0 0 2px #04b360;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background .toggle-switch-handle {
+    transform: translateX(25px); /* Distancia que se mueve el círculo */
+}
