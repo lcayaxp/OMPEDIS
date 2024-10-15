@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',  # Tipos de contenido (framework para manejar modelos)
     'django.contrib.sessions',  # Manejo de sesiones en el sitio
     'django.contrib.messages',  # Mensajes del sistema
-    'django.contrib.staticfiles',  # Archivos estáticos (CSS, JS, etc.)
+    'django.contrib.staticfiles',  # Archivos estáticos (CSS, JS, img, etc.)
     'usuarios',  # Aplicación personalizada para manejo de usuarios
     'pacientes',  # Aplicación para manejo de pacientes
     'reportes',  # Aplicación para generar reportes/estadísticas
