@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
 import dj_database_url
+import django_heroku
 
 # Configuración para el almacenamiento de mensajes en sesión
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -144,6 +145,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Directorios donde se almacenan los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio donde se almacenan los archivos estáticos en producción
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
 
 
 # Configuración de tipo de campo de clave primaria predeterminado para modelos
