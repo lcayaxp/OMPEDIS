@@ -1,1 +1,10 @@
+# Ignorar el entorno virtual
 env/
+
+# Ignorar archivos compilados
+__pycache__/
+*.py[cod]
+*.log
+
+# Ignorar la base de datos local (si es SQLite)
+*.sqlite3

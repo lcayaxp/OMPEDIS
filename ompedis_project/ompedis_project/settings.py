@@ -41,7 +41,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
 # Lista de hosts permitidos para acceder al proyecto (usar '*' permite todos los hosts, no recomendado para producción)
-ALLOWED_HOSTS = ['ompedis.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ompedis.com', 'www.ompedis.com']
 
 
 # Aplicaciones instaladas en el proyecto
@@ -144,7 +144,11 @@ LOGIN_URL = '/usuarios/login/'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Directorios donde se almacenan los archivos estáticos
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directorio donde se almacenan los archivos estáticos en producción
+os.makedirs(STATIC_ROOT, exist_ok=True)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
+os.makedirs(STATIC_TMP, exist_ok=True)
+
 django_heroku.settings(locals())
 
 
@@ -161,3 +165,6 @@ EMAIL_PORT = 587  # Puerto de conexión
 EMAIL_USE_TLS = True  # Utilizar TLS para la conexión
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Correo electrónico que envía los emails
 EMAIL_HOST_PASSWORD = os.getenv( 'EMAIL_HOST_PASSWORD')  # Contraseña del correo electrónico (debería mantenerse segura)
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from usuarios.views import login_view, dashboard_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +27,11 @@ urlpatterns = [
     path('usuarios/', include('usuarios.urls')),  # Incluye las URLs del app 'usuarios'
     path('pacientes/', include('pacientes.urls', namespace='pacientes')),  # Usando namespaces para evitar conflictos
     path('reportes/', include('reportes.urls')),  # Incluye las URLs del app 'reportes'
-]
+    
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Para servir archivos estáticos en desarrollo
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # Para servir archivos multimedia en desarrollo
+
+
 
 
